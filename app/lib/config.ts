@@ -1,24 +1,23 @@
-// ============================================
+// ============================================================================
 // SITE CONFIGURATION
-// ============================================
-// Update these values with the candidate's info.
-// Everything flows from here — no hunting through components.
-// ============================================
+// ============================================================================
+// Single source of truth. Update once, flows everywhere.
+// ============================================================================
 
 export const siteConfig = {
   candidate: {
-    firstName: 'FirstName',
-    lastName: 'LastName',
-    fullName: 'FirstName LastName',
-    title: 'for Portland',
+    firstName: 'Nabil',
+    lastName: 'Zaghloul',
+    fullName: 'Nabil Zaghloul',
+    title: 'for District 2',
     office: 'Multnomah County Commissioner',
-    district: 'District X',
+    district: 'District 2',
   },
 
   meta: {
-    url: 'https://firstnameforportland.com',
+    url: 'https://nabilforportland.com',
     tagline: 'Building a Portland that works for everyone.',
-    email: 'info@firstnameforportland.com',
+    email: 'info@nabilforportland.com',
   },
 
   social: {
@@ -31,14 +30,12 @@ export const siteConfig = {
     { label: 'About', href: '#about' },
     { label: 'Issues', href: '#issues' },
     { label: 'Endorsements', href: '#endorsements' },
-    { label: 'Get Involved', href: '#volunteer' },
-  ],
+  ] as const,
 
-  // Donation link — ActBlue, etc.
   donateUrl: '#donate',
 
-  // Paid-for-by disclaimer (legally required)
-  disclaimer: 'Paid for by FirstName for Portland. Not authorized by any candidate or candidate committee.',
+  // Legally required
+  disclaimer: 'Paid for by Nabil for Portland. Not authorized by any candidate or candidate committee.',
 } as const;
 
 export type SiteConfig = typeof siteConfig;
