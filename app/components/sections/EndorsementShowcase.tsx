@@ -6,39 +6,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import EndorsementCard, { type Endorser } from '@/app/components/sections/EndorsementCard';
 import { useAutoAdvance } from '@/app/hooks/useAutoAdvance';
 
-// ============================================================================
-// CONSTANTS
-// ============================================================================
-
 const ADVANCE_DURATION = 8;
-
 const EASE_STANDARD: [number, number, number, number] = [0.4, 0, 0.2, 1];
 const TRANSITION_DURATION = 0.45;
-
-const ENDORSERS: Endorser[] = [
-  {
-    id: 'endorser-1',
-    name: 'Name One',
-    title: 'Title / Organization',
-    quote: 'Endorsement quote goes here. The best ones are specific — what the candidate did, not just who they are.',
-  },
-  {
-    id: 'endorser-2',
-    name: 'Name Two',
-    title: 'Title / Organization',
-    quote: 'Second endorsement. Keep these genuine. A short, real quote outperforms a long, generic one every time.',
-  },
-  {
-    id: 'endorser-3',
-    name: 'Name Three',
-    title: 'Title / Organization',
-    quote: 'Third endorsement. Three is a strong starting number. Add more as the campaign builds support.',
-  },
-];
-
-// ============================================================================
-// PROGRESS BARS
-// ============================================================================
 
 function ProgressBars({
   count,
@@ -80,15 +50,8 @@ function ProgressBars({
             className="relative flex-1 h-[2px] cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 rounded-full overflow-hidden"
             aria-label={`Go to endorsement ${index + 1}`}
           >
-            {/* Track */}
             <div className="absolute inset-0 bg-primary-200 rounded-full" />
-
-            {/* Filled (past) */}
-            {isPast && (
-              <div className="absolute inset-0 bg-primary-900 rounded-full" />
-            )}
-
-            {/* Active fill */}
+            {isPast && <div className="absolute inset-0 bg-primary-900 rounded-full" />}
             {isActive && (
               prefersReducedMotion ? (
                 <div className="absolute inset-0 bg-primary-900 rounded-full" />
@@ -110,11 +73,11 @@ function ProgressBars({
   );
 }
 
-// ============================================================================
-// COMPONENT
-// ============================================================================
+interface EndorsementShowcaseProps {
+  endorsers: readonly Endorser[];
+}
 
-export default function EndorsementShowcase() {
+export default function EndorsementShowcase({ endorsers }: EndorsementShowcaseProps) {
   const prefersReducedMotion = useReducedMotion();
 
   const {
@@ -126,28 +89,21 @@ export default function EndorsementShowcase() {
     resume,
     isPaused,
   } = useAutoAdvance({
-    itemCount: ENDORSERS.length,
+    itemCount: endorsers.length,
     duration: ADVANCE_DURATION,
     enabled: !prefersReducedMotion,
   });
 
-  const currentEndorser = ENDORSERS[activeIndex];
+  const currentEndorser = endorsers[activeIndex];
 
   return (
     <section id="endorsements" className="bg-surface-warm py-12 md:py-16">
-      <div
-        className="mx-auto max-w-[var(--content-max)]"
-      >
-        {/* Card area */}
+      <div className="mx-auto max-w-[var(--content-max)]">
         <div className="relative overflow-hidden h-[500px] md:h-[550px] lg:h-[600px]">
           <AnimatePresence mode="popLayout">
             <motion.div
               key={activeIndex}
-              initial={
-                prefersReducedMotion
-                  ? { opacity: 0 }
-                  : { x: '100%' }
-              }
+              initial={prefersReducedMotion ? { opacity: 0 } : { x: '100%' }}
               animate={
                 prefersReducedMotion
                   ? { opacity: 1, transition: { duration: 0.2 } }
@@ -167,9 +123,8 @@ export default function EndorsementShowcase() {
           </AnimatePresence>
         </div>
 
-        {/* Progress bars below card */}
         <ProgressBars
-          count={ENDORSERS.length}
+          count={endorsers.length}
           activeIndex={activeIndex}
           animationKey={animationKey}
           duration={ADVANCE_DURATION}

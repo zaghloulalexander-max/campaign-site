@@ -2,23 +2,29 @@ import Hero from '@/app/components/sections/Hero';
 import About from '@/app/components/sections/About';
 import Issues from '@/app/components/sections/Issues';
 import EndorsementShowcase from '@/app/components/sections/EndorsementShowcase';
-import Volunteer from '@/app/components/sections/Volunteer';
 import Donate from '@/app/components/sections/Donate';
+import Volunteer from '@/app/components/sections/Volunteer';
+import { getDictionary, defaultLocale } from '@/app/lib/i18n';
+
+// TODO: When [locale] route segment is added, derive locale from params
+const dict = getDictionary(defaultLocale);
 
 export default function Home() {
   return (
     <>
       <Hero
-        // videoSrc="/hero.mp4"     ← uncomment when video is ready
-        // imageSrc="/hero.jpg"     ← uncomment when photo is ready
+        dict={dict.hero}
+        // videoSrc="/hero.mp4"
+        // imageSrc="/hero.jpg"
       />
-      <About />
-      <Issues />
-      <EndorsementShowcase />
+      <About dict={dict.about} />
+      <Issues dict={dict.issues} />
+      <EndorsementShowcase endorsers={dict.endorsements} />
       <Donate
-        // imageSrc="/community.jpg"  ← uncomment when photo is ready
+        dict={dict.donate}
+        // imageSrc="/community.jpg"
       />
-      <Volunteer />
+      <Volunteer dict={dict.volunteer} modalDict={dict.volunteerModal} />
     </>
   );
 }
