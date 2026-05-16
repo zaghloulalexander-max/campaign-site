@@ -57,7 +57,11 @@ export default function Header({ dict, donateLabel }: HeaderProps) {
     <header
       ref={headerRef}
       className={`fixed top-0 left-0 right-0 z-50 ${
-        showSolidBg ? 'bg-surface/95 backdrop-blur-md border-b border-border shadow-sm' : 'bg-transparent border-b border-transparent'
+        showSolidBg
+          ? 'bg-surface/95 backdrop-blur-md border-b border-border shadow-sm'
+          : hasScrolled && onDark
+          ? 'bg-primary-800/95 backdrop-blur-md border-b border-white/5'
+          : 'bg-transparent border-b border-transparent'
       }`}
       role="banner"
     >

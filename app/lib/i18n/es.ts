@@ -74,9 +74,22 @@ const es: Dictionary = {
     disclaimer: 'Las contribuciones no son deducibles de impuestos. Se aplican las leyes de financiamiento de campañas de Oregon.',
   },
 
-  volunteer: {
-    heading: 'Si cree que el condado puede funcionar mejor, nos gustaría su ayuda.',
-    button: 'Voluntario',
+  signup: {
+    heading: 'Estamos llevando una campaña sostenible. Sin correo basura ni carteles. Le enviaremos algunos correos cuando sea importante.',
+    button: 'Mantenerse Informado',
+    title: 'Mantenerse Informado',
+    emailPlaceholder: 'Correo electrónico',
+    zipPlaceholder: 'Código postal',
+    submit: 'Unirse',
+    thankYou: 'Gracias',
+    thankYouMessage: 'Nos pondremos en contacto cuando sea importante.',
+    volunteerLink: '¿Quiere hacer más? Sea voluntario',
+    closeLabel: 'Cerrar',
+    formLabel: 'Registro de correo electrónico',
+    errors: {
+      invalidEmail: 'Correo electrónico inválido',
+      invalidZip: 'Código postal inválido',
+    },
   },
 
   volunteerModal: {

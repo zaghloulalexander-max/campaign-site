@@ -77,10 +77,23 @@ const en = {
     disclaimer: 'Contributions are not tax-deductible. Oregon campaign finance laws apply.',
   },
 
-  // Volunteer
-  volunteer: {
-    heading: "If you believe the county can work better, we'd like your help.",
-    button: 'Volunteer',
+  // Signup (email capture + volunteer link)
+  signup: {
+    heading: "We're running a sustainable campaign. No mailers or yard signs. We'll send a few emails when it matters.",
+    button: 'Stay Updated',
+    title: 'Stay Updated',
+    emailPlaceholder: 'Email',
+    zipPlaceholder: 'Zip code',
+    submit: 'Join',
+    thankYou: 'Thank you',
+    thankYouMessage: "We'll be in touch when it matters.",
+    volunteerLink: 'Want to do more? Volunteer',
+    closeLabel: 'Close modal',
+    formLabel: 'Email signup',
+    errors: {
+      invalidEmail: 'Invalid email',
+      invalidZip: 'Invalid zip code',
+    },
   },
 
   // Volunteer Modal
@@ -142,7 +155,20 @@ export interface Dictionary {
   issues: readonly { title: string; body: string }[];
   endorsements: readonly { id: string; name: string; title: string; quote: string; imageSrc?: string }[];
   donate: { heading: string; button: string; disclaimer: string };
-  volunteer: { heading: string; button: string };
+  signup: {
+    heading: string;
+    button: string;
+    title: string;
+    emailPlaceholder: string;
+    zipPlaceholder: string;
+    submit: string;
+    thankYou: string;
+    thankYouMessage: string;
+    volunteerLink: string;
+    closeLabel: string;
+    formLabel: string;
+    errors: { invalidEmail: string; invalidZip: string };
+  };
   volunteerModal: {
     title: string;
     firstName: string;

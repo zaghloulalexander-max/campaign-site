@@ -3,7 +3,7 @@ import About from '@/app/components/sections/About';
 import Issues from '@/app/components/sections/Issues';
 import EndorsementShowcase from '@/app/components/sections/EndorsementShowcase';
 import Donate from '@/app/components/sections/Donate';
-import Volunteer from '@/app/components/sections/Volunteer';
+import Signup from '@/app/components/sections/Signup';
 import { getDictionary, defaultLocale } from '@/app/lib/i18n';
 
 // TODO: When [locale] route segment is added, derive locale from params
@@ -24,7 +24,7 @@ export default function Home() {
         dict={dict.donate}
         // imageSrc="/community.jpg"
       />
-      <Volunteer dict={dict.volunteer} modalDict={dict.volunteerModal} />
+      <Signup dict={dict.signup} volunteerModalDict={dict.volunteerModal} />
     </>
   );
 }
