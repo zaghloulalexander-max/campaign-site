@@ -1,4 +1,5 @@
-import type { ButtonHTMLAttributes, ReactNode } from 'react';
+import type { ButtonHTMLAttributes, ReactNode, ComponentType } from 'react';
+import { CloseIcon, ArrowIcon, ChevronIcon, MenuIcon, type IconProps } from '@/app/components/ui/icons';
 
 // ============================================================================
 // TYPES
@@ -6,11 +7,28 @@ import type { ButtonHTMLAttributes, ReactNode } from 'react';
 
 export type IconButtonSize = 'sm' | 'md' | 'lg';
 
+export type IconButtonIcon = 'close' | 'arrow' | 'chevron' | 'menu';
+
 export interface IconButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  /** Icon element to render, or 'close' for default X icon */
-  icon?: 'close' | ReactNode;
+  /** Named icon or custom ReactNode */
+  icon?: IconButtonIcon | ReactNode;
   size?: IconButtonSize;
   className?: string;
+}
+
+// ============================================================================
+// ICON REGISTRY
+// ============================================================================
+
+const iconComponents: Record<IconButtonIcon, ComponentType<IconProps>> = {
+  close: CloseIcon,
+  arrow: ArrowIcon,
+  chevron: ChevronIcon,
+  menu: MenuIcon,
+};
+
+function isIconName(value: unknown): value is IconButtonIcon {
+  return typeof value === 'string' && value in iconComponents;
 }
 
 // ============================================================================
@@ -23,15 +41,17 @@ const sizeClasses: Record<IconButtonSize, string> = {
   lg: 'p-2.5',
 };
 
-const iconSizeClasses: Record<IconButtonSize, string> = {
-  sm: 'w-4 h-4',
-  md: 'w-5 h-5',
-  lg: 'w-6 h-6',
-};
-
 // ============================================================================
 // COMPONENT
 // ============================================================================
+
+function ResolvedIcon({ icon, size }: { icon: IconButtonIcon | ReactNode; size: IconButtonSize }) {
+  if (isIconName(icon)) {
+    const Component = iconComponents[icon];
+    return <Component size={size} />;
+  }
+  return <>{icon}</>;
+}
 
 export default function IconButton({
   icon = 'close',
@@ -39,28 +59,6 @@ export default function IconButton({
   className = '',
   ...props
 }: IconButtonProps) {
-  const renderIcon = () => {
-    if (icon === 'close') {
-      return (
-        <svg
-          className={iconSizeClasses[size]}
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M6 18L18 6M6 6l12 12"
-          />
-        </svg>
-      );
-    }
-    return icon;
-  };
-
   return (
     <button
       type="button"
@@ -77,7 +75,7 @@ export default function IconButton({
       ].filter(Boolean).join(' ')}
       {...props}
     >
-      {renderIcon()}
+      <ResolvedIcon icon={icon} size={size} />
     </button>
   );
 }

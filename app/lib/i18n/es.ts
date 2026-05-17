@@ -20,32 +20,45 @@ const es: Dictionary = {
     ],
   },
 
-  issues: [
-    {
-      title: 'Personas sin Hogar y Servicios',
-      body: '[Traducción pendiente]',
-    },
-    {
-      title: 'Seguridad Pública',
-      body: '[Traducción pendiente]',
-    },
-    {
-      title: 'Vivienda y Asequibilidad',
-      body: '[Traducción pendiente]',
-    },
-    {
-      title: 'Responsabilidad Fiscal',
-      body: '[Traducción pendiente]',
-    },
-    {
-      title: 'Salud Mental',
-      body: '[Traducción pendiente]',
-    },
-    {
-      title: 'Operaciones del Condado',
-      body: '[Traducción pendiente]',
-    },
-  ],
+  issues: {
+    question: '¿Qué hace un comisionado del condado de Multnomah?',
+    questionHref: '/issues/county-commissioner',
+    answer: '[Traducción pendiente]',
+    heading: 'Temas',
+    leadIn: '[Traducción pendiente]',
+    framework: [
+      {
+        title: 'Responsabilidad',
+        description: '[Traducción pendiente]',
+      },
+      {
+        title: 'Servicios eficaces',
+        description: '[Traducción pendiente]',
+      },
+      {
+        title: 'Transparencia fiscal',
+        description: '[Traducción pendiente]',
+      },
+    ],
+    items: [
+      {
+        title: 'Personas sin hogar y salud conductual',
+        body: '[Traducción pendiente]',
+        href: '/issues/homelessness',
+      },
+      {
+        title: 'Vivienda y costo de vida',
+        body: '[Traducción pendiente]',
+        href: '/issues/housing',
+      },
+      {
+        title: 'Seguridad pública',
+        body: '[Traducción pendiente]',
+        href: '/issues/public-safety',
+      },
+    ],
+    keepReading: 'Seguir leyendo',
+  },
 
   endorsements: [
     {
@@ -125,6 +138,11 @@ const es: Dictionary = {
   },
 
   footer: {
+    issuesLabel: 'Temas',
+    involvedLabel: 'Participe',
+    volunteerLink: 'Voluntario',
+    internshipsLink: 'Pasantías',
+    donateLink: 'Donar',
     privacyLink: 'Política de Privacidad',
     contactLink: 'Contacto',
   },

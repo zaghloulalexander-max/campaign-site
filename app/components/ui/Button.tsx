@@ -1,4 +1,6 @@
 import type { ButtonHTMLAttributes, AnchorHTMLAttributes, ReactNode } from 'react';
+import Link from 'next/link';
+import { ArrowIcon, ChevronIcon, SpinnerIcon } from '@/app/components/ui/icons';
 
 // ============================================================================
 // TYPES
@@ -67,24 +69,16 @@ const sizeClasses: Record<ButtonSize, string> = {
 
 const AnimatedIconSvg: Record<AnimatedIcon, ReactNode> = {
   arrow: (
-    <svg
-      className="w-4 h-4 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 ease-out motion-reduce:transition-none"
-      viewBox="0 0 16 16"
-      fill="none"
-      aria-hidden="true"
-    >
-      <path d="M2 8H11M8 4L12 8L8 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
+    <ArrowIcon
+      size="sm"
+      className="opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 ease-out motion-reduce:transition-none"
+    />
   ),
   chevron: (
-    <svg
-      className="w-4 h-4 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 ease-out motion-reduce:transition-none"
-      viewBox="0 0 16 16"
-      fill="none"
-      aria-hidden="true"
-    >
-      <path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
+    <ChevronIcon
+      size="sm"
+      className="opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 ease-out motion-reduce:transition-none"
+    />
   ),
 };
 
@@ -130,10 +124,7 @@ export default function Button({
       {animatedIcon && !loading && AnimatedIconSvg[animatedIcon]}
       {loading && (
         <span className="absolute inset-0 flex items-center justify-center" aria-label="Loading">
-          <svg className="w-5 h-5 animate-spin" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="3" />
-            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-          </svg>
+          <SpinnerIcon size="md" />
         </span>
       )}
     </span>
@@ -141,6 +132,16 @@ export default function Button({
 
   if (as === 'a') {
     const { href, ...anchorRest } = props as Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'href'> & { href: string };
+    const isInternal = href.startsWith('/') && !href.startsWith('//');
+
+    if (isInternal) {
+      return (
+        <Link href={href} className={classes} {...anchorRest}>
+          {content}
+        </Link>
+      );
+    }
+
     return (
       <a href={href} className={classes} {...anchorRest}>
         {content}

@@ -22,7 +22,7 @@ export default function Home() {
       <EndorsementShowcase endorsers={dict.endorsements} />
       <Donate
         dict={dict.donate}
-        // imageSrc="/community.jpg"
+        imageSrc="/images/donate-bg.jpg"
       />
       <Signup dict={dict.signup} volunteerModalDict={dict.volunteerModal} />
     </>

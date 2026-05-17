@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import IconButton from '@/app/components/ui/IconButton';
 import type { Dictionary } from '@/app/lib/i18n';
 
@@ -32,9 +33,9 @@ export default function CookieBanner({ dict }: CookieBannerProps) {
       <div className="mx-auto px-4 py-2 flex items-center justify-between gap-4">
         <p className="text-[11px] text-text-subtle">
           {dict.message}{' '}
-          <a href="/privacy" className="underline hover:text-text transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 rounded">
+          <Link href="/privacy" className="underline hover:text-text transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 rounded">
             {dict.privacyLink}
-          </a>
+          </Link>
         </p>
         <IconButton icon="close" size="sm" onClick={dismiss} aria-label={dict.dismissLabel} />
       </div>

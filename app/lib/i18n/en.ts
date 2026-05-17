@@ -20,33 +20,46 @@ const en = {
     ],
   },
 
-  // Issues
-  issues: [
-    {
-      title: 'Homelessness & Services',
-      body: 'Soluta nobis eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus. Temporibus autem quibusdam et aut officiis debitis rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint.',
-    },
-    {
-      title: 'Public Safety',
-      body: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.',
-    },
-    {
-      title: 'Housing & Affordability',
-      body: 'Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse.',
-    },
-    {
-      title: 'Fiscal Accountability',
-      body: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi.',
-    },
-    {
-      title: 'Behavioral Health',
-      body: 'Nam libero tempore cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est.',
-    },
-    {
-      title: 'County Operations',
-      body: 'Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.',
-    },
-  ],
+  // Issues — Educational intro + heading + framework + teasers
+  issues: {
+    question: 'What does a Multnomah County commissioner do?',
+    questionHref: '/issues/county-commissioner',
+    answer: 'The county manages a $3.9 billion annual budget across homeless services, behavioral health, public safety, and operations serving over 800,000 residents.',
+    heading: 'Issues',
+    leadIn: "After 32 years inside county government, here's how I see the work ahead.",
+    framework: [
+      {
+        title: 'Accountability',
+        description: 'Every dollar and every program measured by outcomes, not intentions.',
+      },
+      {
+        title: 'Effective services',
+        description: "County programs that actually reach the people they're designed for — reliably and without waste.",
+      },
+      {
+        title: 'Fiscal transparency',
+        description: 'Residents can follow their tax dollars from budget line to service delivered.',
+      },
+    ],
+    items: [
+      {
+        title: 'Homelessness & behavioral health',
+        body: "The county spent $247 million on homeless services last year. I've seen where that money goes — and where it gets lost between agencies, contracts, and good intentions.",
+        href: '/issues/homelessness',
+      },
+      {
+        title: 'Housing & cost of living',
+        body: "Portland's housing crisis isn't just about building more units. It's about why the units we fund take four years and cost twice what they should.",
+        href: '/issues/housing',
+      },
+      {
+        title: 'Public safety',
+        body: "The county's role in public safety isn't policing — it's the justice system, crisis response, and reentry programs that determine whether people cycle through or find a way out.",
+        href: '/issues/public-safety',
+      },
+    ],
+    keepReading: 'Keep reading',
+  },
 
   // Endorsements
   endorsements: [
@@ -133,6 +146,11 @@ const en = {
 
   // Footer
   footer: {
+    issuesLabel: 'Issues',
+    involvedLabel: 'Get Involved',
+    volunteerLink: 'Volunteer',
+    internshipsLink: 'Internships',
+    donateLink: 'Donate',
     privacyLink: 'Privacy Policy',
     contactLink: 'Contact',
   },
@@ -152,7 +170,16 @@ export default en;
 export interface Dictionary {
   hero: { office: string };
   about: { photoAlt: string; paragraphs: readonly string[] };
-  issues: readonly { title: string; body: string }[];
+  issues: {
+    question: string;
+    questionHref: string;
+    answer: string;
+    heading: string;
+    leadIn: string;
+    framework: readonly { title: string; description: string }[];
+    items: readonly { title: string; body: string; href: string }[];
+    keepReading: string;
+  };
   endorsements: readonly { id: string; name: string; title: string; quote: string; imageSrc?: string }[];
   donate: { heading: string; button: string; disclaimer: string };
   signup: {
@@ -184,6 +211,14 @@ export interface Dictionary {
   };
   cookie: { message: string; privacyLink: string; dismissLabel: string; regionLabel: string };
   header: { homeLabel: string; district: string; menuOpen: string; menuClose: string };
-  footer: { privacyLink: string; contactLink: string };
+  footer: {
+    issuesLabel: string;
+    involvedLabel: string;
+    volunteerLink: string;
+    internshipsLink: string;
+    donateLink: string;
+    privacyLink: string;
+    contactLink: string;
+  };
   notFound: { code: string; title: string; message: string; backHome: string };
 }

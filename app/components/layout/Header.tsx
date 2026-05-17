@@ -2,8 +2,10 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 import { siteConfig } from '@/app/lib/config';
 import Button from '@/app/components/ui/Button';
+import { MenuIcon, CloseIcon } from '@/app/components/ui/icons';
 import type { Dictionary } from '@/app/lib/i18n';
 
 const DARK_SECTION_IDS = ['hero', 'donate'];
@@ -23,6 +25,8 @@ export default function Header({ dict, donateLabel }: HeaderProps) {
   const [hasScrolled, setHasScrolled] = useState(false);
   const headerRef = useRef<HTMLElement>(null);
   const lastScrollY = useRef(0);
+
+  const rafId = useRef(0);
 
   const checkBackground = useCallback(() => {
     if (!isLanding) { setOnDark(false); setHasScrolled(true); return; }
@@ -44,12 +48,21 @@ export default function Header({ dict, donateLabel }: HeaderProps) {
     setHasScrolled(currentScrollY > 5);
   }, [isLanding]);
 
+  const onScrollOrResize = useCallback(() => {
+    cancelAnimationFrame(rafId.current);
+    rafId.current = requestAnimationFrame(checkBackground);
+  }, [checkBackground]);
+
   useEffect(() => {
     checkBackground();
-    window.addEventListener('scroll', checkBackground, { passive: true });
-    window.addEventListener('resize', checkBackground, { passive: true });
-    return () => { window.removeEventListener('scroll', checkBackground); window.removeEventListener('resize', checkBackground); };
-  }, [checkBackground]);
+    window.addEventListener('scroll', onScrollOrResize, { passive: true });
+    window.addEventListener('resize', onScrollOrResize, { passive: true });
+    return () => {
+      cancelAnimationFrame(rafId.current);
+      window.removeEventListener('scroll', onScrollOrResize);
+      window.removeEventListener('resize', onScrollOrResize);
+    };
+  }, [checkBackground, onScrollOrResize]);
 
   const showSolidBg = !onDark && hasScrolled;
 
@@ -66,7 +79,7 @@ export default function Header({ dict, donateLabel }: HeaderProps) {
       role="banner"
     >
       <div className="px-6 md:px-8 lg:px-10 flex items-center justify-between h-16 md:h-[72px]" style={{ marginRight: 'var(--scrollbar-width, 0px)' }}>
-        <a
+        <Link
           href="/"
           className={`flex items-baseline gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 rounded transition-colors duration-200 ${
             onDark ? 'text-white/40' : 'text-primary-700'
@@ -75,7 +88,7 @@ export default function Header({ dict, donateLabel }: HeaderProps) {
         >
           <span className="text-xl md:text-2xl font-medium tracking-tight">{siteConfig.candidate.firstName}</span>
           <span className={`text-xs md:text-sm font-normal ${onDark ? 'text-white/25' : 'text-text-subtle'}`}>{dict.district}</span>
-        </a>
+        </Link>
 
         {isLanding && (
           <nav className="hidden md:flex items-center gap-8" aria-label="Main navigation" onMouseLeave={() => setHoveredLink(null)}>
@@ -107,9 +120,7 @@ export default function Header({ dict, donateLabel }: HeaderProps) {
             aria-expanded={mobileOpen}
             aria-controls="mobile-nav"
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-              {mobileOpen ? <path d="M18 6L6 18M6 6l12 12" strokeLinecap="round" /> : <path d="M4 6h16M4 12h16M4 18h16" strokeLinecap="round" />}
-            </svg>
+            {mobileOpen ? <CloseIcon size="lg" /> : <MenuIcon size="lg" />}
           </button>
         )}
       </div>

@@ -41,6 +41,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://secure.actblue.com" />
+      </head>
       <body className={`${inter.variable} ${libreBaskerville.variable} antialiased`}>
         {/* Skip to main content — keyboard accessibility */}
         <a

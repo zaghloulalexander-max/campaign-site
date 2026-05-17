@@ -13,7 +13,7 @@ export default function CampaignLayout({ children }: { children: ReactNode }) {
     <ModalStackProvider>
       <Header dict={dict.header} donateLabel={dict.donate.button} />
       <main id="main">{children}</main>
-      <Footer dict={dict.footer} />
+      <Footer dict={dict.footer} issues={dict.issues.items} />
       <CookieBanner dict={dict.cookie} />
     </ModalStackProvider>
   );

@@ -1,11 +1,13 @@
 'use client';
 
 import { useState } from 'react';
+import dynamic from 'next/dynamic';
 import Section from '@/app/components/ui/Section';
 import Button from '@/app/components/ui/Button';
-import SignupModal from '@/app/components/sections/SignupModal';
-import VolunteerModal from '@/app/components/sections/VolunteerModal';
 import type { Dictionary } from '@/app/lib/i18n';
+
+const SignupModal = dynamic(() => import('@/app/components/sections/SignupModal'), { ssr: false });
+const VolunteerModal = dynamic(() => import('@/app/components/sections/VolunteerModal'), { ssr: false });
 
 // ============================================================================
 // TYPES

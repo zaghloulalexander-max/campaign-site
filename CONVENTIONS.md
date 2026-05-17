@@ -5,8 +5,39 @@
 - **Next.js 15 App Router** with route groups
 - `(campaign)/` group wraps all pages with shared Header, Footer, CookieBanner, and ModalStackProvider via `layout.tsx`
 - Privacy page lives inside the campaign group at `(campaign)/privacy/`
+- Issue pages live at `(campaign)/issues/[slug]/` using ArticlePage layout
+- Educational pages (county-commissioner) use the same ArticlePage layout
 - Root `layout.tsx` handles fonts, metadata, skip-to-content link, favicon, `<html>/<body>` only
 - `app/not-found.tsx` handles 404s globally
+- `app/error.tsx` provides branded error boundary with retry
+- `app/loading.tsx` provides spinner during client-side page transitions
+
+## Routing & Navigation
+
+- **Internal links use `next/link`** — never plain `<a>` tags for internal routes
+- External links (ActBlue, social media, mailto) use plain `<a>` tags
+- Hash-only links (`#about`, `#issues`, etc.) use plain `<a>` tags — `next/link` doesn't add value for same-page anchors
+- `Button` component auto-detects internal vs external hrefs when `as="a"` — renders `Link` for paths starting with `/`, plain `<a>` otherwise
+- Header nav links are hash anchors (landing page only) — stay as `<a>` tags
+- Footer links to issue pages, privacy, and home use `Link`
+
+## Images
+
+- **Article/issue page hero images use `next/image`** with optimized dimensions, `sizes` attribute, and `priority` flag
+- Container has `bg-surface-muted` background as loading fallback
+- Hero and Donate section background images use CSS `backgroundImage` (cannot use `next/image`)
+- SVGs (favicon, district map) use plain `<img>` — `next/image` doesn't optimize SVGs
+- Next config has AVIF and WebP formats enabled
+
+## Icons
+
+- All SVG icons live in `components/ui/icons/` as individual components
+- `IconBase` provides shared SVG wrapper (24×24 viewBox, stroke-based, currentColor, aria-hidden)
+- Icons include `shrink-0` to prevent compression in flex containers
+- `SpinnerIcon` is standalone (fill-based, animated) — does not extend IconBase
+- `index.ts` barrel exports all icons and types
+- `IconButton` uses a registry pattern with type guard for named icons
+- No inline SVGs in components except Footer social brand icons (data-driven fill paths)
 
 ## i18n
 
@@ -21,10 +52,17 @@
 ## Components
 
 - `components/ui/` — Reusable primitives (Button, Card, Section, Modal, Input, IconButton, ProgressTabs, CookieBanner). No business logic.
-- `components/layout/` — Structural (Header, Footer). Config-driven via `lib/config.ts`, i18n via dict props.
+- `components/ui/icons/` — SVG icon components (IconBase, ArrowIcon, ChevronIcon, CloseIcon, MenuIcon, SpinnerIcon) with barrel export.
+- `components/layout/` — Structural (Header, Footer, ArticlePage, ReadMore). Config-driven via `lib/config.ts`, i18n via dict props.
 - `components/sections/` — Page-level blocks (Hero, About, Issues, EndorsementShowcase, EndorsementCard, Donate, Signup, SignupModal, VolunteerModal). Each is self-contained.
 - `contexts/` — ModalStackContext for modal z-index management and scroll locking.
 - `hooks/` — useAutoAdvance (endorsement carousel), useMediaQuery / useIsTouchDevice (input autofocus).
+
+### Server vs Client Components
+- Pages are server components — no `'use client'` directive
+- Interactive components are client components: Header, Modal, CookieBanner, EndorsementShowcase, Signup, SignupModal, VolunteerModal, ProgressTabs, Input
+- Static sections are server components: Hero, About, Issues, Donate, EndorsementCard, ArticlePage, ReadMore, Footer
+- This split minimizes client JavaScript — static content ships zero JS
 
 ## Design Tokens
 
@@ -36,7 +74,8 @@
 
 ## Button
 
-- Polymorphic: renders as `<button>` or `<a>` via `as` prop
+- Polymorphic: renders as `<button>`, `<a>`, or `<Link>` via `as` prop
+- When `as="a"`: auto-detects internal hrefs (starting with `/`) and renders `next/link`, external hrefs render plain `<a>`
 - Variants: `primary` (charcoal, for light backgrounds), `secondary` (warm white, for dark backgrounds), `outline`, `ghost`, `link`
 - Sizes: `sm` (header), `md` (sections), `lg` (available)
 - Supports: `loading`, `disabled`, `fullWidth`, `iconOnly`, `animatedIcon`
@@ -110,14 +149,17 @@
 ## TODO — Requires Content or Decisions
 
 ### Content Needed
-- Hero b-roll video of District 2 (environmental, no candidate — streets, bridges, neighborhoods)
+- Hero b-roll video of District 2 (3-4 clips, 3-4 seconds each, landscape, 4K source, export 1080p for web)
+- Hero poster image (frame grab from best clip)
+- Donate section street sign photo (MLK & Fremont or similar District 2 intersection, landscape, shot from below)
 - About section headshot/portrait
-- Donate section community photo (full-width with dark overlay)
 - Endorser headshots (square format)
 - About section copy (2-3 paragraphs, personal, not a resume)
-- Issue positions (real copy to replace Latin placeholders — should read like briefings)
+- Issue page content (replace placeholder copy — homelessness, housing, public safety)
+- Issue page illustrations (ink style matching county-commissioner illustration)
 - Endorsement quotes (real quotes from real people)
 - Signup section heading copy (current is placeholder)
+- Framework lead-in copy (left column of Issues section — Nabil should write)
 
 ### Configuration Needed
 - ActBlue donation URL → update `config.ts` donateUrl
@@ -125,19 +167,37 @@
 - Campaign committee legal name → confirm disclaimer text
 - Domain → update `config.ts` meta.url
 
-### Technical Wiring
-- SignupModal form → connect to Resend API route
-- VolunteerModal form → connect to Resend API route
-- QR code with UTM parameters for cards (utm_source=card&utm_medium=qr&utm_campaign=canvass)
-- OG image → design and add to `/public` + metadata
-- Favicon → verify SVG renders correctly across browsers
-- Google Analytics / Vercel Analytics → set up for UTM tracking
+### Technical — Do Now
+- [x] ~~Dynamic import modals (SignupModal, VolunteerModal) to defer framer-motion bundle~~
+- [x] ~~Throttle Header scroll listener with requestAnimationFrame~~
+- [x] ~~Add preconnect hint for ActBlue domain~~
+- [x] ~~Migrate all internal links to `next/link`~~
+- [x] ~~Add `next/image` to ArticlePage hero with optimized dimensions and loading fallback~~
+- [x] ~~Add `app/error.tsx` error boundary~~
+- [x] ~~Add `app/loading.tsx` loading state~~
+- [x] ~~Button component auto-detect internal vs external hrefs~~
+- [ ] Fix endorsement carousel mobile responsiveness — absolute positioning clips stacked content on small screens
+- [ ] Redesign mobile menu — current inline dropdown needs to be replaced (reference Fayra Drawer pattern)
+- [ ] Simplify county commissioner S3 ("What the county is responsible for") — discussed but not finalized
+
+### Technical — Before Launch
+- [ ] Add `app/sitemap.ts` covering all pages
+- [ ] Add `app/robots.ts`
+- [ ] Add OG image to root metadata and per-page metadata
+- [ ] Add `favicon.ico` fallback
+- [ ] Create or source `/district-map.svg` (referenced in Hero.tsx fallback)
+- [ ] Implement analytics (provider TBD)
+- [ ] SignupModal form → connect to Resend API route
+- [ ] VolunteerModal form → connect to Resend API route
+- [ ] QR code with UTM parameters for palm cards
+- [ ] Refactor campaign layout dict when `[locale]` route segment is added
+- [ ] Darken donate section overlay (currently 70%, needs ~80-85%) once real photo is in place
 
 ### Future
 - **Spanish translations** — professional translation of finalized English content into `es.ts`
 - **[locale] route segment** — activate when Spanish is ready
-- **Issue pages** — standalone pages expanding each issue from the landing page
-- **Blog/writing section** — explainer posts (how county government works, campaign finance, etc.)
+- **Blog/writing section** — explainer posts
 - **About the Campaign page** — zero-waste philosophy, intern program, lean budget approach
 - **Events page** — add when campaign is running regular public events
+- **Standalone volunteer/internship pages** — when content and forms are ready
 - **Mobile testing** — verify all sections, modals, header behavior on actual devices
