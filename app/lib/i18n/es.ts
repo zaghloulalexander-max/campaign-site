@@ -26,20 +26,8 @@ const es: Dictionary = {
     answer: '[Traducción pendiente]',
     heading: 'Temas',
     leadIn: '[Traducción pendiente]',
-    framework: [
-      {
-        title: 'Responsabilidad',
-        description: '[Traducción pendiente]',
-      },
-      {
-        title: 'Servicios eficaces',
-        description: '[Traducción pendiente]',
-      },
-      {
-        title: 'Transparencia fiscal',
-        description: '[Traducción pendiente]',
-      },
-    ],
+    leadInBody: '[Traducción pendiente]',
+    framework: [],
     items: [
       {
         title: 'Personas sin hogar y salud conductual',
@@ -88,8 +76,9 @@ const es: Dictionary = {
   },
 
   signup: {
-    heading: 'Estamos llevando una campaña sostenible. Sin correo basura ni carteles. Le enviaremos algunos correos cuando sea importante.',
-    button: 'Mantenerse Informado',
+    heading: '[Traducción pendiente]',
+    headingBody: '[Traducción pendiente]',
+    button: 'Recordarme',
     title: 'Mantenerse Informado',
     emailPlaceholder: 'Correo electrónico',
     zipPlaceholder: 'Código postal',
