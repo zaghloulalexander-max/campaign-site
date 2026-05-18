@@ -146,6 +146,87 @@
 
 ---
 
+## Issue Pages — Writing Conventions
+
+### Voice
+First person, insider. The narrator is someone who has worked inside the system and is explaining it to a smart neighbor who doesn't know how county government works. Not academic, not campaign-speak, not policy memo. Direct, specific, plainspoken.
+
+### Authority
+Authority comes from specificity. Name the department. Name the program. Use the real number. Every claim should make the reader think "this person has actually seen the spreadsheet."
+
+### Structure
+Each issue follows the same arc:
+
+1. **What the county actually runs** — the specific departments, budget, and systems the commissioner has authority over
+2. **How the money flows** — where it goes, who delivers services, the chain from budget line to person served
+3. **Where it breaks down** — the specific failures, gaps, and inefficiencies an insider has seen
+4. **What would change it** — concrete, operational proposals grounded in experience — not promises, mechanisms
+5. **How you'd know it's working** — the accountability close: measurable outcomes, what gets tracked, what contracts should require
+
+Sections don't need headers that match those words exactly, but the reader should move through that progression naturally.
+
+### First Person
+Personal experience isn't separated from the analysis — it's woven in as the basis for knowing what works and what doesn't. "I ran this program" is evidence, not autobiography. The whole piece is told from inside. Every section should have at least one moment where the reader thinks "this person was in the room."
+
+### Proposals
+Every proposal needs a mechanism. Not "I support affordable housing" but "master lease agreements give landlords guaranteed rent and tenants stability — the county should be funding 500 of them." The reader should be able to picture how it would actually work.
+
+### Accountability
+Every page closes with accountability. What gets measured, what contracts should require, how the public would know if it's working. This is the framework's throughline — it should feel inevitable by the end of each piece, not tacked on.
+
+### Tone
+Confident without being self-promotional. Critical without being cynical. He's not running against the county — he's someone who knows it well enough to fix what's broken.
+
+### Length
+800–1200 words per issue. Enough to demonstrate depth, short enough to read on a phone from a QR code scan.
+
+### What These Pages Are Not
+Platform documents, listicles of positions, policy white papers, or personal essays. They're briefings from someone who's been inside the system, written for voters who want to understand what's actually happening with their money.
+
+### Issue Topics
+Three core issues, each written through the accountability framework:
+
+- **Homelessness** — the $310M Homeless Services Department, shelter-to-housing pipeline, landlord partnerships, prevention vs. response
+- **Behavioral health** — the Health Department's $531M budget, crisis response, fentanyl/Measure 110 fallout, the Behavioral Health Resource Center, the gap between need and capacity
+- **Public safety** — Sheriff's Office, jails, DA, Department of Community Justice, crisis deflection, reentry and stabilization
+
+Cost of living is not a separate issue — it's the context that runs through all three. The framework pillars (accountability, effective services, fiscal transparency) connect them.
+
+---
+
+## Illustrations
+
+### Style
+All page illustrations use the same hand-drawn ink style: loose, gestural black ink strokes on a muted colored background. Simplified and slightly playful, not architecturally precise. Subjects should be recognizable but stylized, with organic flowing linework suggesting forms rather than depicting every detail. No text, no people, no faces. Aspect ratio 2:1 horizontal to match the `ArticlePage` hero image slot.
+
+Always include photo references of the actual subject alongside the style prompt. Without references, the model will generate generic buildings or scenes that don't look like real places.
+
+### Color system
+Each page gets a distinct muted background color. All colors should sit comfortably against the site's warm ivory (`#fffef9`) and charcoal palette.
+
+- **County commissioner**: muted lavender-gray (current)
+- **Homelessness**: warm teal
+- **Behavioral health**: warm amber / muted gold
+- **Public safety**: warm slate / muted steel blue
+
+### Base prompt template
+"A loose, hand-drawn ink illustration of [SUBJECT AND LOCATION]. Render it in an abstract, sketchy style with organic flowing black ink lines on a [COLOR] background. Simplified and slightly playful, not architecturally precise. [SUBJECT] should be recognizable but stylized, with loose gestural strokes suggesting [DETAILS] rather than depicting every detail. No text, no people. Aspect ratio 2:1, horizontal."
+
+### County commissioner prompt (reference)
+"A loose, hand-drawn ink illustration of the Multnomah County Building at 501 SE Hawthorne Boulevard in Portland, Oregon. The building is a mid-century modernist government building, rectangular with a grid of windows and a flat roof. Render it in an abstract, sketchy style with organic flowing black ink lines on a muted lavender-gray background. Simplified and slightly playful, not architecturally precise. The building should be recognizable but stylized, with loose gestural strokes suggesting the facade rather than depicting every detail. No text, no people. Aspect ratio 2:1, horizontal."
+
+### Homelessness prompt
+"A loose, hand-drawn ink illustration of two modest Portland, Oregon homes viewed from the sidewalk. A Tudor-style cottage with a steep gable roof and brick chimney on the left, a smaller gabled house partially hidden by trees on the right. Mature street trees in the foreground, power lines overhead. Render it in an abstract, sketchy style with organic flowing black ink lines on a warm teal background. Simplified and slightly playful, not architecturally precise. The homes should be recognizable but stylized, with loose gestural strokes suggesting the forms rather than depicting every detail. No text, no people. Aspect ratio 2:1, horizontal."
+
+Reference images: photo of the actual houses (Hollywood neighborhood, NE Portland) + the county commissioner illustration for style consistency. No subject reference needed for generic residential scenes, but always include the commissioner illustration as a style reference.
+
+Note: the current teal is slightly cool and saturated against the site's warm ivory palette. A future regeneration should use a warmer, more muted teal. The aspect ratio also runs slightly taller than 2:1, so `next/image` crops the top and bottom. Regenerate at true 2:1 for the final version.
+
+### Behavioral health and public safety prompts (TBD)
+Subjects for these two illustrations have not been decided. They should be recognizable District 2 or Multnomah County locations relevant to each topic, not abstract concepts. The commissioner page works because it illustrates a real, specific building. The issue pages should follow the same approach.
+
+---
+
 ## TODO — Requires Content or Decisions
 
 ### Content Needed
@@ -155,7 +236,7 @@
 - About section headshot/portrait
 - Endorser headshots (square format)
 - About section copy (2-3 paragraphs, personal, not a resume)
-- Issue page content (replace placeholder copy — homelessness, housing, public safety)
+- Issue page content (replace placeholder copy — homelessness, behavioral health, public safety)
 - Issue page illustrations (ink style matching county-commissioner illustration)
 - Endorsement quotes (real quotes from real people)
 - Signup section heading copy (current is placeholder)

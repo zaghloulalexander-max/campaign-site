@@ -29,10 +29,15 @@ export default function Signup({ dict, volunteerModalDict }: SignupProps) {
   return (
     <>
       <Section id="signup" background="default">
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+        <div className="max-w-3xl">
+          <p className="text-lg md:text-xl text-text-muted leading-relaxed">
+            {dict.heading}
+          </p>
+        </div>
+        <div className="mt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
           <div className="max-w-xl">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-normal text-text leading-snug">
-              {dict.heading}
+              {dict.headingBody}
             </h2>
             <button
               type="button"

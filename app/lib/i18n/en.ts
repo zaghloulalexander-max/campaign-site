@@ -26,25 +26,13 @@ const en = {
     questionHref: '/issues/county-commissioner',
     answer: 'The county manages a $3.9 billion annual budget across homeless services, behavioral health, public safety, and operations serving over 800,000 residents.',
     heading: 'Issues',
-    leadIn: "After 32 years inside county government, here's how I see the work ahead.",
-    framework: [
-      {
-        title: 'Accountability',
-        description: 'Every dollar and every program measured by outcomes, not intentions.',
-      },
-      {
-        title: 'Effective services',
-        description: "County programs that actually reach the people they're designed for — reliably and without waste.",
-      },
-      {
-        title: 'Fiscal transparency',
-        description: 'Residents can follow their tax dollars from budget line to service delivered.',
-      },
-    ],
+    leadIn: "After 32 years inside county government, I've worked directly in the systems that deliver homeless services, behavioral health, and public safety to Multnomah County residents.",
+    leadInBody: "My approach is built around accountability. When programs are measured by outcomes, you learn where the money is working and where it isn't. When that information is transparent, the public can see it too. The goal is simple: better results for every tax dollar collected.",
+    framework: [],
     items: [
       {
-        title: 'Homelessness & behavioral health',
-        body: "The county spent $247 million on homeless services last year. I've seen where that money goes — and where it gets lost between agencies, contracts, and good intentions.",
+        title: 'Homelessness',
+        body: "The county's Homeless Services Department has a $310 million budget. Most of the programs it funds measure how many people they serve, not whether those people stay housed.",
         href: '/issues/homelessness',
       },
       {
@@ -92,14 +80,15 @@ const en = {
 
   // Signup (email capture + volunteer link)
   signup: {
-    heading: "We're running a sustainable campaign. No mailers or yard signs. We'll send a few emails when it matters.",
-    button: 'Stay Updated',
-    title: 'Stay Updated',
+    heading: 'Campaigns send mailers and plant yard signs to remind you an election is happening.',
+    headingBody: "We'd rather just email you.",
+    button: 'Remind Me',
+    title: 'Remind Me',
     emailPlaceholder: 'Email',
     zipPlaceholder: 'Zip code',
-    submit: 'Join',
+    submit: 'Submit',
     thankYou: 'Thank you',
-    thankYouMessage: "We'll be in touch when it matters.",
+    thankYouMessage: "We'll email you when the voters' pamphlet and your ballot are on the way.",
     volunteerLink: 'Want to do more? Volunteer',
     closeLabel: 'Close modal',
     formLabel: 'Email signup',
@@ -176,6 +165,7 @@ export interface Dictionary {
     answer: string;
     heading: string;
     leadIn: string;
+    leadInBody: string;
     framework: readonly { title: string; description: string }[];
     items: readonly { title: string; body: string; href: string }[];
     keepReading: string;
@@ -184,6 +174,7 @@ export interface Dictionary {
   donate: { heading: string; button: string; disclaimer: string };
   signup: {
     heading: string;
+    headingBody: string;
     button: string;
     title: string;
     emailPlaceholder: string;

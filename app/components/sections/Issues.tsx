@@ -38,27 +38,17 @@ export default function Issues({ dict }: IssuesProps) {
       {/* Two-column layout — heading + pillars left, teasers right */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20">
 
-        {/* Left column — Heading + lead-in + framework pillars */}
+        {/* Left column — Heading + lead-in */}
         <div>
           <h2 className="text-4xl md:text-5xl font-semibold text-text leading-none tracking-tight">
             {dict.heading}
           </h2>
-          <p className="mt-20 text-base text-text-muted leading-relaxed">
+          <p className="mt-20 text-[17px] text-text-muted leading-relaxed">
             {dict.leadIn}
           </p>
-
-          <div className="mt-10 flex flex-col gap-6">
-            {dict.framework.map((pillar) => (
-              <div key={pillar.title}>
-                <h3 className="text-[15px] font-semibold text-text leading-snug">
-                  {pillar.title}
-                </h3>
-                <p className="mt-1 text-sm text-text-muted leading-relaxed">
-                  {pillar.description}
-                </p>
-              </div>
-            ))}
-          </div>
+          <p className="mt-6 text-base text-text-muted leading-relaxed">
+            {dict.leadInBody}
+          </p>
         </div>
 
         {/* Right column — Issue teasers */}
