@@ -31,13 +31,36 @@ export default function Tooltip({
   const [isVisible, setIsVisible] = useState(false);
   const [coords, setCoords] = useState({ top: 0, left: 0 });
   const [mounted, setMounted] = useState(false);
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const dismissRef = useRef<NodeJS.Timeout | null>(null);
   const triggerRef = useRef<HTMLDivElement>(null);
 
-  // Wait for client mount before using portal
+  // Detect touch device and mount
   useEffect(() => {
     setMounted(true);
+    setIsTouchDevice('ontouchstart' in window || navigator.maxTouchPoints > 0);
   }, []);
+
+  // Dismiss tooltip on scroll (mobile fix)
+  useEffect(() => {
+    if (!isVisible) return;
+    const handleScroll = () => setIsVisible(false);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [isVisible]);
+
+  // Dismiss tooltip on outside tap (mobile fix)
+  useEffect(() => {
+    if (!isVisible || !isTouchDevice) return;
+    const handleOutsideTap = (e: TouchEvent) => {
+      if (triggerRef.current && !triggerRef.current.contains(e.target as Node)) {
+        setIsVisible(false);
+      }
+    };
+    document.addEventListener('touchstart', handleOutsideTap);
+    return () => document.removeEventListener('touchstart', handleOutsideTap);
+  }, [isVisible, isTouchDevice]);
 
   const calculatePosition = useCallback(() => {
     if (!triggerRef.current) return;
@@ -71,7 +94,20 @@ export default function Tooltip({
       clearTimeout(timeoutRef.current);
       timeoutRef.current = null;
     }
+    if (dismissRef.current) {
+      clearTimeout(dismissRef.current);
+      dismissRef.current = null;
+    }
     setIsVisible(false);
+  };
+
+  const handleTap = () => {
+    if (!isTouchDevice) return;
+    calculatePosition();
+    setIsVisible(true);
+    // Auto-dismiss after 2 seconds on touch
+    if (dismissRef.current) clearTimeout(dismissRef.current);
+    dismissRef.current = setTimeout(() => setIsVisible(false), 2000);
   };
 
   const transformMap: Record<TooltipPosition, string> = {
@@ -85,8 +121,9 @@ export default function Tooltip({
     <div
       ref={triggerRef}
       className={`relative inline-flex ${className}`}
-      onMouseEnter={showTooltip}
-      onMouseLeave={hideTooltip}
+      onMouseEnter={!isTouchDevice ? showTooltip : undefined}
+      onMouseLeave={!isTouchDevice ? hideTooltip : undefined}
+      onTouchStart={isTouchDevice ? handleTap : undefined}
     >
       {children}
       {isVisible && mounted && createPortal(

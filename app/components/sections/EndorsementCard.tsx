@@ -14,16 +14,16 @@ interface EndorsementCardProps {
 
 export default function EndorsementCard({ endorser }: EndorsementCardProps) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center h-full px-8 md:px-14 py-12 md:py-16">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-start md:items-center h-full px-8 md:px-14 py-12 md:py-16">
       <div className="flex justify-center md:justify-start">
-        <div className="relative w-full max-w-[280px] md:max-w-[420px] aspect-square rounded-lg overflow-hidden border-[8px] border-zinc-500">
+        <div className="relative w-full max-w-full md:max-w-[420px] aspect-square rounded-lg overflow-hidden">
           {endorser.imageSrc ? (
             <Image
               src={endorser.imageSrc}
               alt={endorser.name}
               fill
               className="object-cover"
-              sizes="(max-width: 768px) 280px, 420px"
+              sizes="(max-width: 768px) calc(100vw - 4rem), 420px"
             />
           ) : (
             <div className="absolute inset-0 bg-zinc-300 flex items-center justify-center">

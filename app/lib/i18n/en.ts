@@ -67,9 +67,9 @@ const en = {
     },
     {
       id: 'ernesto-fonseca',
-      name: 'Ernesto Fonseca',
-      title: 'CEO of Hacienda',
-      quote: 'Endorsement statement to come.',
+      name: 'Dr. Ernesto Fonseca',
+      title: 'CEO, Hacienda CDC',
+      quote: 'Nabil has supported Black, Asian, White, Latino, and Native American working class communities for more than 32 years through housing assistance and social services. He will serve all Multnomah residents well, especially those with the greatest needs.',
     },
   ],
 
