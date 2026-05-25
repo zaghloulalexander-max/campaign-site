@@ -15,9 +15,9 @@ export const siteConfig = {
   },
 
   meta: {
-    url: 'https://nabilforportland.com',
+    url: 'https://electnabil.com',
     tagline: 'Building a Portland that works for everyone.',
-    email: 'info@nabilforportland.com',
+    email: 'info@electnabil.com',
   },
 
   social: {

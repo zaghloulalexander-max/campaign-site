@@ -35,9 +35,9 @@ const es: Dictionary = {
         href: '/issues/homelessness',
       },
       {
-        title: 'Vivienda y costo de vida',
+        title: 'Salud conductual',
         body: '[Traducción pendiente]',
-        href: '/issues/housing',
+        href: '/issues/behavioral-health',
       },
       {
         title: 'Seguridad pública',
@@ -70,7 +70,8 @@ const es: Dictionary = {
   ],
 
   donate: {
-    heading: 'Su contribución va directamente a llegar a los votantes en todo el condado.',
+    heading: '[Traducción pendiente]',
+    subheading: '[Traducción pendiente]',
     button: 'Donar',
     disclaimer: 'Las contribuciones no son deducibles de impuestos. Se aplican las leyes de financiamiento de campañas de Oregon.',
   },

@@ -156,7 +156,22 @@ export default function Privacy() {
           </section>
 
           <section>
-            <h2 className="text-lg font-semibold text-text mb-4">10. Contact</h2>
+            <h2 className="text-lg font-semibold text-text mb-4">10. Media Credits</h2>
+            <p>
+              Hero video: B-Roll provided by{' '}
+              <a
+                href="http://videezy.com/"
+                className="text-text hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Videezy
+              </a>
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-lg font-semibold text-text mb-4">11. Contact</h2>
             <p>Questions about this Privacy Policy? Contact us at:</p>
             <p className="mt-3">
               <a

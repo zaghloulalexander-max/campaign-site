@@ -14,7 +14,7 @@ export default function Home() {
     <>
       <Hero
         dict={dict.hero}
-        // videoSrc="/hero.mp4"
+        videoSrc="/hero.mp4"
         // imageSrc="/hero.jpg"
       />
       <About dict={dict.about} />

@@ -107,6 +107,39 @@ export default function HomelessnessPage() {
       </p>
 
       <p>
+        I&apos;ve volunteered in the county&apos;s shelters. They are modest
+        spaces: mattresses on the floor in large open rooms, first come first
+        served, open in the evening and closed by morning. The people inside
+        are overwhelmingly grateful for a place to sleep. The shelter
+        population is a mix of people with addiction or mental health issues
+        and people who simply lost their housing. The county does not track the
+        distinction. The unsheltered population in encampments skews more
+        heavily toward addiction and mental illness. Many refuse shelters
+        because drug use is prohibited inside and only come in during extreme
+        weather.
+      </p>
+
+      <p>
+        Unsheltered homelessness in Multnomah County increased 75% between
+        2023 and 2025. Over 10,500 people experienced homelessness in the
+        county in 2025, and people are becoming homeless faster than they are
+        entering stable housing. At the same time, shelter vacancy rates
+        remain high. City-run shelters average 50 to 60% occupancy. The county
+        is cutting 600 beds this budget cycle, but many of those beds were
+        already empty.
+      </p>
+
+      <p>
+        Through a separate rehousing program I manage, we transition
+        individuals and families from shelters into permanent housing. Last
+        year we housed 75 families on a $900,000 budget, roughly $12,000 per
+        family. All 75 remained housed. That success depends on the same
+        landlord partnerships that make the eviction prevention work possible.
+        Other programs in the county attempt similar work but have not come
+        close to the same results.
+      </p>
+
+      <p>
         A group that often gets overlooked in the homelessness conversation is
         working families who are one emergency away from losing their housing.
         Across District 2 and Multnomah County, there are households where both

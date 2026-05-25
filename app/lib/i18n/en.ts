@@ -12,11 +12,11 @@ const en = {
 
   // About
   about: {
-    photoAlt: 'Candidate Photo',
+    photoAlt: 'Nabil Zaghloul',
     paragraphs: [
-      "Candidate's story goes here. Keep it personal and specific — not a resume, but a window into who they are and what drives them. 2-3 paragraphs.",
-      "What brought them to this moment. A specific experience, a pattern they've seen in the community, a gap they want to fill.",
-      "What they believe the county commission can do differently, and why they're the person to do it.",
+      "I've spent 32 years working inside Multnomah County government. I started in the Department of Community Justice, managing parole, probation, domestic violence, and juvenile caseloads. After about a decade, I moved to the Health Department, then to the Department of County Human Services, where I currently direct programs in housing stabilization, eviction prevention, economic support, and youth services.",
+      "Over that time, I've managed hundreds of millions of dollars in public funding, created programs that didn't exist before, and worked directly with thousands of families in crisis. The Economic Justice and Recovery Program, which I built during the pandemic, served 2,800 households in its first year with a 90% retention rate. Bienestar Youth Services, which I created and fund within my existing budget, works with 50 kids a week in the Cully neighborhood to prevent youth violence and gang recruitment.",
+      "I'm running for county commissioner because after 32 years inside the system, I want to apply what I've learned from a seat where I can influence how the entire county budget is spent. I know which programs work, which ones don't, and what it takes to build something that actually delivers results. The county has the resources. The question is whether they're being used well.",
     ],
   },
 
@@ -36,13 +36,13 @@ const en = {
         href: '/issues/homelessness',
       },
       {
-        title: 'Housing & cost of living',
-        body: "Portland's housing crisis isn't just about building more units. It's about why the units we fund take four years and cost twice what they should.",
-        href: '/issues/housing',
+        title: 'Behavioral health',
+        body: "The county delivers counseling, addiction treatment, and crisis response through separate systems with separate funding. For the people who need them, they overlap almost entirely.",
+        href: '/issues/behavioral-health',
       },
       {
         title: 'Public safety',
-        body: "The county's role in public safety isn't policing — it's the justice system, crisis response, and reentry programs that determine whether people cycle through or find a way out.",
+        body: "Public safety means different things to different people. I spent over a decade as a manager in the Department of Community Justice.",
         href: '/issues/public-safety',
       },
     ],
@@ -52,28 +52,31 @@ const en = {
   // Endorsements
   endorsements: [
     {
-      id: 'endorser-1',
-      name: 'Name One',
-      title: 'Title / Organization',
-      quote: 'Endorsement quote goes here. The best ones are specific — what the candidate did, not just who they are.',
+      id: 'tom-potter',
+      name: 'Tom Potter',
+      title: 'Former Chief of Police and Mayor of Portland',
+      quote: 'I am honored to endorse Nabil. He will be a strong voice on the Multnomah County Commission.',
+      imageSrc: '/endorsements/tom-potter.png',
     },
     {
-      id: 'endorser-2',
-      name: 'Name Two',
-      title: 'Title / Organization',
-      quote: 'Second endorsement. Keep these genuine. A short, real quote outperforms a long, generic one every time.',
+      id: 'nafisa-fai',
+      name: 'Nafisa Fai',
+      title: 'Washington County Commissioner',
+      quote: 'Endorsement statement to come.',
+      imageSrc: '/endorsements/nafisa-fai.jpeg',
     },
     {
-      id: 'endorser-3',
-      name: 'Name Three',
-      title: 'Title / Organization',
-      quote: 'Third endorsement. Three is a strong starting number. Add more as the campaign builds support.',
+      id: 'ernesto-fonseca',
+      name: 'Ernesto Fonseca',
+      title: 'CEO of Hacienda',
+      quote: 'Endorsement statement to come.',
     },
   ],
 
   // Donate
   donate: {
-    heading: 'Your contribution goes directly to reaching voters across the county.',
+    heading: 'Make it count.',
+    subheading: 'Sharing this site helps just as much.',
     button: 'Donate',
     disclaimer: 'Contributions are not tax-deductible. Oregon campaign finance laws apply.',
   },
@@ -171,7 +174,7 @@ export interface Dictionary {
     keepReading: string;
   };
   endorsements: readonly { id: string; name: string; title: string; quote: string; imageSrc?: string }[];
-  donate: { heading: string; button: string; disclaimer: string };
+  donate: { heading: string; subheading: string; button: string; disclaimer: string };
   signup: {
     heading: string;
     headingBody: string;
