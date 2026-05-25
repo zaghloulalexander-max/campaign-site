@@ -32,7 +32,7 @@ export const siteConfig = {
     { label: 'Endorsements', href: '#endorsements' },
   ] as const,
 
-  donateUrl: '#donate',
+  donateUrl: 'https://donation.c-esystems.com/campaign/electnabil',
 
   // Legally required
   disclaimer: 'Paid for by Nabil for Portland. Not authorized by any candidate or candidate committee.',

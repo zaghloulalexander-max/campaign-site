@@ -22,9 +22,9 @@ export default function HomelessnessPage() {
     >
       <p>
         The county&apos;s Homeless Services Department has a $310 million budget.
-        I&apos;ve spent more than 30 years inside county government, managing
+        I&apos;ve spent more than 32 years inside county government, managing
         housing programs, reviewing contracts, building budgets, and working
-        directly with families in crisis.
+        directly with individuals, families, and their children in crisis.
       </p>
 
       <h2 className="text-2xl font-semibold text-text mt-8">
@@ -34,7 +34,7 @@ export default function HomelessnessPage() {
       <p>
         Multnomah County is the lead agency on homelessness in the area.
         The Homeless Services Department coordinates shelters, housing
-        placement, outreach, and case management. The county also funds dozens of
+        placement, outreach, and funds case management. The county also funds dozens of
         nonprofit organizations to deliver these services on contract.
       </p>
 
@@ -77,12 +77,14 @@ export default function HomelessnessPage() {
       <p>
         In the programs I manage, we evaluate at three, six, nine, and twelve
         months to measure whether the assistance actually worked. The Economic
-        Justice and Recovery Program, which I created during the pandemic, served
+        Justice and Recovery Program, which I created during the pandemic, in
+        combination with general, state, and federal funds served
         2,800 households in its first year with a $7.5 million budget. Our
         retention rate, the percentage of families still in their homes after we
-        help them, is above 90%. It&apos;s now funded at $350,000. The federal
-        dollars that built it were one-time, and the county didn&apos;t continue
-        the investment.
+        help them, is above 90%. The federal dollars that built it were
+        one-time. When they expired, the program&apos;s funding went to zero. I
+        kept it running at $350,000 by redirecting money from my existing
+        budget.
       </p>
 
       <p>
@@ -93,9 +95,9 @@ export default function HomelessnessPage() {
         household. A single mother with no work and mounting debt. We got her
         into job training, financial literacy workshops, and skill-building
         programs. She was eventually hired into county government. Her son is
-        graduating from a university in Texas this year. These outcomes
+        graduating from university this year. These outcomes
         don&apos;t happen with a one-time rent check. They happen when you work
-        with a family for 12 months, sometimes longer, and address the
+        with a family for 6 to 12 months, sometimes longer, and address the
         underlying instability.
       </p>
 
@@ -107,7 +109,7 @@ export default function HomelessnessPage() {
       </p>
 
       <p>
-        I&apos;ve volunteered in the county&apos;s shelters. They are modest
+        I&apos;ve volunteered several times in the county&apos;s shelters. They are modest
         spaces: mattresses on the floor in large open rooms, first come first
         served, open in the evening and closed by morning. The people inside
         are overwhelmingly grateful for a place to sleep. The shelter
@@ -132,10 +134,10 @@ export default function HomelessnessPage() {
       <p>
         Through a separate rehousing program I manage, we transition
         individuals and families from shelters into permanent housing. Last
-        year we housed 75 families on a $900,000 budget, roughly $12,000 per
-        family. All 75 remained housed. That success depends on the same
-        landlord partnerships that make the eviction prevention work possible.
-        Other programs in the county attempt similar work but have not come
+        year we housed 75 families on a $900,000 budget, roughly $8,000 to
+        $12,000 per family. All 75 remained housed. That success depends on the same
+        landlord partnerships that make the rehousing and eviction prevention work
+        possible. Other programs attempt similar work but have not come
         close to the same results.
       </p>
 
@@ -150,9 +152,9 @@ export default function HomelessnessPage() {
 
       <p>
         Meanwhile, the demand has overwhelmed the supply. This year, my programs
-        ran out of money three months before the end of the fiscal year. We have
+        ran out of money almost three months before the end of the fiscal year. We have
         over a thousand people on the waitlist, and we stopped accepting new
-        names three months ago because there was no point. Eviction filings in
+        applications three months ago because there was no point. Eviction filings in
         the court system are surging. The demand has quadrupled compared to the
         pandemic years.
       </p>
@@ -172,7 +174,8 @@ export default function HomelessnessPage() {
       </p>
 
       <p>
-        Second, the county needs to expand master lease agreements. Here&apos;s
+        Second, the county needs to expand the Supportive Housing Alliance,
+        formerly the master lease initiative. Here&apos;s
         how they work: the county signs a master lease with a property owner for a
         block of units, say 300 out of a 1,000-unit building. The county becomes
         the sub-leaseholder. We decide who moves in, we manage tenant
@@ -181,7 +184,8 @@ export default function HomelessnessPage() {
         not have income or credit history. It&apos;s faster than placing families
         one unit at a time, it removes the barrier that keeps landlords from
         participating, and it creates predictability for property owners.
-        Historically, the county has stayed away from master leases.
+        Historically, the county has stayed away from this model but should not
+        be afraid of trying new things, especially if they work.
       </p>
 
       <p>

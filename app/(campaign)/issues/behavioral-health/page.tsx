@@ -15,19 +15,22 @@ export default function BehavioralHealthPage() {
   return (
     <ArticlePage
       title="Behavioral health"
-      imageAlt="Northeast Portland neighborhood"
-      imageCaption="Northeast Portland"
-      showImagePlaceholder
+      imageSrc="/issues/behavioral-health.png"
+      imageAlt="Illustration of a park bench at Wilshire Park in the Beaumont-Wilshire neighborhood"
+      imageCaption="Beaumont-Wilshire, Northeast Portland"
       readMore={readMore}
     >
       <p>
         Behavioral health covers the connection between habits, behaviors, and
-        overall mental and physical well-being. At the county level, that
-        includes counseling for depression, anxiety, and trauma, addiction
-        services for substance use disorders, and crisis response for people
-        in immediate danger. These are separate systems with separate licensing
-        and separate funding, but for the people who need them, they overlap
-        almost entirely.
+        overall mental and physical well-being. It is not the same as mental
+        health, though the two are closely related. Behavioral health focuses
+        on patterns of behavior with the goal of correcting them. Mental health
+        involves deeper cognitive and clinical work. At the county level, both
+        fall under the same division, but they carry separate licensing and
+        separate funding. At the county level, that includes counseling for
+        depression, anxiety, and trauma, addiction services for substance use
+        disorders, and crisis response for people in immediate danger. For the
+        people who need them, these systems overlap almost entirely.
       </p>
 
       <h2 className="text-2xl font-semibold text-text mt-8">
@@ -39,9 +42,10 @@ export default function BehavioralHealthPage() {
         channels. The first is clinic-based. Each county health clinic has a
         behavioral health consultant, a licensed practitioner who works
         alongside primary care providers. Patients either refer themselves or
-        get referred by their doctor. They are assigned to a provider and begin
-        sessions. For most people, this means 4 to 8 weeks of counseling for
-        depression, anxiety, or trauma. They complete treatment and move on.
+        get referred by their doctor or primary care provider. They are assigned
+        to a provider and begin sessions. For most people, this means 4, 8, or 12
+        weeks of counseling for depression, anxiety, or trauma. They complete
+        treatment and move on.
       </p>
 
       <p>
@@ -68,26 +72,27 @@ export default function BehavioralHealthPage() {
 
       <p>
         The system handles short-term needs reasonably well. A person dealing
-        with depression or anxiety can get into counseling through a county
-        clinic and complete a course of treatment. That works. The gap is in
+        with depression, anxiety, or other symptoms can get into counseling
+        through a county clinic, a social service program like the one I manage,
+        and complete a course of sessions. That works. The gap is in
         long-term care. People with severe addiction, chronic mental illness,
         or overlapping behavioral health and housing instability need 12 to 24
-        months of sustained support: housing, treatment sessions, job training,
-        and case management, all coordinated together. The county does not
-        invest enough in that level of care.
+        months of sustained support: housing, treatment and therapy sessions,
+        job training, and case management, all coordinated together. The county
+        does not invest enough in that level of care.
       </p>
 
       <p>
         Through the programs I manage at Bienestar, we combine housing
         stability with behavioral health services, addiction treatment,
-        recovery support, and employment assistance. One woman we worked with
+        recovery support, and employment assistance. One man we worked with
         had been through the justice system and was struggling with addiction.
-        After she was housed, there was no follow-up. She was selling
-        furniture, destabilizing. We enrolled her and worked with her for 14
-        months: permanent housing, weekly treatment sessions, job training. She
-        is now working, paying her own rent, and self-sufficient for the first
-        time. That outcome required sustained, coordinated investment in one
-        person over more than a year.
+        After he was housed, there was no follow-up. He was selling
+        furniture, destabilizing. We enrolled him and worked with him and his
+        family for 14 months: permanent housing, weekly treatment sessions, job
+        training. He is now working, paying his own rent, and self-sufficient
+        for the first time. That outcome required sustained, coordinated
+        investment in one person over more than a year.
       </p>
 
       <p>
@@ -108,17 +113,6 @@ export default function BehavioralHealthPage() {
         not enough treatment centers for the kind of long-term care that
         fentanyl addiction requires. Narcan saves lives in the moment, but
         without 12 to 24 months of sustained treatment, the cycle continues.
-      </p>
-
-      <p>
-        I saw what happens when the system fails at a more basic level. At
-        the Rockwood clinic, a patient exhibiting signs of self-harm called
-        in. The provider did not escalate. The patient had a history of
-        similar calls, and the provider made a judgment call that it was not
-        serious. The patient killed themselves. A checklist for that situation
-        existed but was not followed. After the incident, the process was
-        improved. Systems should not rely on individual judgment for
-        life-or-death decisions. That is what protocols are for.
       </p>
 
       <h2 className="text-2xl font-semibold text-text mt-8">

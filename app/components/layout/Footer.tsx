@@ -75,7 +75,7 @@ export default function Footer({ dict, issues }: FooterProps) {
                 {dict.involvedLabel}
               </p>
               <div className="mt-4 flex flex-col gap-2.5 text-sm text-text-subtle">
-                <a href={siteConfig.donateUrl} className={linkClasses}>
+                <a href={siteConfig.donateUrl} className={linkClasses} target="_blank" rel="noopener noreferrer">
                   {dict.donateLink}
                 </a>
                 <Link href="/#signup" className={linkClasses}>
@@ -98,6 +98,9 @@ export default function Footer({ dict, issues }: FooterProps) {
                 </Link>
                 <a href={`mailto:${siteConfig.meta.email}`} className={linkClasses}>
                   {dict.contactLink}
+                </a>
+                <a href="tel:+15038286075" className={linkClasses}>
+                  (503) 828-6075
                 </a>
               </div>
             </nav>

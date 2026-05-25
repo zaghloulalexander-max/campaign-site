@@ -15,9 +15,9 @@ export default function PublicSafetyPage() {
   return (
     <ArticlePage
       title="Public safety"
-      imageAlt="St. Johns Bridge, North Portland"
-      imageCaption="St. Johns, North Portland"
-      showImagePlaceholder
+      imageSrc="/issues/public-safety.png"
+      imageAlt="Illustration of a 15 MPH neighborhood greenway sign on a residential street in Concordia"
+      imageCaption="Concordia, Northeast Portland"
       readMore={readMore}
     >
       <p>
@@ -59,7 +59,7 @@ export default function PublicSafetyPage() {
 
       <p>
         I spent over a decade as a manager in the Department of Community
-        Justice, overseeing both adult and juvenile caseloads. My unit managed
+        Justice, overseeing programs in both adult and juvenile caseloads. My unit managed
         domestic violence cases, DUI, parole, probation, and sex offender
         supervision. Every day, we worked with judges, district attorneys, public
         defenders, and victims. The job was managing people coming out of jail
@@ -101,10 +101,10 @@ export default function PublicSafetyPage() {
       <p>
         A few years ago, I conducted a safety survey in the Cully neighborhood.
         We asked residents directly: what makes you feel safe? The answers were
-        specific. People talked about landlords who let drug activity happen in
-        the stairwells and did nothing about it. They talked about needing
-        cameras. About youth violence. About car break-ins and assaults where
-        nobody responded. Each person had a different version of what public
+        specific. People talked about no one doing anything about drug
+        activities happening a few yards from where they lived. They talked
+        about needing cameras. About youth violence. About car break-ins, and
+        assaults where nobody responded. Each person had a different version of what public
         safety meant to them, but the common thread was that they wanted someone
         to be paying attention to their neighborhood.
       </p>
@@ -116,7 +116,7 @@ export default function PublicSafetyPage() {
         resources within my existing budget and recruiting volunteers. We work
         with about 50 kids, ages 7 to 18, in the Cully neighborhood and
         surrounding areas. Most are first-generation Americans or children of
-        immigrants, from Somali, Latino, and other communities. For the first
+        immigrants and refugees, from Somali, Latino, and other communities. For the first
         time, we are seeing gang recruitment reach into the Somali community
         here, something that did not exist a generation ago. The program offers
         music classes through a partnership with the Metropolitan Youth
@@ -138,29 +138,26 @@ export default function PublicSafetyPage() {
 
       <p>
         Commissioners vote on the public safety budget every year. The first
-        step is understanding what each program is producing. The Department of
-        Community Justice, the DA&apos;s office, the Sheriff&apos;s Office, and
-        emergency preparedness all receive significant funding. Before
-        continuing to fund any program at its current level, the county should
-        be able to show what outcomes it is delivering.
+        step is understanding what each program is producing. Before
+        continuing to fund any public safety program at its current level, the
+        county should be able to show what outcomes it is delivering.
       </p>
 
       <p>
         The county is currently cutting homeless services and behavioral health
-        while maintaining the Sheriff&apos;s Office budget. Whether that is the
-        right tradeoff depends on what each dollar is producing. Behavioral health is directly
-        connected to public safety. When someone in crisis encounters the
-        police instead of a behavioral health professional, the results are
-        often worse for everyone involved.
+        that is directly connected to public safety. When someone in crisis
+        encounters the police instead of a behavioral health professional, the
+        results are often worse for everyone involved.
       </p>
 
       <p>
         I would also push for more investment in neighborhood-level prevention:
-        Community safety networks, youth programs, partnerships between
-        residents and local organizations. The Cully safety survey showed that
-        residents have specific, practical ideas about what their neighborhoods
-        need. Those are the programs that keep people, especially young people,
-        from entering the justice system in the first place.
+        community safety networks, youth violence prevention programs,
+        partnerships between residents and local organizations. The Cully
+        safety survey showed that residents have specific, practical ideas
+        about what their neighborhoods need. Those are the programs that keep
+        people, especially young people, from entering the justice system in
+        the first place.
       </p>
     </ArticlePage>
   );

@@ -106,7 +106,7 @@ export default function Header({ dict, donateLabel }: HeaderProps) {
                 {item.label}
               </a>
             ))}
-            <Button href={siteConfig.donateUrl} size="sm" variant={onDark ? 'secondary' : 'primary'}>{donateLabel}</Button>
+            <Button as="a" href={siteConfig.donateUrl} target="_blank" rel="noopener noreferrer" size="sm" variant={onDark ? 'secondary' : 'primary'}>{donateLabel}</Button>
           </nav>
         )}
 
@@ -134,7 +134,7 @@ export default function Header({ dict, donateLabel }: HeaderProps) {
               </a>
             ))}
             <div className="pt-3 mt-2 border-t border-border">
-              <Button href={siteConfig.donateUrl} size="md" variant="primary" fullWidth>{donateLabel}</Button>
+              <Button as="a" href={siteConfig.donateUrl} target="_blank" rel="noopener noreferrer" size="md" variant="primary" fullWidth>{donateLabel}</Button>
             </div>
           </div>
         </nav>

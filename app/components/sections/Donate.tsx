@@ -34,7 +34,7 @@ export default function Donate({ imageSrc, dict }: DonateProps) {
       {imageSrc ? (
         <>
           <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${imageSrc})` }} />
-          <div className="absolute inset-0 bg-primary-900/70" />
+          <div className="absolute inset-0 bg-primary-900/80" />
         </>
       ) : (
         <div className="absolute inset-0 bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700" />
@@ -62,7 +62,7 @@ export default function Donate({ imageSrc, dict }: DonateProps) {
             </Tooltip>
           </p>
           <div className="mt-10">
-            <Button href={siteConfig.donateUrl} size="md" variant="secondary">
+            <Button as="a" href={siteConfig.donateUrl} target="_blank" rel="noopener noreferrer" size="md" variant="secondary">
               {dict.button}
             </Button>
           </div>

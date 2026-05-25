@@ -225,28 +225,48 @@ Note: the current teal is slightly cool and saturated against the site's warm iv
 ### Behavioral health and public safety prompts (TBD)
 Subjects for these two illustrations have not been decided. They should be recognizable District 2 or Multnomah County locations relevant to each topic, not abstract concepts. The commissioner page works because it illustrates a real, specific building. The issue pages should follow the same approach.
 
+### Behavioral health prompt
+"A loose, hand-drawn ink illustration of a wooden park bench on a concrete pad, facing away from the viewer, with tall mature trees rising behind it and a house roofline visible through the canopy. Render it in an abstract, sketchy style with organic flowing black ink lines on a warm muted amber background (similar to a dusty gold or aged wheat tone, not bright orange or yellow). Simplified and slightly playful, not architecturally precise. The bench and trees should be recognizable but stylized, with loose gestural strokes suggesting the forms rather than depicting every detail. No text, no people. Aspect ratio 2:1, horizontal."
+
+Reference images: photo of a park bench at Wilshire Park (Beaumont-Wilshire, NE Portland) + the county commissioner illustration for style consistency. Caption: "Beaumont-Wilshire, Northeast Portland"
+
+Subject rationale: a park bench suggests a quiet, human-scale moment of rest and reflection without depicting clinical settings, substance use, or crisis. The park setting connects to the neighborhood and the community rather than to the system.
+
+### Public safety prompt
+"A loose, hand-drawn ink illustration of a 15 MPH neighborhood greenway sign on a residential Portland street, with a quiet road on the left, a sidewalk on the right, and mature trees overhead. A basketball hoop is visible in the background. Render it in an abstract, sketchy style with organic flowing black ink lines on a warm muted slate background (a soft gray with a slight warm brown undertone, like weathered driftwood, not purple or blue). The sign should show 15 MPH and figures of children, rendered in the same black ink style as the rest of the illustration. No color fill on the sign, no people elsewhere in the scene. Simplified and slightly playful, not architecturally precise. The sign and street should be recognizable but stylized, with loose gestural strokes suggesting the forms rather than depicting every detail. Aspect ratio 2:1, horizontal."
+
+Reference images: photo of a PBOT Neighborhood Greenway sign on a residential street in the Concordia neighborhood + the county commissioner illustration for style consistency. Caption: "Concordia, Northeast Portland"
+
+Subject rationale: a "slow down, kids at play" sign communicates public safety as a feeling of community care and attention without depicting police, courts, or the justice system. The basketball hoop adds a neighborhood detail. The sign is a real PBOT fixture that Portland residents recognize.
+
+### Watermark removal
+Gemini-generated illustrations include a small star watermark in the bottom-right corner. Remove it using PIL by sampling the background color from a nearby clean area and painting a rectangle over the watermark region. The background colors are not perfectly uniform, so sample from the same edge (right edge, well above the corner) to match the local tone.
+
+### Behavioral health vs. mental health (content note)
+The behavioral health page opens by distinguishing behavioral health from mental health. Behavioral health focuses on habits and behavior patterns with the goal of correcting them. Mental health involves deeper cognitive and clinical work. Both fall under the same county division but carry separate licensing and funding. This distinction came from Nabil's interview and should be preserved in any editing pass.
+
 ---
 
 ## TODO — Requires Content or Decisions
 
 ### Content Needed
-- Hero b-roll video of District 2 (3-4 clips, 3-4 seconds each, landscape, 4K source, export 1080p for web)
-- Hero poster image (frame grab from best clip)
-- Donate section street sign photo (MLK & Fremont or similar District 2 intersection, landscape, shot from below)
-- About section headshot/portrait
-- Endorser headshots (square format)
-- About section copy (2-3 paragraphs, personal, not a resume)
-- Issue page content (replace placeholder copy — homelessness, behavioral health, public safety)
-- Issue page illustrations (ink style matching county-commissioner illustration)
-- Endorsement quotes (real quotes from real people)
-- Signup section heading copy (current is placeholder)
-- Framework lead-in copy (left column of Issues section — Nabil should write)
+- [x] ~~Hero b-roll video~~ — Hawthorne Blvd 4K drone footage from Videezy, attribution in privacy policy
+- [x] ~~Donate section photo~~ — Ainsworth St tree-lined residential street, District 2
+- [ ] About section headshot/portrait — Nabil, 4:5 format, outdoor, natural light, no hat
+- [x] ~~Endorser headshots~~ — Tom Potter and Nafisa Fai added, Ernesto Fonseca pending
+- [x] ~~About section copy~~ — 3 paragraphs, career arc, proof points, why now
+- [x] ~~Issue page content~~ — homelessness, behavioral health, public safety all drafted from interviews
+- [x] ~~Issue page illustrations~~ — homelessness (Tudor houses, warm teal), behavioral health (park bench, warm amber), public safety (15 MPH sign, warm slate)
+- [x] ~~Endorsement quotes~~ — Potter confirmed, Fai pending statement, Fonseca confirmed
+- [x] ~~Signup section heading copy~~ — "Campaigns send mailers..." / "We'd rather just email you."
+- [x] ~~Framework lead-in copy~~ — "After 32 years inside county government..." split into leadIn + leadInBody
 
 ### Configuration Needed
-- ActBlue donation URL → update `config.ts` donateUrl
-- Social media URLs (Instagram, Twitter/X, Facebook) → update `config.ts`
-- Campaign committee legal name → confirm disclaimer text
-- Domain → update `config.ts` meta.url
+- [x] ~~Donation URL~~ → C&E Systems: https://donation.c-esystems.com/campaign/electnabil
+- [ ] Social media URLs (Instagram, Twitter/X, Facebook) → update `config.ts`
+- [x] ~~Campaign committee legal name~~ → confirm disclaimer text
+- [x] ~~Domain~~ → electnabil.com
+- [x] ~~Email~~ → info@electnabil.com
 
 ### Technical — Do Now
 - [x] ~~Dynamic import modals (SignupModal, VolunteerModal) to defer framer-motion bundle~~
@@ -257,7 +277,7 @@ Subjects for these two illustrations have not been decided. They should be recog
 - [x] ~~Add `app/error.tsx` error boundary~~
 - [x] ~~Add `app/loading.tsx` loading state~~
 - [x] ~~Button component auto-detect internal vs external hrefs~~
-- [ ] Fix endorsement carousel mobile responsiveness — absolute positioning clips stacked content on small screens
+- [x] ~~Fix endorsement carousel mobile responsiveness~~ — min-height adjusted, items-start on mobile
 - [ ] Redesign mobile menu — current inline dropdown needs to be replaced (reference Fayra Drawer pattern)
 - [ ] Simplify county commissioner S3 ("What the county is responsible for") — discussed but not finalized
 
@@ -272,7 +292,8 @@ Subjects for these two illustrations have not been decided. They should be recog
 - [ ] VolunteerModal form → connect to Resend API route
 - [ ] QR code with UTM parameters for palm cards
 - [ ] Refactor campaign layout dict when `[locale]` route segment is added
-- [ ] Darken donate section overlay (currently 70%, needs ~80-85%) once real photo is in place
+- [x] ~~Darken donate section overlay~~ — set to 80%
+- [ ] Alex's full editing/messaging pass on all three issue pages
 
 ### Future
 - **Spanish translations** — professional translation of finalized English content into `es.ts`

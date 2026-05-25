@@ -156,7 +156,31 @@ export default function Privacy() {
           </section>
 
           <section>
-            <h2 className="text-lg font-semibold text-text mb-4">10. Media Credits</h2>
+            <h2 className="text-lg font-semibold text-text mb-4">10. Donations</h2>
+            <p>
+              Campaign donations are processed by C&amp;E Systems, a third-party
+              compliance and donation processing provider. When you click
+              &ldquo;Donate,&rdquo; you are directed to a page operated by C&amp;E
+              Systems at{' '}
+              <a
+                href="https://donation.c-esystems.com"
+                className="text-text hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                donation.c-esystems.com
+              </a>
+              . Any personal or financial information you provide during the
+              donation process is collected and handled by C&amp;E Systems under
+              their own privacy policy. We do not collect or store payment
+              information on this website. Donor information, including name,
+              address, and employer, is reported as required by Oregon campaign
+              finance law.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-lg font-semibold text-text mb-4">11. Media Credits</h2>
             <p>
               Hero video: B-Roll provided by{' '}
               <a
@@ -171,7 +195,7 @@ export default function Privacy() {
           </section>
 
           <section>
-            <h2 className="text-lg font-semibold text-text mb-4">11. Contact</h2>
+            <h2 className="text-lg font-semibold text-text mb-4">12. Contact</h2>
             <p>Questions about this Privacy Policy? Contact us at:</p>
             <p className="mt-3">
               <a

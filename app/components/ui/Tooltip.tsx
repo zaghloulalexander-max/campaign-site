@@ -34,7 +34,7 @@ export default function Tooltip({
   const [isTouchDevice, setIsTouchDevice] = useState(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const dismissRef = useRef<NodeJS.Timeout | null>(null);
-  const triggerRef = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLSpanElement>(null);
 
   // Detect touch device and mount
   useEffect(() => {
@@ -118,7 +118,7 @@ export default function Tooltip({
   };
 
   return (
-    <div
+    <span
       ref={triggerRef}
       className={`relative inline-flex ${className}`}
       onMouseEnter={!isTouchDevice ? showTooltip : undefined}
@@ -127,7 +127,7 @@ export default function Tooltip({
     >
       {children}
       {isVisible && mounted && createPortal(
-        <div
+        <span
           className="fixed px-2.5 py-1.5 text-xs font-medium whitespace-nowrap pointer-events-none bg-text text-surface rounded"
           style={{
             top: coords.top,
@@ -138,9 +138,9 @@ export default function Tooltip({
           role="tooltip"
         >
           {text}
-        </div>,
+        </span>,
         document.body,
       )}
-    </div>
+    </span>
   );
 }
