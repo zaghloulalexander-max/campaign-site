@@ -205,6 +205,11 @@ export default function Privacy() {
                 {siteConfig.meta.email}
               </a>
             </p>
+            <p className="mt-3">
+              Elect Nabil<br />
+              P.O. Box 42307<br />
+              Portland, OR 97242
+            </p>
           </section>
 
         </div>

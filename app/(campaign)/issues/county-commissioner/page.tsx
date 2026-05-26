@@ -4,6 +4,7 @@ import { getDictionary, defaultLocale } from '@/app/lib/i18n';
 
 export const metadata: Metadata = {
   title: 'What Does a County Commissioner Do?',
+  description: 'What does a Multnomah County commissioner do? How the board works, what the county is responsible for, and how the $4 billion budget gets set.',
 };
 
 export default function CountyCommissionerPage() {

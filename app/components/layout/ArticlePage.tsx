@@ -42,7 +42,7 @@ export default function ArticlePage({
   const showImage = imageSrc || showImagePlaceholder;
 
   return (
-    <article className="pt-48 pb-28 md:pt-64 md:pb-36">
+    <article className="pt-32 pb-20 md:pt-64 md:pb-36">
       <div className="mx-auto max-w-2xl px-6 md:px-8">
         <header>
           <h1 className="text-4xl md:text-5xl font-medium text-text leading-tight tracking-tight">

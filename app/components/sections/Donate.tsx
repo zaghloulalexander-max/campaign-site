@@ -54,7 +54,7 @@ export default function Donate({ imageSrc, dict }: DonateProps) {
               <button
                 type="button"
                 onClick={handleCopy}
-                className="inline-flex items-center justify-center text-white/50 hover:text-white cursor-pointer transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded align-middle"
+                className="inline-flex items-center justify-center text-white/50 hover:text-white cursor-pointer transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded align-middle p-2 -m-2"
                 aria-label={copied ? 'Link copied' : 'Copy site link'}
               >
                 {copied ? <CheckIcon size="lg" /> : <CopyIcon size="lg" />}

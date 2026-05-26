@@ -51,7 +51,7 @@
 
 ## Components
 
-- `components/ui/` — Reusable primitives (Button, Card, Section, Modal, Input, IconButton, ProgressTabs, CookieBanner). No business logic.
+- `components/ui/` — Reusable primitives (Button, Card, Drawer, Section, Modal, Input, IconButton, ProgressTabs, CookieBanner, Tooltip). No business logic.
 - `components/ui/icons/` — SVG icon components (IconBase, ArrowIcon, ChevronIcon, CloseIcon, MenuIcon, SpinnerIcon) with barrel export.
 - `components/layout/` — Structural (Header, Footer, ArticlePage, ReadMore). Config-driven via `lib/config.ts`, i18n via dict props.
 - `components/sections/` — Page-level blocks (Hero, About, Issues, EndorsementShowcase, EndorsementCard, Donate, Signup, SignupModal, VolunteerModal). Each is self-contained.
@@ -60,8 +60,9 @@
 
 ### Server vs Client Components
 - Pages are server components — no `'use client'` directive
-- Interactive components are client components: Header, Modal, CookieBanner, EndorsementShowcase, Signup, SignupModal, VolunteerModal, ProgressTabs, Input
-- Static sections are server components: Hero, About, Issues, Donate, EndorsementCard, ArticlePage, ReadMore, Footer
+- Interactive components are client components: Header, Drawer, Modal, CookieBanner, EndorsementShowcase, Signup, SignupModal, VolunteerModal, ProgressTabs, Input, Tooltip
+- Static sections are server components: About, Issues, Donate, EndorsementCard, ArticlePage, ReadMore, Footer
+- Hero is a client component (video autoplay management)
 - This split minimizes client JavaScript — static content ships zero JS
 
 ## Design Tokens
@@ -85,7 +86,7 @@
 ## Header
 
 - Uses `usePathname()` to detect landing page vs sub-pages
-- Landing page: full nav, donate button, mobile menu, dark/light section detection
+- Landing page: full nav, donate button, mobile drawer, dark/light section detection
 - Sub-pages (privacy, etc.): wordmark only, no nav, no donate button, forced light mode
 - Dark section detection via scroll direction-aware check — `DARK_SECTION_IDS` array
 - Scrolling down: checks from bottom of header (changes when new section meets header)
@@ -93,6 +94,24 @@
 - Three background states: transparent (top of page), frosted dark (scrolled over dark section), frosted light (scrolled over light section)
 - Scrollbar width compensation via `--scrollbar-width` CSS variable for modal scroll lock
 - Donate button variant swaps: `secondary` (white) on dark, `primary` (charcoal) on light
+- Mobile navigation uses Drawer component (slide-from-right, content-sized panel, not full height)
+- Drawer contains: wordmark + close button header, three nav links, donate button
+- `returnFocusRef` restores focus to hamburger button on close
+
+## Drawer
+
+- Generic, reusable slide-in panel component at `components/ui/Drawer.tsx`
+- Portal-rendered to `document.body` — avoids z-index and overflow issues
+- Slides from left or right (configurable via `side` prop)
+- Backdrop: `bg-primary-800/60` with `backdrop-blur-sm`
+- Focus trap: Tab cycles within drawer, Shift+Tab wraps
+- Scroll lock: self-contained, defers if Modal already locked scroll (checks `document.body.style.overflow`)
+- ESC to close, click backdrop to close
+- `inert` attribute on panel when closed (screen readers and tab ignore it)
+- `fullHeight` prop: `true` (default) stretches to viewport, `false` sizes to content
+- CSS transitions with `motion-reduce:transition-none` — no framer-motion dependency
+- SSR-safe: uses `mounted` state (not `typeof window`) to avoid hydration mismatch
+- `initialFocusRef` and `returnFocusRef` for focus management
 
 ## Modal System
 
@@ -174,8 +193,13 @@ Every proposal needs a mechanism. Not "I support affordable housing" but "master
 ### Accountability
 Every page closes with accountability. What gets measured, what contracts should require, how the public would know if it's working. This is the framework's throughline — it should feel inevitable by the end of each piece, not tacked on.
 
+Accountability is framed as something that supports workers and earns programs more investment, not as a mechanism for cutting. "Funding tied to outcomes protects frontline staff" not "programs that fail get defunded." Each page arrives at this from its own context — no template language across pages. When funding moving away from something is mentioned, say where it's going and who benefits.
+
 ### Tone
 Confident without being self-promotional. Critical without being cynical. He's not running against the county — he's someone who knows it well enough to fix what's broken.
+
+### Issues Section Lead-In
+The lead-in body on the landing page sets the tone for all three issues: "I believe in supporting and empowering the people and programs that serve this county to get the most out of every taxpayer dollar." This frames accountability as empowerment, not oversight. Both voters and union members read it before clicking into any issue page.
 
 ### Length
 800–1200 words per issue. Enough to demonstrate depth, short enough to read on a phone from a QR code scan.
@@ -245,6 +269,22 @@ Gemini-generated illustrations include a small star watermark in the bottom-righ
 ### Behavioral health vs. mental health (content note)
 The behavioral health page opens by distinguishing behavioral health from mental health. Behavioral health focuses on habits and behavior patterns with the goal of correcting them. Mental health involves deeper cognitive and clinical work. Both fall under the same county division but carry separate licensing and funding. This distinction came from Nabil's interview and should be preserved in any editing pass.
 
+## Mobile Responsiveness
+
+- Target devices: small iPhone (375px), large iPhone (430px), iPad portrait (768px), iPad landscape / small laptop (1024px), large laptop (1280px+), monitor (1440px+)
+- About and Endorsements stay stacked (single column) until `lg` (1024px) — full-width image, text below
+- Issues section splits to two-column at `md` (768px)
+- Hero text uses `clamp(2.75rem, 8vw, 7rem)` for fluid scaling across all widths
+- About photo: `aspect-[4/3]` until `lg`, then `aspect-[4/5]` for desktop two-column
+- Endorsement images: full-width `aspect-[4/3]` when stacked, `aspect-square` at `max-w-[420px]` when side-by-side at `lg`
+- Endorsement showcase min-heights: `750px` (phone), `950px` (tablet), fixed `600px` at `lg`
+- Endorsement quote text: `text-xl` (phone), `text-2xl` (tablet), `text-3xl` (desktop)
+- ArticlePage top padding: `pt-32` on mobile (was `pt-48`), `pt-64` on desktop
+- Modal wrapper padding: `p-4` mobile, `p-6` desktop (corrected from inverted values)
+- Donate copy button: `p-2 -m-2` for larger mobile tap target
+- Phone number and config values pulled from `siteConfig.meta` — not hardcoded in components
+- `--content-max: 72rem` (1152px) caps content width; beyond that, side margins increase
+
 ---
 
 ## TODO — Requires Content or Decisions
@@ -252,8 +292,8 @@ The behavioral health page opens by distinguishing behavioral health from mental
 ### Content Needed
 - [x] ~~Hero b-roll video~~ — Hawthorne Blvd 4K drone footage from Videezy, attribution in privacy policy
 - [x] ~~Donate section photo~~ — Ainsworth St tree-lined residential street, District 2
-- [ ] About section headshot/portrait — Nabil, 4:5 format, outdoor, natural light, no hat
-- [x] ~~Endorser headshots~~ — Tom Potter and Nafisa Fai added, Ernesto Fonseca pending
+- [ ] About section headshot/portrait — reshooting: seated in front of community mural, window light, chest-up, portrait orientation
+- [x] ~~Endorser headshots~~ — Tom Potter, Nafisa Fai, and Ernesto Fonseca added
 - [x] ~~About section copy~~ — 3 paragraphs, career arc, proof points, why now
 - [x] ~~Issue page content~~ — homelessness, behavioral health, public safety all drafted from interviews
 - [x] ~~Issue page illustrations~~ — homelessness (Tudor houses, warm teal), behavioral health (park bench, warm amber), public safety (15 MPH sign, warm slate)
@@ -263,8 +303,8 @@ The behavioral health page opens by distinguishing behavioral health from mental
 
 ### Configuration Needed
 - [x] ~~Donation URL~~ → C&E Systems: https://donation.c-esystems.com/campaign/electnabil
-- [ ] Social media URLs (Instagram, Twitter/X, Facebook) → update `config.ts`
-- [x] ~~Campaign committee legal name~~ → confirm disclaimer text
+- [ ] Social media URLs (Instagram, Twitter/X, Facebook) → update `config.ts` when/if active profiles exist
+- [x] ~~Campaign committee legal name~~ → "Paid for by Elect Nabil. Not authorized by any candidate or candidate committee."
 - [x] ~~Domain~~ → electnabil.com
 - [x] ~~Email~~ → info@electnabil.com
 
@@ -278,18 +318,18 @@ The behavioral health page opens by distinguishing behavioral health from mental
 - [x] ~~Add `app/loading.tsx` loading state~~
 - [x] ~~Button component auto-detect internal vs external hrefs~~
 - [x] ~~Fix endorsement carousel mobile responsiveness~~ — min-height adjusted, items-start on mobile
-- [ ] Redesign mobile menu — current inline dropdown needs to be replaced (reference Fayra Drawer pattern)
+- [x] ~~Redesign mobile menu~~ — Drawer component (slide-from-right, backdrop blur, focus trap, scroll lock, content-sized panel) replaces inline dropdown
 - [ ] Simplify county commissioner S3 ("What the county is responsible for") — discussed but not finalized
 
 ### Technical — Before Launch
-- [ ] Add `app/sitemap.ts` covering all pages
-- [ ] Add `app/robots.ts`
-- [ ] Add OG image to root metadata and per-page metadata
-- [ ] Add `favicon.ico` fallback
-- [ ] Create or source `/district-map.svg` (referenced in Hero.tsx fallback)
-- [ ] Implement analytics (provider TBD)
-- [ ] SignupModal form → connect to Resend API route
-- [ ] VolunteerModal form → connect to Resend API route
+- [x] ~~Add `app/sitemap.ts` covering all pages~~
+- [x] ~~Add `app/robots.ts`~~
+- [x] ~~Add OG image to root metadata~~ — 1200×630, Inter font, warm ivory background
+- [x] ~~Add `favicon.ico` fallback~~ — multi-size ICO (16/32/48px) in public/
+- [x] ~~Create or source `/district-map.svg`~~ — removed reference from Hero.tsx, not needed
+- [x] ~~Implement analytics~~ — @vercel/analytics installed, `<Analytics />` in root layout
+- [ ] SignupModal form → connect to Resend API route (pending Google Workspace setup)
+- [ ] VolunteerModal form → connect to Resend API route (pending Google Workspace setup)
 - [ ] QR code with UTM parameters for palm cards
 - [ ] Refactor campaign layout dict when `[locale]` route segment is added
 - [x] ~~Darken donate section overlay~~ — set to 80%
@@ -302,4 +342,4 @@ The behavioral health page opens by distinguishing behavioral health from mental
 - **About the Campaign page** — zero-waste philosophy, intern program, lean budget approach
 - **Events page** — add when campaign is running regular public events
 - **Standalone volunteer/internship pages** — when content and forms are ready
-- **Mobile testing** — verify all sections, modals, header behavior on actual devices
+- **Mobile testing** — verify endorsement min-heights on actual devices, especially with Ernesto's long quote

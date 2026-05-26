@@ -99,8 +99,8 @@ export default function Footer({ dict, issues }: FooterProps) {
                 <a href={`mailto:${siteConfig.meta.email}`} className={linkClasses}>
                   {dict.contactLink}
                 </a>
-                <a href="tel:+15038286075" className={linkClasses}>
-                  (503) 828-6075
+                <a href={`tel:${siteConfig.meta.phoneTel}`} className={linkClasses}>
+                  {siteConfig.meta.phone}
                 </a>
               </div>
             </nav>

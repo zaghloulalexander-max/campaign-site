@@ -62,7 +62,7 @@ const en = {
       id: 'nafisa-fai',
       name: 'Nafisa Fai',
       title: 'Washington County Commissioner',
-      quote: 'Endorsement statement to come.',
+      quote: 'Multnomah County needs a commissioner who has done the work, not just studied it. Nabil has done the work.',
       imageSrc: '/endorsements/nafisa-fai.jpeg',
     },
     {

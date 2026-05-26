@@ -99,7 +99,7 @@ export default function EndorsementShowcase({ endorsers }: EndorsementShowcasePr
   return (
     <section id="endorsements" className="bg-surface-warm py-12 md:py-16">
       <div className="mx-auto max-w-[var(--content-max)]">
-        <div className="relative overflow-hidden min-h-[950px] md:min-h-0 md:h-[550px] lg:h-[600px]">
+        <div className="relative overflow-hidden min-h-[750px] md:min-h-[950px] lg:min-h-0 lg:h-[600px]">
           <AnimatePresence mode="popLayout">
             <motion.div
               key={activeIndex}

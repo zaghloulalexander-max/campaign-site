@@ -1,0 +1,33 @@
+import type { MetadataRoute } from 'next';
+import { siteConfig } from '@/app/lib/config';
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = siteConfig.meta.url;
+
+  return [
+    {
+      url: baseUrl,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/issues/homelessness`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/issues/behavioral-health`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/issues/public-safety`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/issues/county-commissioner`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/privacy`,
+      lastModified: new Date(),
+    },
+  ];
+}

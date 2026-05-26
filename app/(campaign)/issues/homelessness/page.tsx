@@ -4,6 +4,7 @@ import { getDictionary, defaultLocale } from '@/app/lib/i18n';
 
 export const metadata: Metadata = {
   title: 'Homelessness',
+  description: 'The county spends $310 million a year on homelessness. People are becoming homeless faster than they are being housed.',
 };
 
 const CURRENT_HREF = '/issues/homelessness';

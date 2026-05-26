@@ -4,6 +4,7 @@ import { getDictionary, defaultLocale } from '@/app/lib/i18n';
 
 export const metadata: Metadata = {
   title: 'Behavioral Health',
+  description: 'The county delivers counseling, addiction treatment, and crisis response through separate systems with separate funding. For the people who need them, they overlap almost entirely.',
 };
 
 const CURRENT_HREF = '/issues/behavioral-health';

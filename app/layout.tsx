@@ -18,16 +18,28 @@ const libreBaskerville = Libre_Baskerville({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://electnabil.com'),
   title: {
     default: 'Nabil for District 2 — Multnomah County Commissioner',
     template: '%s | Nabil for District 2',
   },
-  description: 'Nabil Zaghloul for Multnomah County Commissioner, District 2.',
+  description: '32 years inside county government. Running for Multnomah County Commissioner, District 2.',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     title: 'Nabil for District 2 — Multnomah County Commissioner',
-    description: 'Nabil Zaghloul for Multnomah County Commissioner, District 2.',
+    description: '32 years inside county government. Running for Multnomah County Commissioner, District 2.',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Nabil for District 2',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
   },
   robots: {
     index: true,
@@ -36,13 +48,16 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.svg',
   },
+  themeColor: '#1f1e1c',
 };
+
+import { Analytics } from '@vercel/analytics/react';
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
-        <link rel="preconnect" href="https://secure.actblue.com" />
+        <link rel="preconnect" href="https://donation.c-esystems.com" />
       </head>
       <body className={`${inter.variable} ${libreBaskerville.variable} antialiased`}>
         {/* Skip to main content — keyboard accessibility */}
@@ -53,6 +68,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           Skip to main content
         </a>
         {children}
+        <Analytics />
       </body>
     </html>
   );

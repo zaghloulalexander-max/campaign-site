@@ -36,7 +36,7 @@ export default function Issues({ dict }: IssuesProps) {
       <div className="border-b border-border my-16 md:my-20" />
 
       {/* Two-column layout — heading + pillars left, teasers right */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-16 lg:gap-20">
 
         {/* Left column — Heading + lead-in */}
         <div>

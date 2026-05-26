@@ -227,8 +227,9 @@ export default function Header({ dict, donateLabel }: HeaderProps) {
           onClose={closeDrawer}
           ariaLabel="Mobile navigation"
           returnFocusRef={menuButtonRef}
+          fullHeight={false}
         >
-          <div className="flex flex-col h-full">
+          <div>
             {/* Drawer header */}
             <div className="flex items-center justify-between px-6 h-16 border-b border-border">
               <Link
@@ -253,7 +254,7 @@ export default function Header({ dict, donateLabel }: HeaderProps) {
             </div>
 
             {/* Navigation links */}
-            <nav className="flex-1 px-6 py-6" aria-label="Mobile navigation">
+            <nav className="px-6 py-6" aria-label="Mobile navigation">
               <div className="flex flex-col gap-1">
                 {siteConfig.nav.map((item) => (
                   <a
@@ -272,8 +273,8 @@ export default function Header({ dict, donateLabel }: HeaderProps) {
               </div>
             </nav>
 
-            {/* Donate button pinned to bottom */}
-            <div className="px-6 py-6 border-t border-border">
+            {/* Donate button */}
+            <div className="px-6 pb-6">
               <Button
                 as="a"
                 href={siteConfig.donateUrl}

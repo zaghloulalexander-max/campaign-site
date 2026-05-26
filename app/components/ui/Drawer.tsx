@@ -39,6 +39,13 @@ interface DrawerProps {
    * If not provided, restores focus to the previously focused element.
    */
   returnFocusRef?: React.RefObject<HTMLElement | null>;
+
+  /**
+   * Whether the drawer panel stretches to full viewport height.
+   * When false, the panel sizes to its content.
+   * @default true
+   */
+  fullHeight?: boolean;
 }
 
 // ============================================================================
@@ -80,6 +87,7 @@ export default function Drawer({
   ariaLabel,
   initialFocusRef,
   returnFocusRef,
+  fullHeight = true,
 }: DrawerProps) {
   const drawerRef = useRef<HTMLDivElement>(null);
   const previousActiveElement = useRef<HTMLElement | null>(null);
@@ -267,7 +275,8 @@ export default function Drawer({
         tabIndex={-1}
         inert={!isOpen ? (true as unknown as undefined) : undefined}
         className={[
-          'fixed top-0 h-full bg-surface z-50 outline-none',
+          'fixed top-0 bg-surface z-50 outline-none',
+          fullHeight ? 'h-full' : 'max-h-full overflow-y-auto',
           'w-80 max-w-[85vw]',
           'transition-transform duration-250 ease-in-out motion-reduce:transition-none',
           positionClass,

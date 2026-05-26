@@ -4,6 +4,7 @@ import { getDictionary, defaultLocale } from '@/app/lib/i18n';
 
 export const metadata: Metadata = {
   title: 'Public Safety',
+  description: 'The county spends hundreds of millions on the justice system, but most of that money comes after something has already gone wrong.',
 };
 
 const CURRENT_HREF = '/issues/public-safety';

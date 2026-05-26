@@ -149,7 +149,7 @@ export default function Modal({
           animate={{ opacity: 1 }}
           exit={{ opacity: 1 }}
           transition={{ duration: 0.25 }}
-          className="fixed inset-0 flex items-center justify-center p-6 sm:p-4"
+          className="fixed inset-0 flex items-center justify-center p-4 sm:p-6"
           style={{ zIndex: zIndexRef.current }}
           role="dialog"
           aria-modal="true"

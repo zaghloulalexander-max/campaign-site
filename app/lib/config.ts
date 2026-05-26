@@ -18,6 +18,8 @@ export const siteConfig = {
     url: 'https://electnabil.com',
     tagline: 'Building a Portland that works for everyone.',
     email: 'info@electnabil.com',
+    phone: '(503) 828-6075',
+    phoneTel: '+15038286075',
   },
 
   social: {

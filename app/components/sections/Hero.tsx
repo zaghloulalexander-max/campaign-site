@@ -70,15 +70,7 @@ export default function Hero({ videoSrc, imageSrc, dict }: HeroProps) {
           <div className="absolute inset-0 bg-gradient-to-r from-primary-900/85 via-primary-900/65 to-primary-800/40" />
         </>
       ) : (
-        <>
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700" />
-          <div
-            className="absolute inset-0 flex items-center justify-end pointer-events-none"
-            aria-hidden="true"
-          >
-            <img src="/district-map.svg" alt="" className="h-[80%] w-auto mr-[5%] opacity-100" />
-          </div>
-        </>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700" />
       )}
 
       <div className="relative z-10 mx-auto max-w-[var(--content-max)] px-6 md:px-8 lg:px-12 w-full pt-24 pb-16">
@@ -86,7 +78,7 @@ export default function Hero({ videoSrc, imageSrc, dict }: HeroProps) {
           <h1
             id="hero-heading"
             className="font-normal text-white leading-[1.1] tracking-tight animate-fade-up"
-            style={{ fontSize: 'clamp(4rem, 8vw, 7rem)' }}
+            style={{ fontSize: 'clamp(2.75rem, 8vw, 7rem)' }}
           >
             <span>{siteConfig.candidate.firstName}</span>
             <br />
