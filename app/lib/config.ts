@@ -35,7 +35,7 @@ export const siteConfig = {
   donateUrl: 'https://donation.c-esystems.com/campaign/electnabil',
 
   // Legally required
-  disclaimer: 'Paid for by Nabil for Portland. Not authorized by any candidate or candidate committee.',
+  disclaimer: 'Paid for by Elect Nabil. Not authorized by any candidate or candidate committee.',
 } as const;
 
 export type SiteConfig = typeof siteConfig;

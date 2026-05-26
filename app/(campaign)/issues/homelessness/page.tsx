@@ -164,13 +164,12 @@ export default function HomelessnessPage() {
       </h2>
 
       <p>
-        First, every program receiving county funding needs to demonstrate
-        measurable outcomes before that funding continues. Programs that can show
-        strong retention rates and real progress toward housing stability should
-        get funded. Programs that can&apos;t demonstrate results should not
-        receive continued investment. For new programs, clear performance
-        expectations need to be established from day one, before the first dollar
-        goes out.
+        First, programs receiving county funding should be able to demonstrate
+        measurable outcomes. Programs that show strong retention rates and real
+        progress toward housing stability should be prioritized, and when the
+        budget permits, expanded. When funding is tied to outcomes, it protects
+        the case managers, housing specialists, and staff who are in the
+        trenches fighting to keep families housed.
       </p>
 
       <p>

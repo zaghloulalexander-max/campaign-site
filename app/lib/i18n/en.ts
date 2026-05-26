@@ -27,12 +27,12 @@ const en = {
     answer: 'The county manages a $3.9 billion annual budget across homeless services, behavioral health, public safety, and operations serving over 800,000 residents.',
     heading: 'Issues',
     leadIn: "After 32 years inside county government, I've worked directly in the systems that deliver homeless services, behavioral health, and public safety to Multnomah County residents.",
-    leadInBody: "My approach is built around accountability. When programs are measured by outcomes, you learn where the money is working and where it isn't. When that information is transparent, the public can see it too. The goal is simple: better results for every tax dollar collected.",
+    leadInBody: "I believe in supporting and empowering the people and programs that serve this county to get the most out of every taxpayer dollar. When outcomes are measured, the people doing the work get the backing they need.",
     framework: [],
     items: [
       {
         title: 'Homelessness',
-        body: "The county's Homeless Services Department has a $310 million budget. Most of the programs it funds measure how many people they serve, not whether those people stay housed.",
+        body: "The county spends $310 million a year on homelessness. People are becoming homeless faster than they're being housed.",
         href: '/issues/homelessness',
       },
       {
@@ -42,7 +42,7 @@ const en = {
       },
       {
         title: 'Public safety',
-        body: "Public safety means different things to different people. I spent over a decade as a manager in the Department of Community Justice.",
+        body: "Public safety means different things to different people. The county spends hundreds of millions on the justice system, but most of that money comes after something has already gone wrong.",
         href: '/issues/public-safety',
       },
     ],
@@ -70,6 +70,7 @@ const en = {
       name: 'Dr. Ernesto Fonseca',
       title: 'CEO, Hacienda CDC',
       quote: 'Nabil has supported Black, Asian, White, Latino, and Native American working class communities for more than 32 years through housing assistance and social services. He will serve all Multnomah residents well, especially those with the greatest needs.',
+      imageSrc: '/endorsements/ernesto-fonseca.jpeg',
     },
   ],
 

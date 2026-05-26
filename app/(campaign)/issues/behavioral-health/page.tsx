@@ -127,19 +127,19 @@ export default function BehavioralHealthPage() {
       </p>
 
       <p>
-        Programs that receive county funding for behavioral health services
-        should be tracking completion rates, patient progress over time, and
-        whether the severity of diagnoses like depression, anxiety, and trauma
-        decreases between intake and follow-up. Most of this is not being
-        measured consistently across county-funded programs.
+        Most completion rates, patient progress over time, and changes in the
+        severity of diagnoses like depression, anxiety, and trauma are not
+        being measured consistently across county-funded programs. By rolling
+        out that tracking, we can better support practitioners and staff by
+        showing what their work actually produces.
       </p>
 
       <p>
         The model that works, combining housing with behavioral health
         services, addiction treatment, and employment support over 12 to 24
         months, should be the standard for people with severe and overlapping
-        needs. That requires sustained funding for programs that can
-        demonstrate results, not one-time grants or short-term contracts.
+        needs. That requires sustained funding for the programs and the people
+        delivering them, not one-time grants or short-term contracts.
       </p>
 
       <p>

@@ -138,9 +138,7 @@ export default function PublicSafetyPage() {
 
       <p>
         Commissioners vote on the public safety budget every year. The first
-        step is understanding what each program is producing. Before
-        continuing to fund any public safety program at its current level, the
-        county should be able to show what outcomes it is delivering.
+        step is understanding what each program is achieving.
       </p>
 
       <p>
