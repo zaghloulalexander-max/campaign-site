@@ -59,6 +59,7 @@ export default function Hero({ videoSrc, imageSrc, dict }: HeroProps) {
             poster={imageSrc}
             preload="auto"
             className="absolute inset-0 w-full h-full object-cover"
+            aria-hidden="true"
           >
             <source src={videoSrc} type="video/mp4" />
           </video>

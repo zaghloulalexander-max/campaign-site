@@ -17,7 +17,7 @@ interface IssuesProps {
 
 export default function Issues({ dict }: IssuesProps) {
   return (
-    <Section id="issues" background="default">
+    <Section id="issues" background="default" labelledBy="issues-heading">
       {/* Educational intro — full width */}
       <div className="max-w-3xl">
         <p className="text-2xl md:text-3xl lg:text-[1.75rem] font-normal text-text leading-snug">
@@ -40,7 +40,7 @@ export default function Issues({ dict }: IssuesProps) {
 
         {/* Left column — Heading + lead-in */}
         <div>
-          <h2 className="text-4xl md:text-5xl font-semibold text-text leading-none tracking-tight">
+          <h2 id="issues-heading" className="text-4xl md:text-5xl font-semibold text-text leading-none tracking-tight">
             {dict.heading}
           </h2>
           <p className="mt-20 text-[17px] text-text-muted leading-relaxed">

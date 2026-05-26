@@ -97,7 +97,7 @@ export default function EndorsementShowcase({ endorsers }: EndorsementShowcasePr
   const currentEndorser = endorsers[activeIndex];
 
   return (
-    <section id="endorsements" className="bg-surface-warm py-12 md:py-16">
+    <section id="endorsements" className="bg-surface-warm py-12 md:py-16" aria-label="Endorsements">
       <div className="mx-auto max-w-[var(--content-max)]">
         <div className="relative overflow-hidden min-h-[750px] md:min-h-[950px] lg:min-h-0 lg:h-[600px]">
           <AnimatePresence mode="popLayout">

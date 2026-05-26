@@ -7,7 +7,7 @@ interface AboutProps {
 
 export default function About({ dict }: AboutProps) {
   return (
-    <Section id="about" background="warm">
+    <Section id="about" background="warm" ariaLabel="About Nabil">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         <div>
           <div className="aspect-[4/3] lg:aspect-[4/5] rounded-[var(--radius-xl)] bg-surface-muted overflow-hidden shadow-[0_0_40px_rgba(0,0,0,0.08)]">
