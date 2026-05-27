@@ -201,6 +201,15 @@ Confident without being self-promotional. Critical without being cynical. He's n
 ### Issues Section Lead-In
 The lead-in body on the landing page sets the tone for all three issues: "I believe in supporting and empowering the people and programs that serve this county to get the most out of every taxpayer dollar." This frames accountability as empowerment, not oversight. Both voters and union members read it before clicking into any issue page.
 
+### Persuasion Principles
+The issue pages should persuade without arguing. The reader should arrive at the conclusion that Nabil is the right person — not because he told them so, but because the evidence made it obvious.
+
+- **Appeal to self-interest, not ideals.** The voter's version: your taxes are paying for programs that aren't being measured, you deserve to know if they're working. The union's version: when outcomes are tracked, it proves what your work produces, which is how your program gets funded and staffed. Both audiences support Nabil because it serves them, not because he asked.
+- **Lead with heart, close with mind.** Stories and human moments first (the single mother, the father on minimum wage, the Bienestar kids), systems and numbers second, accountability as the natural conclusion. The emotional material earns the reader's attention; the analytical material earns their trust.
+- **Let the reader arrive at the conclusion.** Show the 90% retention rate next to programs that only track throughput. Don't tell the reader what to think about it. The understated approach trusts the voter to connect the dots, and that respect is itself persuasive.
+- **Do the opposite of what's expected.** First-person voice instead of third-person campaign-speak. Briefing-style issue pages instead of platform promises. A lean campaign that doesn't waste money on mailers. The unexpectedness builds trust.
+- **No em dashes.** Use commas or restructure the sentence.
+
 ### Length
 800–1200 words per issue. Enough to demonstrate depth, short enough to read on a phone from a QR code scan.
 

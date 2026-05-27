@@ -1,6 +1,6 @@
 import './globals.css';
 import type { ReactNode } from 'react';
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter, Libre_Baskerville } from 'next/font/google';
 
 const inter = Inter({
@@ -48,6 +48,9 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.svg',
   },
+};
+
+export const viewport: Viewport = {
   themeColor: '#1f1e1c',
 };
 

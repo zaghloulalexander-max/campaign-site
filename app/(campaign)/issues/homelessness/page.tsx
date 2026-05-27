@@ -22,10 +22,12 @@ export default function HomelessnessPage() {
       readMore={readMore}
     >
       <p>
-        The county&apos;s Homeless Services Department has a $310 million budget.
-        I&apos;ve spent more than 32 years inside county government, managing
-        housing programs, reviewing contracts, building budgets, and working
-        directly with individuals, families, and their children in crisis.
+        The county spends $310 million a year on homelessness, and people are
+        becoming homeless faster than they&apos;re being housed. I&apos;ve spent
+        over 32 years inside county government, and for more than two decades
+        I&apos;ve run housing stabilization, eviction prevention, and rehousing
+        programs. I know what works, what doesn&apos;t, and what the staff on
+        the ground need to deliver results.
       </p>
 
       <h2 className="text-2xl font-semibold text-text mt-8">
@@ -33,21 +35,20 @@ export default function HomelessnessPage() {
       </h2>
 
       <p>
-        Multnomah County is the lead agency on homelessness in the area.
-        The Homeless Services Department coordinates shelters, housing
-        placement, outreach, and funds case management. The county also funds dozens of
-        nonprofit organizations to deliver these services on contract.
+        That $310 million flows through the county&apos;s Homeless Services
+        Department, which coordinates shelters, housing placement, outreach,
+        and case management. The county also funds dozens of nonprofit
+        organizations to deliver these services on contract.
       </p>
 
       <p>
-        The Department of County Human Services, where I work, runs several
-        programs that address housing instability before and after it becomes
-        homelessness. Eviction prevention, housing support services, emergency
-        housing, and the Economic Justice and Recovery Program, which I created
-        during the pandemic, all operate separately with separate funding. The
-        Oregon Rehousing Initiative is another. Each serves a different
-        population and a different stage of crisis, but they all deal with the
-        same problem: keeping people housed or getting them housed again.
+        With the Department of County Human Services, where I work, I oversee
+        five of these programs directly: eviction prevention, housing support
+        services, emergency housing, the Oregon Rehousing Initiative, and the
+        Economic Justice and Recovery Program, which I created during the
+        pandemic. They&apos;re funded separately and intervene at different
+        points; they all address housing instability, from keeping families in
+        their homes before they lose them to rehousing the homeless.
       </p>
 
       <p>
@@ -60,69 +61,8 @@ export default function HomelessnessPage() {
         market that continues to underperform on property tax revenue.
       </p>
 
-      <h2 className="text-2xl font-semibold text-text mt-8">
-        What I&apos;ve seen
-      </h2>
-
-      <p>
-        The $310 million isn&apos;t being lost. It&apos;s being spent, but
-        without the strategic framework to know whether it&apos;s working.
-        The county directs significant funding to nonprofit organizations and
-        tells them: here&apos;s the money, here&apos;s how many households we
-        want you to serve. Until recently, that was about all the direction they
-        got. Most contracts measured one thing: how many households were served.
-        Not whether those households stayed housed. Not whether the money
-        actually prevented an eviction six months later. Just throughput.
-      </p>
-
-      <p>
-        In the programs I manage, we evaluate at three, six, nine, and twelve
-        months to measure whether the assistance actually worked. The Economic
-        Justice and Recovery Program, which I created during the pandemic, in
-        combination with general, state, and federal funds served
-        2,800 households in its first year with a $7.5 million budget. Our
-        retention rate, the percentage of families still in their homes after we
-        help them, is above 90%. The federal dollars that built it were
-        one-time. When they expired, the program&apos;s funding went to zero. I
-        kept it running at $350,000 by redirecting money from my existing
-        budget.
-      </p>
-
-      <p>
-        Through that program, a father supporting a wife and three daughters on
-        minimum wage, with every dollar going to rent, nothing left for
-        utilities, insurance, school costs. We enrolled the family, helped his wife get
-        licensed as a childcare provider, and that second income stabilized the
-        household. A single mother with no work and mounting debt. We got her
-        into job training, financial literacy workshops, and skill-building
-        programs. She was eventually hired into county government. Her son is
-        graduating from university this year. These outcomes
-        don&apos;t happen with a one-time rent check. They happen when you work
-        with a family for 6 to 12 months, sometimes longer, and address the
-        underlying instability.
-      </p>
-
-      <p>
-        I&apos;ve pushed for years to extend those same performance expectations
-        to every organization receiving county funding. In the last couple of
-        years, some progress has been made. But it&apos;s not happening across
-        the board.
-      </p>
-
-      <p>
-        I&apos;ve volunteered several times in the county&apos;s shelters. They are modest
-        spaces: mattresses on the floor in large open rooms, first come first
-        served, open in the evening and closed by morning. The people inside
-        are overwhelmingly grateful for a place to sleep. The shelter
-        population is a mix of people with addiction or mental health issues
-        and people who simply lost their housing. The county does not track the
-        distinction. The unsheltered population in encampments skews more
-        heavily toward addiction and mental illness. Many refuse shelters
-        because drug use is prohibited inside and only come in during extreme
-        weather.
-      </p>
-
-      <p>
+      {/* Bridge data — sits between sections */}
+      <p className="border-l-2 border-[#71b3a9] pl-6 text-text-subtle text-[15px] italic my-16">
         Unsheltered homelessness in Multnomah County increased 75% between
         2023 and 2025. Over 10,500 people experienced homelessness in the
         county in 2025, and people are becoming homeless faster than they are
@@ -132,36 +72,92 @@ export default function HomelessnessPage() {
         already empty.
       </p>
 
+      <h2 className="text-2xl font-semibold text-text mt-8">
+        What I&apos;ve seen
+      </h2>
+
       <p>
-        Through a separate rehousing program I manage, we transition
-        individuals and families from shelters into permanent housing. Last
-        year we housed 75 families on a $900,000 budget, roughly $8,000 to
-        $12,000 per family. All 75 remained housed. That success depends on the same
-        landlord partnerships that make the rehousing and eviction prevention work
-        possible. Other programs attempt similar work but have not come
-        close to the same results.
+        I&apos;ve volunteered many times in the county&apos;s shelters,
+        especially during COVID. The shelters are modest: mattresses on the
+        floor in large open rooms, first come first served, open in the evening
+        and closed by morning. The people inside are overwhelmingly grateful
+        for a place to sleep. The shelter population is a mix of people with
+        addiction or mental health issues and people who simply lost their
+        housing. That distinction isn&apos;t tracked. The unsheltered population
+        in encampments skews more heavily toward addiction and mental illness.
+        Many unsheltered refuse shelters because drug use is prohibited inside
+        and only enter shelters during extreme weather.
       </p>
 
       <p>
-        A group that often gets overlooked in the homelessness conversation is
-        working families who are one emergency away from losing their housing.
-        Across District 2 and Multnomah County, there are households where both
-        adults work full time and still can&apos;t cover rent, utilities,
-        childcare, and groceries. These families don&apos;t show up in the
-        homeless count.
+        Through a rehousing program I manage, we transition individuals and
+        families from shelters into permanent housing. Last year we housed 75
+        families on a $900,000 budget, roughly $8,000 to $12,000 per family.
+        All 75 remained housed. That success depends on the same landlord
+        partnerships that make the rehousing and eviction prevention work
+        possible.
       </p>
 
       <p>
-        Meanwhile, the demand has overwhelmed the supply. This year, my programs
-        ran out of money almost three months before the end of the fiscal year. We have
-        over a thousand people on the waitlist, and we stopped accepting new
-        applications three months ago because there was no point. Eviction filings in
-        the court system are surging. The demand has quadrupled compared to the
-        pandemic years.
+        A group that can sometimes be overlooked in the homelessness
+        conversation is the individuals and families who are one emergency
+        away from losing their housing. Across District 2 and Multnomah
+        County, there are households where both adults work full time and
+        still can&apos;t cover rent, utilities, childcare, and groceries.
+        I&apos;ve worked with families where the difference between losing
+        their home and keeping it came down to the support the county provides.
+      </p>
+
+      <p>
+        I&apos;ve seen a father trying to support his wife and three daughters
+        on minimum wage; every dollar goes to rent, with next to nothing left
+        for utilities, insurance, or school expenses. We brought the family
+        into our program and worked with his wife to get licensed as a
+        childcare provider. With a second income, they were able to stabilize
+        the household and are no longer at risk of losing their home.
+      </p>
+
+      <p>
+        I&apos;ve seen a single mother without a job and mounting debts. We
+        brought her into our program and supported her through career training,
+        financial literacy workshops, and skill-building programs. With newly
+        developed skills and competencies, she was, believe it or not, hired
+        by the county and has continued to serve our community for the last
+        several years. Not only that, her son graduates from university this
+        year.
+      </p>
+
+      <p>
+        These outcomes are unlikely to happen with a one-time rent check. When
+        we invest in, and work with a family for 6 to 12 months, sometimes
+        longer, we can address the underlying instability and change their
+        trajectory for the better.
+      </p>
+
+      <p>
+        In the programs I manage, we evaluate at three, six, nine, and twelve
+        months to measure whether the assistance worked. Both families came
+        through the Economic Justice and Recovery Program, which I created
+        during the pandemic. In its first year, it had a budget of $7.5
+        million drawn from general, state, and federal funds and served 2,800
+        households. The Program&apos;s retention rate, the percentage of
+        families still in their homes after we help them, is above 90%. The
+        majority of the funding was one-time COVID funds, and now the
+        Program&apos;s formal funding is effectively $0. I&apos;ve kept it
+        running at a greatly reduced $350,000 budget by redirecting money
+        from my existing programs.
+      </p>
+
+      <p>
+        This year, my programs ran out of money almost three months before the
+        end of the fiscal year. We have over a thousand people on the waitlist,
+        and we stopped accepting new applications three months ago because
+        there was no point. Eviction filings in the court system are surging.
+        The demand has quadrupled compared to the pandemic years.
       </p>
 
       <h2 className="text-2xl font-semibold text-text mt-8">
-        What can be improved
+        Opportunities
       </h2>
 
       <p>
@@ -174,52 +170,37 @@ export default function HomelessnessPage() {
       </p>
 
       <p>
+        Most contracts with nonprofits measure how many households were served,
+        not whether those households stayed housed. The county should be
+        tracking, and publicly reporting, housing retention rates at three,
+        six, nine, and twelve months after assistance. Every nonprofit contract
+        should require quarterly reporting on those metrics.
+      </p>
+
+      <p>
         Second, the county needs to expand the Supportive Housing Alliance,
-        formerly the master lease initiative. Here&apos;s
-        how they work: the county signs a master lease with a property owner for a
-        block of units, say 300 out of a 1,000-unit building. The county becomes
-        the sub-leaseholder. We decide who moves in, we manage tenant
-        responsibilities, we handle any issues. The landlord simply gets paid
-        monthly rent without taking on the risk that comes with tenants who may
-        not have income or credit history. It&apos;s faster than placing families
-        one unit at a time, it removes the barrier that keeps landlords from
-        participating, and it creates predictability for property owners.
-        Historically, the county has stayed away from this model but should not
-        be afraid of trying new things, especially if they work.
+        formerly the master lease initiative. In this context, the county signs
+        a master lease with a property owner for a block of units, e.g., 300
+        units of a 1,000-unit building. The county becomes the sub-leaseholder
+        and decides who moves in, managing tenant responsibilities and any
+        issues that arise. The landlord gets paid rent monthly without
+        absorbing the risk that comes with tenants who may not have income or
+        credit history. For the county, it&apos;s more efficient than placing
+        families one unit at a time and it removes the biggest barrier that
+        keeps landlords from participating in solving homelessness.
       </p>
 
       <p>
-        Third, prevention needs to be treated as a frontline strategy, not an
-        afterthought. When a family gets evicted and enters the shelter system,
-        the cost to rehouse them is roughly double what it would have cost to keep
-        them housed: first month, last month, deposit, plus legal fees that pile
-        up once the case hits court.
-      </p>
-
-      <h2 className="text-2xl font-semibold text-text mt-8">
-        How progress gets measured
-      </h2>
-
-      <p>
-        The county should be tracking, and publicly reporting, housing retention
-        rates at three, six, nine, and twelve months after assistance. Not just
-        how many people were served, but how many are still housed. Every
-        nonprofit contract should require quarterly reporting on those metrics.
-        Programs that consistently meet retention benchmarks get continued
-        funding. Programs that don&apos;t get a clear timeline to improve, and if
-        they can&apos;t, the money moves to programs that deliver.
+        Third, prevention needs to be treated as a frontline strategy, not as
+        an afterthought. When a family gets evicted and enters the shelter
+        system, the cost to rehouse them is roughly double what it would have
+        cost to keep them housed: first month, last month, deposit, plus legal
+        fees that pile up once the case hits court.
       </p>
 
       <p>
         Commissioners vote on the budget every year. That&apos;s where these
-        changes start. I&apos;d push for performance reviews of every funded
-        program before the next budget cycle and use the data to redirect funding
-        toward what works. I&apos;d build partnerships
-        with landlords and property managers, addressing their business concerns,
-        to expand housing options beyond what the county can provide directly.
-        Homelessness requires coordination across the county, the cities, Metro,
-        nonprofits, and the private sector. That coordination starts with the
-        county spending smarter and measuring honestly.
+        changes start.
       </p>
     </ArticlePage>
   );

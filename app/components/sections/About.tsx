@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Section from '@/app/components/ui/Section';
 import type { Dictionary } from '@/app/lib/i18n';
 
@@ -8,21 +9,24 @@ interface AboutProps {
 export default function About({ dict }: AboutProps) {
   return (
     <Section id="about" background="warm" ariaLabel="About Nabil">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-        <div>
-          <div className="aspect-[4/3] lg:aspect-[4/5] rounded-[var(--radius-xl)] bg-surface-muted overflow-hidden shadow-[0_0_40px_rgba(0,0,0,0.08)]">
-            <div className="w-full h-full bg-gradient-to-br from-primary-100/60 to-surface-muted flex items-center justify-center">
-              <span className="text-text-subtle text-sm tracking-wide">{dict.photoAlt}</span>
-            </div>
+      <div className="mt-8 md:mt-12">
+        <div className="float-none md:float-left md:mr-10 md:mb-6 md:w-[55%] mb-8">
+          <div className="aspect-[4/3] rounded-[var(--radius-xl)] bg-surface-muted overflow-hidden shadow-[0_0_40px_rgba(0,0,0,0.08)] relative">
+            <Image
+              src="/images/about-headshot.jpeg"
+              alt={dict.photoAlt}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 45vw"
+              priority
+            />
           </div>
         </div>
 
-        <div>
-          <div className="space-y-5 text-text-muted leading-[1.75] text-base">
-            {dict.paragraphs.map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
-          </div>
+        <div className="space-y-5 text-text-muted leading-[1.75] text-base">
+          {dict.paragraphs.map((p, i) => (
+            <p key={i}>{p}</p>
+          ))}
         </div>
       </div>
     </Section>
