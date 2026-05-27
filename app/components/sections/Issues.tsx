@@ -43,10 +43,7 @@ export default function Issues({ dict }: IssuesProps) {
           <h2 id="issues-heading" className="text-4xl md:text-5xl font-semibold text-text leading-none tracking-tight">
             {dict.heading}
           </h2>
-          <p className="mt-20 text-[17px] text-text-muted leading-relaxed">
-            {dict.leadIn}
-          </p>
-          <p className="mt-6 text-base text-text-muted leading-relaxed">
+          <p className="mt-20 text-xl md:text-2xl text-text-muted leading-relaxed">
             {dict.leadInBody}
           </p>
         </div>
