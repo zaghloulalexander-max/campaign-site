@@ -81,9 +81,6 @@ export default function Footer({ dict, issues }: FooterProps) {
                 <Link href="/#signup" className={linkClasses}>
                   {dict.volunteerLink}
                 </Link>
-                <Link href="/#signup" className={linkClasses}>
-                  {dict.internshipsLink}
-                </Link>
               </div>
             </nav>
 

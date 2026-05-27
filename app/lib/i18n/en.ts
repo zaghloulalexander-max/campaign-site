@@ -14,9 +14,8 @@ const en = {
   about: {
     photoAlt: 'Nabil Zaghloul',
     paragraphs: [
-      "I've spent over 32 years inside Multnomah County government. I started in the Department of Community Justice, managing parole, probation, and domestic violence caseloads. After about a decade, I moved to the Health Department, and then to the Department of County Human Services, where I currently run housing stabilization, eviction prevention, and youth services programs.",
+      "I've spent over 32 years inside Multnomah County government. I started in the Department of Community Justice, managing parole, probation, and domestic violence caseloads. After about a decade, I moved to the Health Department, where I managed medical and behavioral health programs. I'm now with the Department of County Human Services, where I run housing stabilization, mental health, addiction services, eviction prevention, and youth services programs.",
       "When the pandemic hit, I built the Economic Justice and Recovery Program to help families stay in their homes. It served 2,800 households in its first year with a 90% retention rate. When the funding ran out, I kept it going. In the Cully neighborhood, I started Bienestar Youth Services with one staff member and no dedicated budget to keep kids away from gang recruitment.",
-      "I'm running for county commissioner because after 32 years inside the system, I want to apply what I've learned from a seat where I can influence how the county budget is spent and help the staff on the ground get the support they need to deliver results. The county has resources, and I want to help us get more out of them.",
     ],
   },
 
@@ -37,12 +36,12 @@ const en = {
       },
       {
         title: 'Behavioral health',
-        body: "The county delivers counseling, addiction treatment, and crisis response through separate systems with separate funding. For the people who need them, they overlap almost entirely.",
+        body: "The county's behavioral health system handles short-term care well. For people dealing with addiction, mental illness, and housing instability at the same time, there's almost nothing.",
         href: '/issues/behavioral-health',
       },
       {
         title: 'Public safety',
-        body: "Public safety means different things to different people. The county spends hundreds of millions on the justice system, but most of that money comes after something has already gone wrong.",
+        body: "For a restaurant owner in Cully, public safety means people camping outside her door and breaking into cars. For a mother in Northeast Portland, it means whether her kids are safe walking to school.",
         href: '/issues/public-safety',
       },
     ],
@@ -93,7 +92,7 @@ const en = {
     submit: 'Submit',
     thankYou: 'Thank you',
     thankYouMessage: "We'll email you when the voters' pamphlet and your ballot are on the way.",
-    volunteerLink: 'Want to do more? Volunteer',
+    volunteerLink: 'Want to knock on doors? Volunteer',
     closeLabel: 'Close modal',
     formLabel: 'Email signup',
     errors: {

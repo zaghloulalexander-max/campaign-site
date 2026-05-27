@@ -4,7 +4,7 @@ import { getDictionary, defaultLocale } from '@/app/lib/i18n';
 
 export const metadata: Metadata = {
   title: 'Public Safety',
-  description: 'The county spends hundreds of millions on the justice system, but most of that money comes after something has already gone wrong.',
+  description: 'For a restaurant owner in Cully, public safety means people camping outside her door and breaking into cars. For a mother in Northeast Portland, it means whether her kids are safe walking to school.',
 };
 
 const CURRENT_HREF = '/issues/public-safety';
@@ -16,19 +16,17 @@ export default function PublicSafetyPage() {
   return (
     <ArticlePage
       title="Public safety"
-      imageSrc="/issues/public-safety.png"
+      imageSrc="/issues/public-safety.avif"
       imageAlt="Illustration of a 15 MPH neighborhood greenway sign on a residential street in Concordia"
       imageCaption="Concordia, Northeast Portland"
       readMore={readMore}
     >
       <p>
-        Public safety means different things to different people. For a
-        restaurant owner in Cully, it means people camping outside her door and
-        breaking into cars. For a parent in Northeast Portland, it means whether
-        her kids are safe walking to school. For a senior in East County, it
-        might mean whether anyone responds when something goes wrong. When
-        voters say they care about public safety, they are usually talking about
-        all of these things at once.
+        For a restaurant owner in Cully, public safety means people camping
+        outside her door and breaking into cars. For a mother in Northeast
+        Portland, it means whether her kids are safe walking to school. The
+        county spends more than $350 million a year on the justice system. I
+        spent over a decade inside it.
       </p>
 
       <h2 className="text-2xl font-semibold text-text mt-8">
@@ -38,125 +36,102 @@ export default function PublicSafetyPage() {
       <p>
         The county&apos;s role in public safety is different from the
         city&apos;s. The city runs the police department. The county runs the
-        justice system: the Department of Community Justice, which handles parole,
-        probation, and juvenile justice; the two county jails with over 1,100
-        beds; the District Attorney&apos;s office; and the Sheriff&apos;s Office.
-        The county also manages emergency preparedness, which covers response to
-        floods, extreme weather, and public health emergencies. And behavioral
-        health services, which are funded separately but connected directly to
-        public safety because untreated mental illness and addiction drive a
-        significant share of what people experience as unsafe.
+        justice system: the Department of Community Justice, which handles
+        parole, probation, and juvenile justice; the two county jails; the
+        District Attorney&apos;s office; and the Sheriff&apos;s Office. It
+        also manages emergency preparedness and funds the behavioral
+        health services connected to public safety.
       </p>
 
-      <p>
-        Most people don&apos;t know where the city&apos;s responsibility ends
-        and the county&apos;s begins. The county spends hundreds of millions of
-        dollars on these systems.
-      </p>
-
-      <h2 className="text-2xl font-semibold text-text mt-8">
-        What I saw inside the justice system
-      </h2>
-
-      <p>
-        I spent over a decade as a manager in the Department of Community
-        Justice, overseeing programs in both adult and juvenile caseloads. My unit managed
-        domestic violence cases, DUI, parole, probation, and sex offender
-        supervision. Every day, we worked with judges, district attorneys, public
-        defenders, and victims. The job was managing people coming out of jail
-        and prison, trying to help them reintegrate into the community and reduce
-        the likelihood that they would end up back in the system.
-      </p>
-
-      <p>
-        The caseloads were serious. Murder, manslaughter, assault, rape, domestic
-        violence, theft. Probation officers carried heavy loads and dealt with
-        people in crisis constantly. A lot of the work was showing up in court,
-        coordinating with the DA on cases, tracking behavior, making sure
-        conditions of parole and probation were met. When someone violated, the
-        system responded. When someone stabilized, found work, stayed clean, that
-        was the outcome we were working toward.
-      </p>
-
-      <p>
-        The system leaned punitive. There were people inside it who believed in
-        restorative approaches and rehabilitation, but the structure was built
-        around compliance and consequences. Whether people actually reintegrated
-        successfully after leaving the system was harder to measure, and we
-        didn&apos;t track it as well as we should have.
-      </p>
-
-      <p>
-        After about a decade, I moved to the Health Department. The work inside
-        the justice system takes a toll. You are dealing with people who have
-        committed serious harm, and you are also dealing with a system that
-        doesn&apos;t always have the tools to break the cycle. That experience
-        is why I think about public safety differently now. The most effective
-        investments happen before someone enters the system, not after.
+      {/* Bridge data — sits between sections */}
+      <p className="border-l-2 border-[#c37b62] pl-6 text-text-subtle text-[15px] italic my-16">
+        The FY 2027 proposed budget cuts the District Attorney&apos;s office
+        by 5%, roughly $3.5 million and 18 positions. The DA has called it
+        the largest reduction in the office&apos;s history. Jail capacity is
+        maintained at 1,130 beds. Crime rates have declined, but the systems
+        producing those results are being asked to do more with less.
       </p>
 
       <h2 className="text-2xl font-semibold text-text mt-8">
-        What prevention looks like
+        What I&apos;ve seen
       </h2>
 
       <p>
-        A few years ago, I conducted a safety survey in the Cully neighborhood.
-        We asked residents directly: what makes you feel safe? The answers were
-        specific. People talked about no one doing anything about drug
-        activities happening a few yards from where they lived. They talked
-        about needing cameras. About youth violence. About car break-ins, and
-        assaults where nobody responded. Each person had a different version of what public
-        safety meant to them, but the common thread was that they wanted someone
-        to be paying attention to their neighborhood.
+        I managed domestic violence, DUI, parole, probation, and sex offender
+        caseloads in the Department of Community Justice. The crimes were
+        serious. Murder, manslaughter, assault, rape, theft. Probation
+        officers carried heavy caseloads and dealt with people in crisis
+        every day. The job was managing people coming out of jail and prison
+        and trying to keep them from going back. After about a decade, I
+        couldn&apos;t do it anymore. I moved to the Health Department.
       </p>
 
       <p>
-        That survey informed a program I created and run now called Bienestar
-        Youth Services. There was no directive to build it and no budget for it.
-        I saw the need, designed the program, and fund it by redirecting
-        resources within my existing budget and recruiting volunteers. We work
-        with about 50 kids, ages 7 to 18, in the Cully neighborhood and
-        surrounding areas. Most are first-generation Americans or children of
-        immigrants and refugees, from Somali, Latino, and other communities. For the first
-        time, we are seeing gang recruitment reach into the Somali community
-        here, something that did not exist a generation ago. The program offers
-        music classes through a partnership with the Metropolitan Youth
-        Symphony, robotics, aviation, art, and other activities. We run
-        sessions multiple times a week, including weekends. We work closely
-        with parents.
+        The system leaned punitive. There were people inside it who believed
+        in rehabilitation, but the structure was built around compliance and
+        consequences. Whether someone actually reintegrated after leaving was
+        harder to measure, and we didn&apos;t track it very well. What I
+        did see was that the juvenile side showed more results than the adult
+        side.
       </p>
 
       <p>
-        The program costs a fraction of what it costs to process one juvenile
-        through the justice system. Every kid who
-        stays in school, stays out of trouble, and builds skills is one fewer
-        person entering the cycle I spent a decade managing on the other end.
+        A few years ago, I conducted a safety survey in the Cully
+        neighborhood. I&apos;d worked on community safety in the district
+        before, including with Tom Potter&apos;s daughter at the Northeast
+        Precinct. We asked residents directly: what makes you feel safe?
+        People talked about drug activities happening yards from where they
+        lived, about needing cameras, about youth violence and car break-ins
+        and assaults where nobody responded. The common thread was that they
+        wanted someone paying attention to their neighborhood.
+      </p>
+
+      <p>
+        That survey led to Bienestar Youth Services, a program I created
+        with no directive and no budget. I fund it by redirecting resources
+        from my existing programs and recruiting volunteers. We work with
+        about 50 kids, ages 7 to 18, in Cully and the surrounding areas,
+        most of them first-generation Americans from immigrant communities.
+        For the first time, we&apos;re seeing gang recruitment reach into
+        these communities, something that didn&apos;t exist a generation ago.
+      </p>
+
+      <p>
+        The program costs a fraction of processing one juvenile through the
+        justice system. Every kid who stays in school and stays
+        out of trouble is one fewer person entering it.
       </p>
 
       <h2 className="text-2xl font-semibold text-text mt-8">
-        What a commissioner can do
+        Opportunities
       </h2>
 
       <p>
-        Commissioners vote on the public safety budget every year. The first
-        step is understanding what each program is achieving.
+        Tracking whether people who leave the justice system actually
+        reintegrate, find work, stay housed, stay out, should be standard.
+        When it is, it shows the public whether the investment is working,
+        and it shows the officers and case managers what their work is
+        producing.
       </p>
 
       <p>
-        The county is currently cutting homeless services and behavioral health
-        that is directly connected to public safety. When someone in crisis
-        encounters the police instead of a behavioral health professional, the
-        results are often worse for everyone involved.
+        The Cully survey showed that residents know what their neighborhoods
+        need: cameras, community safety networks, youth programs. Those
+        investments are far less expensive than the justice system, and
+        they keep people, especially young people, from entering it in the
+        first place.
       </p>
 
       <p>
-        I would also push for more investment in neighborhood-level prevention:
-        community safety networks, youth violence prevention programs,
-        partnerships between residents and local organizations. The Cully
-        safety survey showed that residents have specific, practical ideas
-        about what their neighborhoods need. Those are the programs that keep
-        people, especially young people, from entering the justice system in
-        the first place.
+        When the county doesn&apos;t have enough behavioral health
+        professionals, police end up responding to mental health crises.
+        That&apos;s not what they&apos;re trained for, and the outcomes are
+        worse for everyone, the person in crisis and the officer.
+      </p>
+
+      <p>
+        Commissioners vote on the budget every year. That&apos;s where these
+        changes start.
       </p>
     </ArticlePage>
   );

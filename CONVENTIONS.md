@@ -220,8 +220,8 @@ Platform documents, listicles of positions, policy white papers, or personal ess
 Three core issues, each written through the accountability framework:
 
 - **Homelessness** — the $310M Homeless Services Department, shelter-to-housing pipeline, landlord partnerships, prevention vs. response
-- **Behavioral health** — the Health Department's $531M budget, crisis response, fentanyl/Measure 110 fallout, the Behavioral Health Resource Center, the gap between need and capacity
-- **Public safety** — Sheriff's Office, jails, DA, Department of Community Justice, crisis deflection, reentry and stabilization
+- **Behavioral health** — $150M umbrella for mental health, addiction treatment, and crisis response; CareOregon funding crisis; long-term care gap; Bienestar model as proof of concept
+- **Public safety** — $350M+ justice system (DCJ, DA, Sheriff, jails); decade inside DCJ; Cully safety survey; Bienestar Youth Services; prevention vs. response
 
 Cost of living is not a separate issue — it's the context that runs through all three. The framework pillars (accountability, effective services, fiscal transparency) connect them.
 
@@ -233,10 +233,27 @@ Cost of living is not a separate issue — it's the context that runs through al
 5. **Opportunities** — accountability with union close (throughput critique folded in), master lease (SHA), prevention as frontline strategy, commissioner lever closes
 
 ### Bridge data pattern
-When a section needs statistical context that doesn't belong in either the preceding or following narrative section, use a bridge paragraph with the illustration's accent color as a left border: `border-l-2 border-[accent] pl-6 text-text-subtle text-[15px] italic my-16`. Each issue page uses its own accent color from the illustration.
+When a section needs statistical context that doesn't belong in either the preceding or following narrative section, use a bridge paragraph with the illustration's accent color as a left border: `border-l-2 border-[accent] pl-6 text-text-subtle text-[15px] italic my-16`. Each issue page uses its own accent color from the illustration:
+- Homelessness: `#aa7355` (terracotta door)
+- Behavioral health: `#c37b62` (red roofline)
+- Public safety: `#c37b62` (matching behavioral health; updated illustration pending)
+
+### Behavioral health page structure (edited)
+1. Opening — definition (county umbrella for mental health, addiction, crisis response), $150M spending + demand/funding tension, credential (20 years + currently manages long-term rehabilitation through Bienestar)
+2. **What the county is responsible for** — BH Division as local mental health authority, delivers services directly and through 100+ contracts, general fund distinction, separate licensing for mental health and addiction
+3. Bridge data paragraph — CareOregon ended care coordination funding ($4.6M gap, Board covered $2.4M, rest hit care coordination teams), FY 2027 proposes further cuts
+4. **What I've seen** — Bienestar program (12-24 months, 5-8 people, funding constraint), woman's story (justice system, addiction, county apartment with no services, 14 months to self-sufficiency), insight (short-term counseling works, comprehensive rehabilitation for severe/overlapping needs barely exists)
+5. **Opportunities** — fentanyl emergency as lead (declaration without infrastructure), workforce + measurement merged (not enough practitioners, programs should measure what they produce, dual-lens sentence), Bienestar model as standard (multi-year funding and committed staff), commissioner budget lever closes
+
+### Public safety page structure (edited)
+1. Opening — two vignettes (restaurant owner in Cully, mother in NE Portland), $350M on the justice system, "I spent over a decade inside it"
+2. **What the county is responsible for** — city/county distinction (city runs police, county runs justice system), DCJ, jails, DA, Sheriff, emergency preparedness, behavioral health connection
+3. Bridge data paragraph — DA's office cut 5% (~$3.5M, 18 positions, "largest reduction in office's history"), jail capacity maintained at 1,130 beds, crime rates declined but systems asked to do more with less
+4. **What I've seen** — two phases of one career. Phase one: DCJ caseloads (murder, manslaughter, assault, rape, theft), officers carrying heavy loads, system leaned punitive, didn't track reintegration well, juvenile side showed more results, burnout and move to Health Department. Phase two: Cully safety survey (Potter's daughter connection), residents' specific concerns, Bienestar Youth Services (no directive, no budget, 50 kids, gang recruitment), cost comparison (fraction of processing one juvenile)
+5. **Opportunities** — accountability (track reintegration: work, housing, staying out; dual-lens sentence), neighborhood prevention (Cully survey showed residents know what they need, far less expensive than justice system), crisis response (not enough BH professionals means police respond to mental health crises), commissioner budget lever closes
 
 ### Section naming
-"What can be improved" was renamed to "Opportunities." "How progress gets measured" was absorbed into Opportunities. Forward-looking section names avoid implying the current system is a failure.
+"What can be improved" was renamed to "Opportunities." "How progress gets measured" was absorbed into Opportunities. "What a commissioner can do" was absorbed into a two-sentence close matching all three pages: "Commissioners vote on the budget every year. That's where these changes start." Forward-looking section names avoid implying the current system is a failure.
 
 ---
 
@@ -268,8 +285,8 @@ Reference images: photo of the actual houses (Hollywood neighborhood, NE Portlan
 
 Note: the teal was shifted warmer via Gemini regeneration and now includes a terracotta door accent (`#aa7355`) on the Tudor cottage, matching the warm accent pattern used across all illustrations (behavioral health has a red roofline). The illustration was also regenerated with bolder, more confident strokes to match the behavioral health quality. Watermark removed via PIL.
 
-### Behavioral health and public safety prompts (TBD)
-Subjects for these two illustrations have not been decided. They should be recognizable District 2 or Multnomah County locations relevant to each topic, not abstract concepts. The commissioner page works because it illustrates a real, specific building. The issue pages should follow the same approach.
+### Behavioral health and public safety prompts
+Both illustrations have been created. Subjects are recognizable District 2 or Multnomah County locations relevant to each topic, following the same approach as the commissioner page illustration.
 
 ### Behavioral health prompt
 "A loose, hand-drawn ink illustration of a wooden park bench on a concrete pad, facing away from the viewer, with tall mature trees rising behind it and a house roofline visible through the canopy. Render it in an abstract, sketchy style with organic flowing black ink lines on a warm muted amber background (similar to a dusty gold or aged wheat tone, not bright orange or yellow). Simplified and slightly playful, not architecturally precise. The bench and trees should be recognizable but stylized, with loose gestural strokes suggesting the forms rather than depicting every detail. No text, no people. Aspect ratio 2:1, horizontal."
@@ -289,7 +306,7 @@ Subject rationale: a "slow down, kids at play" sign communicates public safety a
 Gemini-generated illustrations include a small star watermark in the bottom-right corner. Remove it using PIL by sampling the background color from a nearby clean area and painting a rectangle over the watermark region. The background colors are not perfectly uniform, so sample from the same edge (right edge, well above the corner) to match the local tone.
 
 ### Behavioral health vs. mental health (content note)
-The behavioral health page opens by distinguishing behavioral health from mental health. Behavioral health focuses on habits and behavior patterns with the goal of correcting them. Mental health involves deeper cognitive and clinical work. Both fall under the same county division but carry separate licensing and funding. This distinction came from Nabil's interview and should be preserved in any editing pass.
+The behavioral health page opens by defining behavioral health in the county context: the umbrella for mental health services, addiction treatment, and crisis response. Nabil's professional distinction between behavioral health and mental health (from the interview) was considered but replaced with the county's own practical framing, which is more verifiable and educational. The county groups mental health and addiction services together under the "Behavioral Health" umbrella without drawing a formal clinical distinction.
 
 ## Mobile Responsiveness
 
@@ -313,8 +330,8 @@ The behavioral health page opens by distinguishing behavioral health from mental
 - [x] ~~Donate section photo~~ — Ainsworth St tree-lined residential street, District 2
 - [x] ~~About section headshot/portrait~~ — Image 5 (IMG_0572), seated at round table with community mural, 4:3 crop removes rainbow, float-wrap layout
 - [x] ~~Endorser headshots~~ — Tom Potter, Nafisa Fai, and Ernesto Fonseca added
-- [x] ~~About section copy~~ — 3 paragraphs: career arc (broad strokes), what he built (EJRP + Bienestar), why he's running (staff on the ground + get more out of resources)
-- [x] ~~Issue page content~~ — homelessness fully edited, behavioral health and public safety drafted from interviews
+- [x] ~~About section copy~~ — 2 paragraphs: career arc (three departments: DCJ, Health, DCHS), what he built (EJRP + Bienestar). "Why he's running" paragraph cut — the proof points speak for themselves
+- [x] ~~Issue page content~~ — all three fully edited: homelessness, behavioral health, public safety
 - [x] ~~Issue page illustrations~~ — homelessness (Tudor houses, warm teal, terracotta door accent), behavioral health (park bench, warm amber, red roofline accent), public safety (15 MPH sign, warm slate)
 - [x] ~~Endorsement quotes~~ — Potter confirmed, Fai written, Fonseca confirmed
 - [x] ~~Signup section heading copy~~ — "Campaigns send mailers..." / "We'd rather just email you."
@@ -352,7 +369,7 @@ The behavioral health page opens by distinguishing behavioral health from mental
 - [ ] QR code with UTM parameters for palm cards
 - [ ] Refactor campaign layout dict when `[locale]` route segment is added
 - [x] ~~Darken donate section overlay~~ — set to 80%
-- [ ] Alex's full editing/messaging pass on behavioral health and public safety issue pages
+- [x] ~~Alex's full editing/messaging pass on behavioral health and public safety issue pages~~
 
 ### Future
 - **Spanish translations** — professional translation of finalized English content into `es.ts`
