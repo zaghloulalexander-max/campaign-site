@@ -20,13 +20,15 @@ Don't say: "I support unions and I'll fight for workers."
 
 Say: "I was a Local 88 member. I know what it's like to depend on fair wages and decent benefits. When programs can prove what their staff are achieving, that's what gets them funded and staffed. Accountability protects the people doing the work."
 
+A go-to line: "I know what works, what doesn't, and what the staff on the ground need to deliver results."
+
 The union leader's question is always: "What happens to our people?" Answer it by showing that your approach means more investment in their members, not less.
 
 ### In endorsement interviews
 
 Don't say: "I'm running because I care about this community."
 
-Say: "I've managed these programs for 32 years. I can tell you exactly where the money goes, what's working, and what isn't. I'm running because I know how to fix the things that are broken."
+Say: "I've managed these programs for 32 years. I can tell you exactly where the money goes, what's working, and what isn't. I'm running because I know where the opportunities are and what it takes to get more out of what we have."
 
 The endorsement committee's question is always: "Does this person actually know what they're talking about?" Answer it with specifics. Name the program. Name the budget. Name the outcome.
 

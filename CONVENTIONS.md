@@ -7,7 +7,7 @@
 - Privacy page lives inside the campaign group at `(campaign)/privacy/`
 - Issue pages live at `(campaign)/issues/[slug]/` using ArticlePage layout
 - Educational pages (county-commissioner) use the same ArticlePage layout
-- Root `layout.tsx` handles fonts, metadata, skip-to-content link, favicon, `<html>/<body>` only
+- Root `layout.tsx` handles fonts, metadata, skip-to-content link, favicon, `<html>/<body>` only. `metadataBase` set to `https://electnabil.com`. `themeColor` is in a separate `viewport` export (Next.js 15 requirement). Twitter card configured as `summary_large_image`. Preconnect to `donation.c-esystems.com`.
 - `app/not-found.tsx` handles 404s globally
 - `app/error.tsx` provides branded error boundary with retry
 - `app/loading.tsx` provides spinner during client-side page transitions
@@ -225,6 +225,19 @@ Three core issues, each written through the accountability framework:
 
 Cost of living is not a separate issue — it's the context that runs through all three. The framework pillars (accountability, effective services, fiscal transparency) connect them.
 
+### Homelessness page structure (edited)
+1. Opening — $310M tension, housing-specific credential (two decades), staff-on-the-ground promise
+2. **What the county is responsible for** — HSD, nonprofits on contract, DCHS five programs, funding sources under pressure
+3. Bridge data paragraph — 75% increase, 10,500 people, vacancy rates, 600 beds cut. Styled as `border-l-2 border-[#aa7355] pl-6 text-text-subtle text-[15px] italic my-16`. Sits between sections as context, not narrative.
+4. **What I've seen** — shelter volunteering, rehousing (75 families/$900K), working families, two stories (father/single mother), one-time rent check insight, EJRP data (90% retention, $7.5M to $0), waitlist/demand crisis closes the section
+5. **Opportunities** — accountability with union close (throughput critique folded in), master lease (SHA), prevention as frontline strategy, commissioner lever closes
+
+### Bridge data pattern
+When a section needs statistical context that doesn't belong in either the preceding or following narrative section, use a bridge paragraph with the illustration's accent color as a left border: `border-l-2 border-[accent] pl-6 text-text-subtle text-[15px] italic my-16`. Each issue page uses its own accent color from the illustration.
+
+### Section naming
+"What can be improved" was renamed to "Opportunities." "How progress gets measured" was absorbed into Opportunities. Forward-looking section names avoid implying the current system is a failure.
+
 ---
 
 ## Illustrations
@@ -253,7 +266,7 @@ Each page gets a distinct muted background color. All colors should sit comforta
 
 Reference images: photo of the actual houses (Hollywood neighborhood, NE Portland) + the county commissioner illustration for style consistency. No subject reference needed for generic residential scenes, but always include the commissioner illustration as a style reference.
 
-Note: the current teal is slightly cool and saturated against the site's warm ivory palette. A future regeneration should use a warmer, more muted teal. The aspect ratio also runs slightly taller than 2:1, so `next/image` crops the top and bottom. Regenerate at true 2:1 for the final version.
+Note: the teal was shifted warmer via Gemini regeneration and now includes a terracotta door accent (`#aa7355`) on the Tudor cottage, matching the warm accent pattern used across all illustrations (behavioral health has a red roofline). The illustration was also regenerated with bolder, more confident strokes to match the behavioral health quality. Watermark removed via PIL.
 
 ### Behavioral health and public safety prompts (TBD)
 Subjects for these two illustrations have not been decided. They should be recognizable District 2 or Multnomah County locations relevant to each topic, not abstract concepts. The commissioner page works because it illustrates a real, specific building. The issue pages should follow the same approach.
@@ -281,10 +294,7 @@ The behavioral health page opens by distinguishing behavioral health from mental
 ## Mobile Responsiveness
 
 - Target devices: small iPhone (375px), large iPhone (430px), iPad portrait (768px), iPad landscape / small laptop (1024px), large laptop (1280px+), monitor (1440px+)
-- About and Endorsements stay stacked (single column) until `lg` (1024px) — full-width image, text below
-- Issues section splits to two-column at `md` (768px)
-- Hero text uses `clamp(2.75rem, 8vw, 7rem)` for fluid scaling across all widths
-- About photo: `aspect-[4/3]` until `lg`, then `aspect-[4/5]` for desktop two-column
+- About section uses float-wrap layout: image floats left at `md:w-[55%]` with text wrapping around it. On mobile, image stacks full-width above text. `aspect-[4/3]` across all breakpoints.
 - Endorsement images: full-width `aspect-[4/3]` when stacked, `aspect-square` at `max-w-[420px]` when side-by-side at `lg`
 - Endorsement showcase min-heights: `750px` (phone), `950px` (tablet), fixed `600px` at `lg`
 - Endorsement quote text: `text-xl` (phone), `text-2xl` (tablet), `text-3xl` (desktop)
@@ -301,14 +311,14 @@ The behavioral health page opens by distinguishing behavioral health from mental
 ### Content Needed
 - [x] ~~Hero b-roll video~~ — Hawthorne Blvd 4K drone footage from Videezy, attribution in privacy policy
 - [x] ~~Donate section photo~~ — Ainsworth St tree-lined residential street, District 2
-- [ ] About section headshot/portrait — reshooting: seated in front of community mural, window light, chest-up, portrait orientation
+- [x] ~~About section headshot/portrait~~ — Image 5 (IMG_0572), seated at round table with community mural, 4:3 crop removes rainbow, float-wrap layout
 - [x] ~~Endorser headshots~~ — Tom Potter, Nafisa Fai, and Ernesto Fonseca added
-- [x] ~~About section copy~~ — 3 paragraphs, career arc, proof points, why now
-- [x] ~~Issue page content~~ — homelessness, behavioral health, public safety all drafted from interviews
-- [x] ~~Issue page illustrations~~ — homelessness (Tudor houses, warm teal), behavioral health (park bench, warm amber), public safety (15 MPH sign, warm slate)
-- [x] ~~Endorsement quotes~~ — Potter confirmed, Fai pending statement, Fonseca confirmed
+- [x] ~~About section copy~~ — 3 paragraphs: career arc (broad strokes), what he built (EJRP + Bienestar), why he's running (staff on the ground + get more out of resources)
+- [x] ~~Issue page content~~ — homelessness fully edited, behavioral health and public safety drafted from interviews
+- [x] ~~Issue page illustrations~~ — homelessness (Tudor houses, warm teal, terracotta door accent), behavioral health (park bench, warm amber, red roofline accent), public safety (15 MPH sign, warm slate)
+- [x] ~~Endorsement quotes~~ — Potter confirmed, Fai written, Fonseca confirmed
 - [x] ~~Signup section heading copy~~ — "Campaigns send mailers..." / "We'd rather just email you."
-- [x] ~~Framework lead-in copy~~ — "After 32 years inside county government..." split into leadIn + leadInBody
+- [x] ~~Framework lead-in copy~~ — leadIn removed, leadInBody only at `text-xl md:text-2xl`
 
 ### Configuration Needed
 - [x] ~~Donation URL~~ → C&E Systems: https://donation.c-esystems.com/campaign/electnabil
@@ -320,7 +330,7 @@ The behavioral health page opens by distinguishing behavioral health from mental
 ### Technical — Do Now
 - [x] ~~Dynamic import modals (SignupModal, VolunteerModal) to defer framer-motion bundle~~
 - [x] ~~Throttle Header scroll listener with requestAnimationFrame~~
-- [x] ~~Add preconnect hint for ActBlue domain~~
+- [x] ~~Add preconnect hint for donation domain~~ — updated to donation.c-esystems.com
 - [x] ~~Migrate all internal links to `next/link`~~
 - [x] ~~Add `next/image` to ArticlePage hero with optimized dimensions and loading fallback~~
 - [x] ~~Add `app/error.tsx` error boundary~~
@@ -342,7 +352,7 @@ The behavioral health page opens by distinguishing behavioral health from mental
 - [ ] QR code with UTM parameters for palm cards
 - [ ] Refactor campaign layout dict when `[locale]` route segment is added
 - [x] ~~Darken donate section overlay~~ — set to 80%
-- [ ] Alex's full editing/messaging pass on all three issue pages
+- [ ] Alex's full editing/messaging pass on behavioral health and public safety issue pages
 
 ### Future
 - **Spanish translations** — professional translation of finalized English content into `es.ts`
