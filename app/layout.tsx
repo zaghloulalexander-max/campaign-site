@@ -23,12 +23,12 @@ export const metadata: Metadata = {
     default: 'Nabil for District 2 — Multnomah County Commissioner',
     template: '%s | Nabil for District 2',
   },
-  description: '32 years inside county government. Running for Multnomah County Commissioner, District 2.',
+  description: 'Over 32 years inside the county\'s housing, behavioral health, and public safety systems. Running for Multnomah County Commissioner, District 2.',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     title: 'Nabil for District 2 — Multnomah County Commissioner',
-    description: '32 years inside county government. Running for Multnomah County Commissioner, District 2.',
+    description: 'Over 32 years inside the county\'s housing, behavioral health, and public safety systems. Running for Multnomah County Commissioner, District 2.',
     images: [
       {
         url: '/og-image.jpg',

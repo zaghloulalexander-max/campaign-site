@@ -2,7 +2,7 @@
 
 ## Candidate
 
-- **Nabil Zaghloul** — 30 years as a county executive, late 50s, looks relatively young
+- **Nabil Zaghloul** — over 32 years as a county executive, late 50s, looks relatively young
 - Running for **Multnomah County Commissioner, District 2**
 - Positioning: institutional knowledge + insider credibility to fix things from within
 - Not a grassroots insurgent — a serious person with a record
@@ -50,7 +50,8 @@
 
 ## Content Principles
 
-- Photos are the primary source of warmth and connection — the design stays neutral
+- Photos and video provide warmth on the landing page — the hero video and donate section use real District 2 imagery
+- Issue pages use hand-drawn illustrations of recognizable District 2 locations, each with a warm background and ink line work. The illustration style is the visual identity of the editorial content.
 - Community photos should reflect the district naturally — visibly diverse without being staged
 - Use real North/Northeast Portland locations: Alberta, Mississippi, St. Johns
 - His heritage is not a talking point through design — 30 years of experience is the lead
@@ -59,12 +60,13 @@
 - Tone: direct, first-person where possible, sounds like a person not a campaign
 - Issues should read like briefings, not platform documents
 
-## Photography Direction
+## Photography & Illustration Direction
 
 - **Hero**: b-roll video of District 2 — streets, bridges, neighborhoods, people. Not the candidate. The community is the subject.
 - **About section**: personal headshot/portrait
 - **Donate section**: full-width community photo (neighborhood, event, crowd) with dark overlay
 - **Endorsements**: individual headshots of endorsers, square format with border
+- **Issue pages**: hand-drawn illustrations of recognizable District 2 locations. Each uses a warm background color with black ink line work and a single accent color (terracotta, amber, red, or slate). Subjects: Wilshire Park bench (behavioral health), 15 MPH greenway sign (public safety), terracotta door (homelessness), Multnomah County Building (commissioner explainer).
 
 ## Campaign Materials — Lean Approach
 
@@ -79,7 +81,7 @@
   - Estimate: 3,000-5,000 cards
 - **Digital ads** — targeted to District 2 zip codes during ballot window ($3-5K)
 - **Voters' pamphlet statement** — $300 filing fee
-- **Email list** — built via website signup, used sparingly (4-6 emails total across campaign)
+- **Email list** — built via website signup, used sparingly (1-2 emails: voters' pamphlet notification and ballot reminder)
 
 ## Campaign Operations
 
@@ -103,8 +105,8 @@
 
 ## Future Pages
 
-- **Issue pages** — standalone deep dives expanding each issue from the landing page
 - **Blog/writing** — explainer posts, campaign finance transparency, county government education
 - **About the Campaign** — zero-waste philosophy, intern program, lean budget, sustainability angle
 - **Events** — add when running regular public events
 - **Spanish** — professional translation when English content is finalized
+- **Internships** — PSU partnership page, currently hidden from footer pending setup

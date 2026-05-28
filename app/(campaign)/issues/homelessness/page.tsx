@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import ArticlePage from '@/app/components/layout/ArticlePage';
 import { getDictionary, defaultLocale } from '@/app/lib/i18n';
 
@@ -65,8 +66,7 @@ export default function HomelessnessPage() {
       <p className="border-l-2 border-[#71a790] pl-6 text-text-subtle text-[15px] italic my-16">
         Unsheltered homelessness in Multnomah County increased 75% between
         2023 and 2025. Over 10,500 people experienced homelessness in the
-        county in 2025, and people are becoming homeless faster than they are
-        entering stable housing. At the same time, shelter vacancy rates
+        county in 2025. At the same time, shelter vacancy rates
         remain high. City-run shelters average 50 to 60% occupancy. The county
         is cutting 600 beds this budget cycle, but many of those beds were
         already empty.
@@ -86,7 +86,15 @@ export default function HomelessnessPage() {
         housing. That distinction isn&apos;t tracked. The unsheltered population
         in encampments skews more heavily toward addiction and mental illness.
         Many unsheltered refuse shelters because drug use is prohibited inside
-        and only enter shelters during extreme weather.
+        and only enter shelters during extreme weather. For this population,
+        the answer is sustained{' '}
+        <Link
+          href="/issues/behavioral-health"
+          className="underline decoration-border hover:decoration-text underline-offset-4 transition-colors duration-150 motion-reduce:transition-none"
+        >
+          behavioral health
+        </Link>
+        {' '}and addiction treatment, not more shelters.
       </p>
 
       <p>
@@ -99,13 +107,9 @@ export default function HomelessnessPage() {
       </p>
 
       <p>
-        A group that can sometimes be overlooked in the homelessness
-        conversation is the individuals and families who are one emergency
-        away from losing their housing. Across District 2 and Multnomah
-        County, there are households where both adults work full time and
-        still can&apos;t cover rent, utilities, childcare, and groceries.
-        I&apos;ve worked with families where the difference between losing
-        their home and keeping it came down to the support the county provides.
+        Most of the homelessness conversation focuses on people already on
+        the streets. An equally important piece of the work is keeping
+        people from getting there.
       </p>
 
       <p>
@@ -120,8 +124,8 @@ export default function HomelessnessPage() {
       <p>
         I&apos;ve seen a single mother without a job and mounting debts. We
         brought her into our program and supported her through career training,
-        financial literacy workshops, and skill-building programs. With newly
-        developed skills and competencies, she was, believe it or not, hired
+        financial literacy workshops, and skill-building programs. She was,
+        believe it or not, hired
         by the county and has continued to serve our community for the last
         several years. Not only that, her son graduates from university this
         year.
@@ -130,8 +134,8 @@ export default function HomelessnessPage() {
       <p>
         These outcomes are unlikely to happen with a one-time rent check. When
         we invest in, and work with a family for 6 to 12 months, sometimes
-        longer, we can address the underlying instability and change their
-        trajectory for the better.
+        longer, we can fix what&apos;s actually driving the instability and
+        change their trajectory.
       </p>
 
       <p>

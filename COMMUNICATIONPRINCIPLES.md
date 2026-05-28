@@ -48,6 +48,33 @@ Never say "I'm qualified." Describe what you've done and let them reach that con
 
 Don't argue. Don't persuade. Don't sell. Present the facts, share the experience, and let the listener decide. People resist being convinced but they trust their own conclusions. Your job is to put the right information in front of them and respect them enough to let them think.
 
+## Techniques (refined from the issue pages)
+
+**The dual-lens sentence.** One sentence that speaks to both voters and union members without performing for either. The voter hears fiscal accountability. The union reader hears workforce investment. Same words, both audiences served. Examples from the issue pages:
+
+- "It shows the public what their money is buying, and it shows the practitioners and staff what their work is producing."
+- "When funding is tied to outcomes, it protects the case managers, housing specialists, and staff who are in the trenches fighting to keep families housed."
+- "It shows the public whether the investment is working, and it shows the officers and case managers what their work is producing."
+
+Every issue page has at least one of these in its Opportunities section. They're the most strategically important sentences on the site.
+
+**Don't state the thesis.** The reader should arrive at the conclusion, not be told it. Each issue page has a thesis that is never stated:
+
+- Homelessness: sustained case management works, one-time interventions don't.
+- Behavioral health: long-term rehabilitation barely exists.
+- Public safety: prevention is more effective than response.
+
+Each thesis emerges from the stories and evidence. The reader draws the line themselves.
+
+**Voice register.** The issue pages sound like a person talking, not a document. Specific rules:
+
+- Contractions throughout where natural (don't, isn't, we're, I've)
+- Active verbs for program actions (we brought her into our program, not she was enrolled)
+- No analytical conclusions after human moments (let the story end on the outcome)
+- No policy labels where observations will do (not "the system is reactive" but "nothing in the current system is designed to break that cycle")
+- No case-report language (not "the patient was placed in housing" but "she had an apartment")
+- No presentation-deck setups (not "this does two things" — just say the two things)
+
 ## What Makes You Different
 
 Every other candidate will say they care, they'll fight, they believe. You're the only one who can say: "I built a youth program on no budget that now serves 50 kids a week. I housed 75 families last year and all 75 stayed housed. I've been doing this work for 32 years and I can tell you exactly how the county's money is being spent."
