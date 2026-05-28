@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Privacy Policy',
 };
 
-const LAST_UPDATED = 'May 15, 2026';
+const LAST_UPDATED = 'May 28, 2026';
 
 export default function Privacy() {
   return (
@@ -22,7 +22,7 @@ export default function Privacy() {
 
           <section>
             <p>
-              This Privacy Policy is effective as of May 15, 2026. It explains how {siteConfig.disclaimer.split('.')[0].replace('Paid for by ', '')} (<strong>&ldquo;the Campaign,&rdquo;</strong>{' '}
+              This Privacy Policy is effective as of May 28, 2026. It explains how {siteConfig.disclaimer.split('.')[0].replace('Paid for by ', '')} (<strong>&ldquo;the Campaign,&rdquo;</strong>{' '}
               <strong>&ldquo;we,&rdquo;</strong> <strong>&ldquo;us,&rdquo;</strong> or <strong>&ldquo;our&rdquo;</strong>) collects, uses,
               and protects your information when you visit this website. By using this site,
               you agree to the practices described here.
@@ -34,21 +34,10 @@ export default function Privacy() {
 
             <h3 className="text-base font-medium text-text mt-6 mb-2">Information You Provide</h3>
             <p>
-              When you submit information through our volunteer form, you provide your
-              first name, last name, email address, and zip code. This information is
-              used solely for campaign communication and volunteer coordination.
-            </p>
-
-            <h3 className="text-base font-medium text-text mt-6 mb-2">Donation Information</h3>
-            <p>
-              Donations are processed through a third-party payment processor. We do not
-              store credit card numbers or bank account information on our servers. Our
-              payment processor handles financial data in accordance with their own privacy
-              policy and applicable payment card industry standards.
-            </p>
-            <p className="mt-3">
-              Donor names, amounts, and addresses are reported to the Oregon Secretary of
-              State as required by Oregon campaign finance law. These records are public.
+              When you submit information through our email signup or volunteer form, you
+              provide your email address and zip code, and in the case of the volunteer
+              form, your first and last name. This information is used solely for campaign
+              communication and volunteer coordination.
             </p>
 
             <h3 className="text-base font-medium text-text mt-6 mb-2">Information Collected Automatically</h3>
@@ -77,15 +66,10 @@ export default function Privacy() {
           <section>
             <h2 className="text-lg font-semibold text-text mb-4">3. Information Sharing</h2>
             <p>
-              We may share basic contact information (name, email, address) with the
-              Multnomah County Democratic Party or other aligned political committees
-              for voter outreach purposes. We do not share your information with
-              commercial entities.
-            </p>
-            <p className="mt-3">
-              Donation information is disclosed to the Oregon Secretary of State as
-              required by Oregon Revised Statutes Chapter 260. Campaign finance
-              reports are public records.
+              We do not share your information with commercial entities. Donation
+              information is disclosed to the Oregon Secretary of State as required
+              by Oregon Revised Statutes Chapter 260. Campaign finance reports are
+              public records.
             </p>
           </section>
 
@@ -100,7 +84,7 @@ export default function Privacy() {
                 <strong className="text-text font-medium">Resend</strong> — delivers form submissions to our email
               </li>
               <li>
-                <strong className="text-text font-medium">Payment processor</strong> — handles donation transactions
+                <strong className="text-text font-medium">C&amp;E Systems</strong> — processes donation transactions
               </li>
             </ul>
             <p className="mt-4">
@@ -180,22 +164,7 @@ export default function Privacy() {
           </section>
 
           <section>
-            <h2 className="text-lg font-semibold text-text mb-4">11. Media Credits</h2>
-            <p>
-              Hero video: B-Roll provided by{' '}
-              <a
-                href="http://videezy.com/"
-                className="text-text hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Videezy
-              </a>
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-lg font-semibold text-text mb-4">12. Contact</h2>
+            <h2 className="text-lg font-semibold text-text mb-4">11. Contact</h2>
             <p>Questions about this Privacy Policy? Contact us at:</p>
             <p className="mt-3">
               <a

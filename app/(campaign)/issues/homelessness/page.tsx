@@ -62,7 +62,7 @@ export default function HomelessnessPage() {
       </p>
 
       {/* Bridge data — sits between sections */}
-      <p className="border-l-2 border-[#aa7355] pl-6 text-text-subtle text-[15px] italic my-16">
+      <p className="border-l-2 border-[#71a790] pl-6 text-text-subtle text-[15px] italic my-16">
         Unsheltered homelessness in Multnomah County increased 75% between
         2023 and 2025. Over 10,500 people experienced homelessness in the
         county in 2025, and people are becoming homeless faster than they are

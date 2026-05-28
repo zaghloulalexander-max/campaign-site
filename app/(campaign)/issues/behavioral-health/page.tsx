@@ -4,7 +4,7 @@ import { getDictionary, defaultLocale } from '@/app/lib/i18n';
 
 export const metadata: Metadata = {
   title: 'Behavioral Health',
-  description: 'The county\'s behavioral health system handles short-term care well. For people dealing with addiction, mental illness, and housing instability at the same time, there\'s almost nothing.',
+  description: 'The county\'s behavioral health system handles short-term care well. For people dealing with addiction, mental illness, and housing instability at the same time, there\'s almost no long-term help.',
 };
 
 const CURRENT_HREF = '/issues/behavioral-health';
@@ -47,7 +47,7 @@ export default function BehavioralHealthPage() {
       </p>
 
       {/* Bridge data — sits between sections */}
-      <p className="border-l-2 border-[#c37b62] pl-6 text-text-subtle text-[15px] italic my-16">
+      <p className="border-l-2 border-[#e1b76d] pl-6 text-text-subtle text-[15px] italic my-16">
         In September 2025, CareOregon, the state&apos;s largest Medicaid
         provider, ended its intensive care coordination funding, opening a
         $4.6 million gap in the county&apos;s behavioral health budget. The

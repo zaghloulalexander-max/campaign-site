@@ -36,7 +36,7 @@ const en = {
       },
       {
         title: 'Behavioral health',
-        body: "The county's behavioral health system handles short-term care well. For people dealing with addiction, mental illness, and housing instability at the same time, there's almost nothing.",
+        body: "The county's behavioral health system handles short-term care well. For people dealing with addiction, mental illness, and housing instability at the same time, there's almost no long-term help.",
         href: '/issues/behavioral-health',
       },
       {

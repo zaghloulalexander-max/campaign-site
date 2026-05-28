@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { siteConfig } from '@/app/lib/config';
+import VideoCredit from '@/app/components/ui/VideoCredit';
 import type { Dictionary } from '@/app/lib/i18n';
 
 // ============================================================================
@@ -116,6 +117,7 @@ export default function Footer({ dict, issues }: FooterProps) {
 
         <div className="mt-12 pt-8 border-t border-border">
           <p className="text-xs text-text-subtle">{siteConfig.disclaimer}</p>
+          <VideoCredit />
         </div>
       </div>
     </footer>

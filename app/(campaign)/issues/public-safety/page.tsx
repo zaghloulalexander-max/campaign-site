@@ -44,7 +44,7 @@ export default function PublicSafetyPage() {
       </p>
 
       {/* Bridge data — sits between sections */}
-      <p className="border-l-2 border-[#c37b62] pl-6 text-text-subtle text-[15px] italic my-16">
+      <p className="border-l-2 border-[#8a8890] pl-6 text-text-subtle text-[15px] italic my-16">
         The FY 2027 proposed budget cuts the District Attorney&apos;s office
         by 5%, roughly $3.5 million and 18 positions. The DA has called it
         the largest reduction in the office&apos;s history. Jail capacity is

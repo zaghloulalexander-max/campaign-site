@@ -234,9 +234,9 @@ Cost of living is not a separate issue — it's the context that runs through al
 
 ### Bridge data pattern
 When a section needs statistical context that doesn't belong in either the preceding or following narrative section, use a bridge paragraph with the illustration's accent color as a left border: `border-l-2 border-[accent] pl-6 text-text-subtle text-[15px] italic my-16`. Each issue page uses its own accent color from the illustration:
-- Homelessness: `#aa7355` (terracotta door)
-- Behavioral health: `#c37b62` (red roofline)
-- Public safety: `#c37b62` (matching behavioral health; updated illustration pending)
+- Homelessness: `#71a790` (sage green background)
+- Behavioral health: `#e1b76d` (warm amber background)
+- Public safety: `#8a8890` (darkened slate background)
 
 ### Behavioral health page structure (edited)
 1. Opening — definition (county umbrella for mental health, addiction, crisis response), $150M spending + demand/funding tension, credential (20 years + currently manages long-term rehabilitation through Bienestar)
