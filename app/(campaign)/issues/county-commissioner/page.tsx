@@ -4,7 +4,7 @@ import { getDictionary, defaultLocale } from '@/app/lib/i18n';
 
 export const metadata: Metadata = {
   title: 'What Does a County Commissioner Do?',
-  description: 'What does a Multnomah County commissioner do? How the board works, what the county is responsible for, and how the $4 billion budget gets set.',
+  description: 'A Multnomah County commissioner votes on a $4 billion annual budget covering homeless services, behavioral health, public safety, transportation, and more.',
 };
 
 export default function CountyCommissionerPage() {
@@ -19,142 +19,31 @@ export default function CountyCommissionerPage() {
       imageCaption="Multnomah County Building, Southeast Hawthorne"
       readMore={readMore}
     >
-      {/* S1: The Board of County Commissioners */}
-      <h2 className="text-2xl font-semibold text-text mt-8">The Board of County Commissioners</h2>
-
       <p>
-        Multnomah County is governed by a Board of County Commissioners made up
-        of a Chair, who is elected countywide, and four district commissioners.
-        Each commissioner represents one of four geographic districts. District 2
-        covers North and Northeast Portland. Commissioners serve four-year terms
-        and are elected on non-partisan ballots.
+        Multnomah County is governed by a board of five: a chair elected
+        countywide and four commissioners elected by district. The chair
+        runs the county, overseeing departments, directing staff, and
+        proposing the annual budget. Commissioners don&apos;t manage
+        departments. They vote on the budget, adopt policies and ordinances,
+        approve labor agreements with county employee unions, and represent
+        their district&apos;s residents. Each commissioner has their own
+        office and staff. District 2 covers North and Northeast Portland.
+        They serve four-year terms and are elected on non-partisan
+        ballots.
       </p>
 
-      <p>
-        The board conducts its business in public every Tuesday and Thursday. On
-        Tuesdays, commissioners and department leaders work through specific
-        topics, including how programs are performing, where the county
-        budget stands relative to projections, and what changes are being
-        considered in response to state and federal funding shifts. On Thursdays,
-        the board holds formal meetings where votes are taken and residents can
-        testify. All sessions are livestreamed and archived.
-      </p>
-
-      {/* S2: The role of a commissioner */}
-      <h2 className="text-2xl font-semibold text-text mt-8">The role of a commissioner</h2>
+      <h2 className="text-2xl font-semibold text-text mt-8">
+        The budget
+      </h2>
 
       <p>
-        The County Chair serves as the chief executive of Multnomah County. The
-        Chair oversees day-to-day operations, directs department heads, and
-        proposes the annual budget. Commissioners do not manage departments.
-        The Chair appoints and directs department heads.
-      </p>
-
-      <p>
-        Commissioners serve as the county&apos;s legislative body. They review
-        and amend the budget, adopt county policies and ordinances, approve labor
-        agreements with county employee unions, and act as liaisons to specific
-        departments, advisory boards, and commissions. Each commissioner
-        represents their district&apos;s residents and has their own office and
-        staff.
-      </p>
-
-      {/* S3: What the county is responsible for */}
-      <h2 className="text-2xl font-semibold text-text mt-8">What the county is responsible for</h2>
-
-      <p>
-        Multnomah County and the city of Portland operate separate governments
-        with separate budgets, but many of the services residents rely on are
-        funded and delivered by both. A third layer of regional government, Metro,
-        adds additional funding and coordination.
-      </p>
-
-      <p>
-        <strong>Homelessness</strong> is split across all three levels. The
-        county&apos;s Homeless Services Department coordinates most shelters,
-        housing placement, outreach, and case management. The city runs its own
-        shelter system, including outdoor Safe Rest Villages with wraparound
-        services. Metro&apos;s voter-approved Supportive Housing Services tax
-        funds programs at both levels. Dozens of nonprofit organizations deliver
-        services on contract with one or both governments.
-      </p>
-
-      <p>
-        <strong>Housing</strong> is similarly divided. The county funds supportive
-        housing and rental assistance through the Supportive Housing Services tax.
-        The city&apos;s Portland Housing Bureau funds affordable housing
-        development, rental assistance, and eviction prevention. Home Forward, the
-        regional housing authority, operates independently of both. All three
-        fund housing through separate programs and funding streams.
-      </p>
-
-      <p>
-        <strong>Behavioral health</strong> is primarily a county responsibility in
-        Oregon. The county&apos;s Health Department provides mental health
-        services, substance use treatment, crisis response, and runs the
-        county&apos;s 24/7 behavioral health crisis line. The city also funds
-        complementary programs, including sobering beds and behavioral health
-        outreach, but the county is the lead.
-      </p>
-
-      <p>
-        <strong>Public safety</strong> spans both levels. The city funds the
-        Portland Police Bureau and Portland Fire and Rescue. The county funds the
-        Sheriff&apos;s Office, which operates two jails with over 1,100 beds,
-        provides security on TriMet, patrols county waterways, and serves as law
-        enforcement in unincorporated areas and contract cities like Fairview and
-        Troutdale. The county also funds the District Attorney&apos;s Office,
-        which prosecutes criminal cases, and the Department of Community Justice,
-        which manages adult parole and probation and the juvenile justice system.
-        The city and county share the Justice Center building downtown.
-      </p>
-
-      <p>
-        <strong>Transportation</strong> is divided geographically. The county
-        maintains six Willamette River bridges (Sellwood, Hawthorne, Morrison,
-        Burnside, Broadway, and Sauvie Island) and 269 miles of roads, mostly in
-        east county and unincorporated areas. The county does not maintain any
-        roads inside Portland or Gresham. The city&apos;s Bureau of
-        Transportation manages city streets, sidewalks, bike lanes, signals, and
-        streetlights. The Earthquake Ready Burnside Bridge, a major seismic
-        resilience project, is a county capital project.
-      </p>
-
-      <p>
-        <strong>Elections</strong> are entirely a county function. The county
-        Elections Division runs all local, city, county, state, and federal
-        elections for every voter in Multnomah County.
-      </p>
-
-      <p>
-        <strong>Education</strong> is not directly a county function. K-12 schools
-        are managed by independent school districts, including Portland Public
-        Schools, David Douglas, Reynolds, Parkrose, and others, each with its own
-        elected board. The county does, however, manage the SUN (Schools Uniting
-        Neighborhoods) Community Schools program, which operates in 94 schools
-        across six districts, turning them into community hubs that connect
-        families to after-school programs, food assistance, health services, and
-        other resources. The county also operates the Preschool for All program
-        for children under five through the Department of County Human Services,
-        and the Health Department runs school-based health clinics.
-      </p>
-
-      <p>
-        <strong>Public transit</strong> is also separate. TriMet is a regional
-        agency governed by its own board. Metro handles regional land use
-        planning, growth management, and transportation policy. State agencies
-        control highway infrastructure and statewide housing and land use policy.
-      </p>
-
-      {/* S4: Setting the county budget */}
-      <h2 className="text-2xl font-semibold text-text mt-8">Setting the county budget</h2>
-
-      <p>
-        Each spring, the board receives the Chair&apos;s proposed budget, then
-        deliberates, amends, and votes on the final version. Individual
-        commissioners shape the budget through amendments that redirect funding,
-        add programs, or cut spending. For fiscal year 2026, that budget totals
-        $4 billion and supports nearly 6,000 employees across 11 departments:
+        The budget is where a commissioner&apos;s vote matters most. Each
+        spring, the chair proposes a spending plan and the board deliberates,
+        amends, and votes on the final version. Individual commissioners
+        shape the budget through amendments that redirect funding, add
+        programs, or cut spending. For fiscal year 2026, that budget totals
+        $4 billion and supports nearly 6,000 employees across 11
+        departments:
       </p>
 
       <ul className="space-y-6 my-6 pl-5 list-disc marker:text-text-muted">
@@ -172,28 +61,69 @@ export default function CountyCommissionerPage() {
       </ul>
 
       <p>
-        Three of those offices are led by independently elected officials: the
-        Sheriff, the District Attorney, and the County Auditor. The board sets
-        their funding levels but does not manage their operations. The Auditor,
-        whose office is separate from the 11 departments, independently reviews
-        county spending, evaluates program performance, and investigates
-        complaints.
+        The Sheriff and the District Attorney are independently elected.
+        The board sets their funding but doesn&apos;t manage their
+        operations. The County Auditor is also independently elected and
+        sits outside the department structure, reviewing county spending
+        and investigating complaints.
       </p>
 
       <p>
-        Budgets can also change mid-year. If revenue falls short or federal and
-        state funding is cut, the board votes on rebalancing measures that can
-        reduce services, close programs, or shift resources. In fiscal year 2026,
-        the board approved mid-year cuts affecting rent assistance, transitional
-        housing, food assistance, and other services after significant state and
-        federal funding reductions.
+        Budgets can change mid-year. If revenue falls short or state and
+        federal funding is cut, the board votes on rebalancing measures that
+        can reduce services, close programs, or shift resources.
+      </p>
+
+      <h2 className="text-2xl font-semibold text-text mt-8">
+        What the county covers
+      </h2>
+
+      <p>
+        The county and the city of Portland run separate governments with
+        separate budgets. Metro, a regional layer of government, adds
+        funding and coordination on top of both. The lines between them
+        aren&apos;t always obvious.
       </p>
 
       <p>
-        These decisions, from the annual budget to mid-year adjustments, shape
-        how the county delivers services to over 800,000 residents.
+        The county is the lead on homeless services, behavioral health and
+        addiction treatment, and the justice system. The justice system
+        includes the district attorney, the sheriff, the jails, and parole
+        and probation. The county also funds supportive housing and rental assistance alongside the
+        city and Metro.
       </p>
 
+      <p>
+        The county maintains six Willamette River bridges (Sellwood,
+        Hawthorne, Morrison, Burnside, Broadway, and Sauvie Island) and
+        269 miles of roads, mostly in east county and unincorporated areas.
+        It doesn&apos;t maintain roads inside Portland or Gresham. The
+        Earthquake Ready Burnside Bridge is a major county capital project.
+      </p>
+
+      <p>
+        The county Elections Division runs all elections for every voter in
+        Multnomah County: local, city, county, state, and federal.
+      </p>
+
+      <p>
+        K-12 schools are managed by independent school districts, each with
+        its own elected board. But the county runs the SUN Community Schools
+        program, which operates in 94 schools across six districts,
+        connecting families to after-school programs, food assistance, and
+        health services. The county also operates Preschool for All for
+        children under five and runs school-based health clinics.
+      </p>
+
+      <p>
+        Public transit is separate. TriMet is a regional agency with its own
+        board. Metro handles regional land use and transportation policy.
+      </p>
+
+      <p>
+        Board meetings are held Thursdays at 9:30 a.m. Work sessions are
+        Tuesdays at 10 a.m. All sessions are livestreamed and archived.
+      </p>
     </ArticlePage>
   );
 }

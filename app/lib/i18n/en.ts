@@ -14,8 +14,8 @@ const en = {
   about: {
     photoAlt: 'Nabil Zaghloul',
     paragraphs: [
-      "I've spent over 32 years inside Multnomah County government. I started in the Department of Community Justice, managing parole, probation, and domestic violence caseloads. After about a decade, I moved to the Health Department, where I managed medical and behavioral health programs. I'm now with the Department of County Human Services, where I run housing stabilization, mental health, addiction services, eviction prevention, and youth services programs.",
-      "When the pandemic hit, I built the Economic Justice and Recovery Program to help families stay in their homes. It served 2,800 households in its first year with a 90% retention rate. When the funding ran out, I kept it going. In the Cully neighborhood, I started Bienestar Youth Services with one staff member and no dedicated budget to keep kids away from gang recruitment.",
+      "I've spent over 32 years inside Multnomah County government. I started in the Department of Community Justice, managing parole, probation, and domestic violence caseloads. After about a decade, I moved to the Health Department, where I managed medical and behavioral health programs. I'm now with the Department of County Human Services, where I work with a great team of more than 60 people across housing stabilization, mental health, addiction services, eviction prevention, and youth services programs.",
+      "When the pandemic hit, I built the Economic Justice and Recovery Program to help families stay in their homes. In combination with other funding, it served 2,800 households in its first year with a 90% retention rate. When the funding ran out, I kept it going. In the Cully neighborhood, I started Bienestar Youth Services with one staff member and no dedicated budget to keep kids away from gang recruitment.",
     ],
   },
 
@@ -23,10 +23,10 @@ const en = {
   issues: {
     question: 'What does a Multnomah County commissioner do?',
     questionHref: '/issues/county-commissioner',
-    answer: 'The county manages a $3.9 billion annual budget across homeless services, behavioral health, public safety, and operations serving over 800,000 residents.',
+    answer: 'They vote on a $4 billion annual budget covering homeless services, behavioral health, public safety, and eight other county departments serving nearly 800,000 residents.',
     heading: 'Issues',
-    leadIn: "After 32 years inside county government, I've worked directly in the systems that deliver homeless services, behavioral health, and public safety to Multnomah County residents.",
-    leadInBody: "I believe in supporting and empowering the people and programs that serve this county to get the most out of every taxpayer dollar. When outcomes are measured, the people doing the work get the backing they need.",
+    leadIn: "",
+    leadInBody: "Homelessness, behavioral health, and public safety are the issues residents in Multnomah County raise most. The county spends nearly a billion dollars on them every year, and when outcomes are measured, the people doing the work get the backing they need.",
     framework: [],
     items: [
       {

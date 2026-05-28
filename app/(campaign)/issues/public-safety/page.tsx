@@ -78,8 +78,7 @@ export default function PublicSafetyPage() {
       <p>
         A few years ago, I conducted a safety survey in the Cully
         neighborhood. I&apos;d worked on community safety in the district
-        before, including with Tom Potter&apos;s daughter at the Northeast
-        Precinct. We asked residents directly: what makes you feel safe?
+        with police officers at the Northeast Precinct. We asked residents directly: what makes you feel safe?
         People talked about drug activities happening yards from where they
         lived, about needing cameras, about youth violence and car break-ins
         and assaults where nobody responded. The common thread was that they
