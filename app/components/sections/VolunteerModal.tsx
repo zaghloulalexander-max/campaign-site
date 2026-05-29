@@ -71,7 +71,12 @@ export default function VolunteerModal({ isOpen, onClose, dict }: VolunteerModal
     if (Object.keys(validationErrors).length > 0) { setErrors(validationErrors); return; }
     setLoading(true);
     try {
-      await new Promise((resolve) => setTimeout(resolve, 800));
+      const res = await fetch('/api/volunteer', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(sanitized),
+      });
+      if (!res.ok) throw new Error();
       setSubmitted(true);
     } catch { setLoading(false); }
   };

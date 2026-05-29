@@ -85,8 +85,12 @@ export default function SignupModal({ isOpen, onClose, dict }: SignupModalProps)
 
     setLoading(true);
     try {
-      // TODO: wire to Resend / API route
-      await new Promise((resolve) => setTimeout(resolve, 800));
+      const res = await fetch('/api/signup', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(sanitized),
+      });
+      if (!res.ok) throw new Error();
       setSubmitted(true);
     } catch {
       setLoading(false);
