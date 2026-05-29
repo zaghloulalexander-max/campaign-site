@@ -1,6 +1,7 @@
 'use client';
 
-import { useReducedMotion } from 'framer-motion';
+import { useRef } from 'react';
+import { useReducedMotion, useInView } from 'framer-motion';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import EndorsementCard, { type Endorser } from '@/app/components/sections/EndorsementCard';
@@ -78,6 +79,8 @@ interface EndorsementShowcaseProps {
 }
 
 export default function EndorsementShowcase({ endorsers }: EndorsementShowcaseProps) {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: false, amount: 0.3 });
   const prefersReducedMotion = useReducedMotion();
 
   const {
@@ -91,13 +94,13 @@ export default function EndorsementShowcase({ endorsers }: EndorsementShowcasePr
   } = useAutoAdvance({
     itemCount: endorsers.length,
     duration: ADVANCE_DURATION,
-    enabled: !prefersReducedMotion,
+    enabled: !prefersReducedMotion && isInView,
   });
 
   const currentEndorser = endorsers[activeIndex];
 
   return (
-    <section id="endorsements" className="bg-surface-warm py-12 md:py-16" aria-label="Endorsements">
+    <section ref={sectionRef} id="endorsements" className="bg-surface-warm py-12 md:py-16" aria-label="Endorsements">
       <div className="mx-auto max-w-[var(--content-max)]">
         <div className="relative overflow-hidden min-h-[750px] md:min-h-[950px] lg:min-h-0 lg:h-[600px]">
           <AnimatePresence mode="popLayout">
