@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    title: 'Nabil for District 2 — Multnomah County Commissioner',
+    title: 'District 2',
     description: 'Over 32 years inside the county\'s housing, behavioral health, and public safety systems. Running for Multnomah County Commissioner, District 2.',
     images: [
       {
