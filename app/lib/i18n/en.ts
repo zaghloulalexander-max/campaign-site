@@ -14,7 +14,7 @@ const en = {
   about: {
     photoAlt: 'Nabil Zaghloul',
     paragraphs: [
-      "I've spent over 32 years inside Multnomah County government. I started in the Department of Community Justice, managing parole, probation, and domestic violence caseloads. After about a decade, I moved to the Health Department, where I managed medical and behavioral health programs. I'm now with the Department of County Human Services, where I work with a great team of more than 60 people across housing stabilization, mental health, addiction services, eviction prevention, and youth services programs. I hold degrees in science, literature, law, and public administration.",
+      "I've spent over 32 years inside Multnomah County government. I started in the Department of Community Justice, managing parole, probation, and domestic violence caseloads. After about a decade, I moved to the Health Department, where I managed medical and behavioral health programs. I'm now with the Department of County Human Services, where I work with a great team of more than 60 people across housing stabilization, mental health, addiction services, eviction prevention, and youth services programs. I hold a degree in literature and a law degree with a specialization in public administration.",
       "When the pandemic hit, I built the Economic Justice and Recovery Program to help families stay in their homes. In combination with other funding, it served 2,800 households in its first year with a 90% retention rate. When the funding ran out, I kept it going. In the Cully neighborhood, I started Bienestar Youth Services with one staff member and no dedicated budget to keep kids away from gang recruitment.",
     ],
   },
