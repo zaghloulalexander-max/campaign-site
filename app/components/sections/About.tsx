@@ -29,6 +29,28 @@ export default function About({ dict }: AboutProps) {
           ))}
         </div>
       </div>
+
+      {dict.stats && dict.stats.length > 0 && (
+        <div className="clear-both mt-16 pt-12 border-t border-border">
+          {dict.statsLabel && (
+            <p className="text-base text-text-muted mb-10">
+              {dict.statsLabel}
+            </p>
+          )}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-10">
+            {dict.stats.map((stat, i) => (
+              <div key={i}>
+                <p className="text-3xl md:text-4xl font-medium text-text tracking-tight">
+                  {stat.number}
+                </p>
+                <p className="text-sm text-text-muted mt-1">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </Section>
   );
 }

@@ -14,8 +14,38 @@ const en = {
   about: {
     photoAlt: 'Nabil Zaghloul',
     paragraphs: [
-      "I've lived in District 2 for more than 30 years and spent over 32 inside Multnomah County government. I started in the Department of Community Justice, managing parole, probation, and domestic violence caseloads. After about a decade, I moved to the Health Department, where I managed medical and behavioral health programs. I'm now with the Department of County Human Services, where I work with a great team of more than 60 people across housing stabilization, mental health, addiction services, eviction prevention, and youth services programs. I hold a degree in literature and a law degree with a specialization in public administration.",
-      "When the pandemic hit, I built the Economic Justice and Recovery Program to help families stay in their homes. In combination with other funding, it served 2,800 households in its first year with a 90% retention rate. When the funding ran out, I kept it going. In the Cully neighborhood, I started Bienestar Youth Services with one staff member and no dedicated budget to keep kids away from gang recruitment.",
+      "Hi, I've lived in District 2 for more than 30 years and spent over 32 inside Multnomah County government. I started in the Department of Community Justice, managing parole, probation, and domestic violence caseloads. After about a decade, I moved to the Health Department, where I managed medical and behavioral health programs. I'm now with the Department of County Human Services, where I work with a great team of more than 60 people across housing stabilization, mental health, addiction services, eviction prevention, and youth services programs. I hold a degree in literature and a law degree with a specialization in public administration.",
+      "During my career I've built programs like the Economic Justice and Recovery Program and Bienestar Youth Services from the ground up.",
+    ],
+    statsLabel: 'A few things I\'m proud of.',
+    stats: [
+      { number: '25,000', label: 'households kept housed' },
+      { number: '90%', label: 'housing retention rate' },
+      { number: '350', label: 'rehoused from shelters' },
+      { number: '100+', label: 'youth served' },
+      { number: '1,800', label: 'seniors served' },
+      { number: '3,200', label: 'immigrants and refugees assisted' },
+      { number: '$200M', label: 'in public funding managed' },
+    ],
+  },
+
+  // Workforce
+  workforce: {
+    intro: "I have spent my career on both sides of the table, first as a union member and later as a manager. I understand the challenges employees face because I have lived them.",
+    heading: 'Supporting Workers and Strengthening Public Service',
+    pillars: [
+      {
+        title: 'Respect',
+        body: 'County employees deserve respect because they are the people delivering services every day.',
+      },
+      {
+        title: 'Investment',
+        body: 'Competitive wages, benefits, career growth, training, and workforce development.',
+      },
+      {
+        title: 'Partnership',
+        body: 'Workers should have a seat at the table when decisions affect their jobs and services.',
+      },
     ],
   },
 
@@ -161,7 +191,12 @@ export default en;
 // Dictionary type — uses string instead of literals so translations can differ
 export interface Dictionary {
   hero: { office: string };
-  about: { photoAlt: string; paragraphs: readonly string[] };
+  about: { photoAlt: string; paragraphs: readonly string[]; statsLabel: string; stats: readonly { number: string; label: string }[] };
+  workforce: {
+    intro: string;
+    heading: string;
+    pillars: readonly { title: string; body: string }[];
+  };
   issues: {
     question: string;
     questionHref: string;

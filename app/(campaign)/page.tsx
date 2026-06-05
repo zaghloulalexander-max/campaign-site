@@ -1,6 +1,7 @@
 import Hero from '@/app/components/sections/Hero';
 import About from '@/app/components/sections/About';
 import Issues from '@/app/components/sections/Issues';
+import Workforce from '@/app/components/sections/Workforce';
 import EndorsementShowcase from '@/app/components/sections/EndorsementShowcase';
 import Donate from '@/app/components/sections/Donate';
 import Signup from '@/app/components/sections/Signup';
@@ -19,6 +20,7 @@ export default function Home() {
       />
       <About dict={dict.about} />
       <Issues dict={dict.issues} />
+      <Workforce dict={dict.workforce} />
       <EndorsementShowcase endorsers={dict.endorsements} />
       <Donate
         dict={dict.donate}
