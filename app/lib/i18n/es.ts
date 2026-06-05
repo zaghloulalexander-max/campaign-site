@@ -16,7 +16,16 @@ const es: Dictionary = {
     paragraphs: [
       '[Traducción pendiente]',
       '[Traducción pendiente]',
-      '[Traducción pendiente]',
+    ],
+    statsLabel: '[Traducción pendiente]',
+    stats: [
+      { number: '25,000', label: '[Traducción pendiente]' },
+      { number: '90%', label: '[Traducción pendiente]' },
+      { number: '350', label: '[Traducción pendiente]' },
+      { number: '100+', label: '[Traducción pendiente]' },
+      { number: '1,800', label: '[Traducción pendiente]' },
+      { number: '3,200', label: '[Traducción pendiente]' },
+      { number: '$200M', label: '[Traducción pendiente]' },
     ],
   },
 
@@ -74,6 +83,16 @@ const es: Dictionary = {
     subheading: '[Traducción pendiente]',
     button: 'Donar',
     disclaimer: 'Las contribuciones no son deducibles de impuestos. Se aplican las leyes de financiamiento de campañas de Oregon.',
+  },
+
+  workforce: {
+    intro: '[Traducción pendiente]',
+    heading: '[Traducción pendiente]',
+    pillars: [
+      { title: '[Traducción pendiente]', body: '[Traducción pendiente]' },
+      { title: '[Traducción pendiente]', body: '[Traducción pendiente]' },
+      { title: '[Traducción pendiente]', body: '[Traducción pendiente]' },
+    ],
   },
 
   signup: {
