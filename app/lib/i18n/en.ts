@@ -14,37 +14,38 @@ const en = {
   about: {
     photoAlt: 'Nabil Zaghloul',
     paragraphs: [
-      "Hi, I've lived in District 2 for more than 30 years and spent over 32 inside Multnomah County government. I started in the Department of Community Justice, managing parole, probation, and domestic violence caseloads. After about a decade, I moved to the Health Department, where I managed medical and behavioral health programs. I'm now with the Department of County Human Services, where I work with a great team of more than 60 people across housing stabilization, mental health, addiction services, eviction prevention, and youth services programs. I hold a degree in literature and a law degree with a specialization in public administration.",
-      "During my career I've built programs like the Economic Justice and Recovery Program and Bienestar Youth Services from the ground up.",
+      "Hi, I've lived in District 2 for more than 30 years and spent over 32 inside Multnomah County government. I started in the Department of Community Justice, managing parole, probation, and domestic violence caseloads. After about a decade, I moved to the Health Department, where I managed medical and behavioral health programs. I'm now with the Department of County Human Services, where I work with a great team of more than 60 people across housing stabilization, mental health, addiction services, eviction prevention, and youth services programs.",
     ],
-    statsLabel: 'A few things I\'m proud of.',
-    stats: [
-      { number: '25,000', label: 'households kept housed' },
-      { number: '90%', label: 'housing retention rate' },
-      { number: '350', label: 'rehoused from shelters' },
-      { number: '100+', label: 'youth served' },
-      { number: '1,800', label: 'seniors served' },
-      { number: '3,200', label: 'immigrants and refugees assisted' },
-      { number: '$200M', label: 'in public funding managed' },
-    ],
+    highlights: {
+      intro: 'In that role, a few things I\'m proud of are:',
+      items: [
+        'building the Economic Justice and Recovery Program during the pandemic, which served 2,800 households with a 90% retention rate;',
+        'rehousing 75 families from shelters into their own homes on a $900,000 budget; and',
+        'starting Bienestar Youth Services in Cully with one staff member and no dedicated budget. It now serves 50 kids a week.',
+      ],
+    },
+    degrees: 'I hold a degree in literature and a law degree with a specialization in public administration.',
   },
 
-  // Workforce
-  workforce: {
-    intro: "I have spent my career on both sides of the table, first as a union member and later as a manager. I understand the challenges employees face because I have lived them.",
-    heading: 'Supporting Workers and Strengthening Public Service',
+  // Labor
+  labor: {
+    heading: 'Labor',
+    paragraphs: [
+      "I've spent my career on both sides of the table, first as a union member and later as a county manager.",
+      "During the SNAP crisis, I worked alongside county employees who themselves qualified for food assistance because of household size and rising living costs. Poverty doesn't only exist outside county government. It affects members of our own workforce.",
+    ],
     pillars: [
       {
-        title: 'Respect',
-        body: 'County employees deserve respect because they are the people delivering services every day.',
+        title: 'Compensation',
+        body: 'County wages should keep up with the cost of living in Portland. Workers who serve diverse communities in multiple languages deserve a bilingual premium that reflects that value.',
       },
       {
-        title: 'Investment',
-        body: 'Competitive wages, benefits, career growth, training, and workforce development.',
+        title: 'Leave',
+        body: "County employees shouldn't have to choose between caring for their families and financial stability. Parental leave and sick time policies should reflect the demands of the work.",
       },
       {
-        title: 'Partnership',
-        body: 'Workers should have a seat at the table when decisions affect their jobs and services.',
+        title: 'Voice',
+        body: 'Workers should be part of decisions about how technology is implemented, how services are restructured, and how the budget is set. The people doing the work know what works.',
       },
     ],
   },
@@ -191,10 +192,18 @@ export default en;
 // Dictionary type — uses string instead of literals so translations can differ
 export interface Dictionary {
   hero: { office: string };
-  about: { photoAlt: string; paragraphs: readonly string[]; statsLabel: string; stats: readonly { number: string; label: string }[] };
-  workforce: {
-    intro: string;
+  about: {
+    photoAlt: string;
+    paragraphs: readonly string[];
+    highlights: {
+      intro: string;
+      items: readonly string[];
+    };
+    degrees: string;
+  };
+  labor: {
     heading: string;
+    paragraphs: readonly string[];
     pillars: readonly { title: string; body: string }[];
   };
   issues: {

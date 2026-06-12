@@ -15,18 +15,16 @@ const es: Dictionary = {
     photoAlt: 'Foto del Candidato',
     paragraphs: [
       '[Traducción pendiente]',
-      '[Traducción pendiente]',
     ],
-    statsLabel: '[Traducción pendiente]',
-    stats: [
-      { number: '25,000', label: '[Traducción pendiente]' },
-      { number: '90%', label: '[Traducción pendiente]' },
-      { number: '350', label: '[Traducción pendiente]' },
-      { number: '100+', label: '[Traducción pendiente]' },
-      { number: '1,800', label: '[Traducción pendiente]' },
-      { number: '3,200', label: '[Traducción pendiente]' },
-      { number: '$200M', label: '[Traducción pendiente]' },
-    ],
+    highlights: {
+      intro: '[Traducción pendiente]',
+      items: [
+        '[Traducción pendiente]',
+        '[Traducción pendiente]',
+        '[Traducción pendiente]',
+      ],
+    },
+    degrees: '[Traducción pendiente]',
   },
 
   issues: {
@@ -85,9 +83,12 @@ const es: Dictionary = {
     disclaimer: 'Las contribuciones no son deducibles de impuestos. Se aplican las leyes de financiamiento de campañas de Oregon.',
   },
 
-  workforce: {
-    intro: '[Traducción pendiente]',
+  labor: {
     heading: '[Traducción pendiente]',
+    paragraphs: [
+      '[Traducción pendiente]',
+      '[Traducción pendiente]',
+    ],
     pillars: [
       { title: '[Traducción pendiente]', body: '[Traducción pendiente]' },
       { title: '[Traducción pendiente]', body: '[Traducción pendiente]' },

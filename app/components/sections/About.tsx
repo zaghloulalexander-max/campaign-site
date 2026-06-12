@@ -27,30 +27,23 @@ export default function About({ dict }: AboutProps) {
           {dict.paragraphs.map((p, i) => (
             <p key={i}>{p}</p>
           ))}
+
+          {dict.highlights && (
+            <div>
+              <p>{dict.highlights.intro}</p>
+              <ul className="mt-2 ml-5 space-y-1.5 list-disc marker:text-text-muted">
+                {dict.highlights.items.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {dict.degrees && (
+            <p>{dict.degrees}</p>
+          )}
         </div>
       </div>
-
-      {dict.stats && dict.stats.length > 0 && (
-        <div className="clear-both mt-16 pt-12 border-t border-border">
-          {dict.statsLabel && (
-            <p className="text-base text-text-muted mb-10">
-              {dict.statsLabel}
-            </p>
-          )}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-10">
-            {dict.stats.map((stat, i) => (
-              <div key={i}>
-                <p className="text-3xl md:text-4xl font-medium text-text tracking-tight">
-                  {stat.number}
-                </p>
-                <p className="text-sm text-text-muted mt-1">
-                  {stat.label}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
     </Section>
   );
 }
