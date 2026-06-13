@@ -14,30 +14,66 @@ const en = {
   about: {
     photoAlt: 'Nabil Zaghloul',
     paragraphs: [
-      "Hi, I've lived in District 2 for more than 30 years and spent over 32 inside Multnomah County government. I started in the Department of Community Justice, managing parole, probation, and domestic violence caseloads. After about a decade, I moved to the Health Department, where I managed medical and behavioral health programs. I'm now with the Department of County Human Services, where I work with a great team of more than 60 people across housing stabilization, mental health, addiction services, eviction prevention, and youth services programs.",
+      "Hi, I've lived in District 2 for more than 30 years and spent over 32 inside Multnomah County government. I started in the Department of Community Justice, managing parole, probation, and domestic violence caseloads. After about a decade, I moved to the Health Department, where I managed medical and behavioral health programs. I'm now with the Department of County Human Services, where I work with a great team of more than 60 people across housing stabilization, mental health, addiction services, eviction prevention, and youth services programs. I hold a degree in literature and a law degree with a specialization in public administration.",
+      "During my career I've built programs like the Economic Justice and Recovery Program and Bienestar Youth Services from the ground up.",
     ],
-    highlights: {
-      intro: 'In that role, a few things I\'m proud of are:',
-      items: [
-        'building the Economic Justice and Recovery Program during the pandemic, which served 2,800 households with a 90% retention rate;',
-        'rehousing 75 families from shelters into their own homes on a $900,000 budget; and',
-        'starting Bienestar Youth Services in Cully with one staff member and no dedicated budget. It now serves 50 kids a week.',
-      ],
-    },
-    degrees: 'I hold a degree in literature and a law degree with a specialization in public administration.',
+    statsLabel: 'A few things I\'m proud of:',
+    stats: [
+      {
+        number: '25,000',
+        label: 'families kept housed',
+        description: 'Since 2012, we\'ve helped 25,000 families stay in their homes through the Economic Justice and Recovery Program, court eviction prevention, housing support services, and state emergency housing assistance. The Economic Justice and Recovery Program alone served 2,800 families in its first year.',
+        href: '/issues/homelessness',
+      },
+      {
+        number: '90%',
+        label: 'housing retention rate',
+        description: 'Across all of Bienestar\'s housing programs, we survey every family at 3, 6, 9, and 12 months after they receive support. At the one-year mark, 90% are still in their homes.',
+        href: '/issues/homelessness',
+      },
+      {
+        number: '350',
+        label: 'families rehoused',
+        description: 'Over the last three years, we\'ve moved 350 families, including their children, from hotels, shelters, and the street into their own homes.',
+        href: '/issues/homelessness',
+      },
+      {
+        number: '600+',
+        label: 'youth served',
+        description: 'Since 2018, Bienestar Youth Services in Cully has hosted weekly workshops led by teachers and professionals in music, art, robotics, aviation, mentoring, and tutoring.',
+        href: '/issues/public-safety',
+      },
+      {
+        number: '1,800',
+        label: 'seniors served',
+        description: 'Over the last ten years through Bienestar, we\'ve provided 1,800 seniors with food assistance, rental support, disability services, legal aid, and reading groups.',
+      },
+      {
+        number: '3,200+',
+        label: 'immigrants and refugees assisted',
+        description: 'Over the last ten years through Bienestar, we\'ve assisted 3,200 immigrants and refugees with housing support, food resources, legal clinics, ESL classes, and connection to long-term stability programs.',
+      },
+      {
+        number: '$200M',
+        label: 'in direct client services managed',
+        description: 'Over 32 years, I\'ve managed more than $200 million in county, city, state, and federal funding across three departments for direct client services.',
+      },
+      {
+        number: '20,000+',
+        label: 'families provided with food',
+        description: 'Over the last ten years through Bienestar, we\'ve delivered and distributed food to more than 20,000 families.',
+      },
+    ],
   },
 
   // Labor
   labor: {
-    heading: 'Labor',
-    paragraphs: [
-      "I've spent my career on both sides of the table, first as a union member and later as a county manager.",
-      "During the SNAP crisis, I worked alongside county employees who themselves qualified for food assistance because of household size and rising living costs. Poverty doesn't only exist outside county government. It affects members of our own workforce.",
-    ],
+    intro: "I've spent my career on both sides of the table, first as a union member and later as a county manager. I understand the challenges employees face because I have lived them.",
+    heading: 'Investing in Workers, Improving Services',
     pillars: [
       {
         title: 'Compensation',
-        body: 'County wages should keep up with the cost of living in Portland. Workers who serve diverse communities in multiple languages deserve a bilingual premium that reflects that value.',
+        body: 'County wages should keep up with the cost of living in Portland. The people delivering services deserve compensation that reflects the demands of the work.',
       },
       {
         title: 'Leave',
@@ -45,7 +81,7 @@ const en = {
       },
       {
         title: 'Voice',
-        body: 'Workers should be part of decisions about how technology is implemented, how services are restructured, and how the budget is set. The people doing the work know what works.',
+        body: 'Workers should be part of decisions about how technology is implemented, how services are restructured, and how the budget is set.',
       },
     ],
   },
@@ -195,15 +231,17 @@ export interface Dictionary {
   about: {
     photoAlt: string;
     paragraphs: readonly string[];
-    highlights: {
-      intro: string;
-      items: readonly string[];
-    };
-    degrees: string;
+    statsLabel: string;
+    stats: readonly {
+      number: string;
+      label: string;
+      description: string;
+      href?: string;
+    }[];
   };
   labor: {
+    intro: string;
     heading: string;
-    paragraphs: readonly string[];
     pillars: readonly { title: string; body: string }[];
   };
   issues: {

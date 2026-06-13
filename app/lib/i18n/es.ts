@@ -15,16 +15,19 @@ const es: Dictionary = {
     photoAlt: 'Foto del Candidato',
     paragraphs: [
       '[Traducción pendiente]',
+      '[Traducción pendiente]',
     ],
-    highlights: {
-      intro: '[Traducción pendiente]',
-      items: [
-        '[Traducción pendiente]',
-        '[Traducción pendiente]',
-        '[Traducción pendiente]',
-      ],
-    },
-    degrees: '[Traducción pendiente]',
+    statsLabel: '[Traducción pendiente]',
+    stats: [
+      { number: '25,000', label: '[Traducción pendiente]', description: '[Traducción pendiente]', href: '/issues/homelessness' },
+      { number: '90%', label: '[Traducción pendiente]', description: '[Traducción pendiente]', href: '/issues/homelessness' },
+      { number: '350', label: '[Traducción pendiente]', description: '[Traducción pendiente]', href: '/issues/homelessness' },
+      { number: '600+', label: '[Traducción pendiente]', description: '[Traducción pendiente]', href: '/issues/public-safety' },
+      { number: '1,800', label: '[Traducción pendiente]', description: '[Traducción pendiente]' },
+      { number: '3,200+', label: '[Traducción pendiente]', description: '[Traducción pendiente]' },
+      { number: '$200M', label: '[Traducción pendiente]', description: '[Traducción pendiente]' },
+      { number: '20,000+', label: '[Traducción pendiente]', description: '[Traducción pendiente]' },
+    ],
   },
 
   issues: {
@@ -84,11 +87,8 @@ const es: Dictionary = {
   },
 
   labor: {
+    intro: '[Traducción pendiente]',
     heading: '[Traducción pendiente]',
-    paragraphs: [
-      '[Traducción pendiente]',
-      '[Traducción pendiente]',
-    ],
     pillars: [
       { title: '[Traducción pendiente]', body: '[Traducción pendiente]' },
       { title: '[Traducción pendiente]', body: '[Traducción pendiente]' },

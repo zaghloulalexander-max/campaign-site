@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Section from '@/app/components/ui/Section';
+import StatsGrid from '@/app/components/sections/StatsGrid';
 import type { Dictionary } from '@/app/lib/i18n';
 
 interface AboutProps {
@@ -27,23 +28,10 @@ export default function About({ dict }: AboutProps) {
           {dict.paragraphs.map((p, i) => (
             <p key={i}>{p}</p>
           ))}
-
-          {dict.highlights && (
-            <div>
-              <p>{dict.highlights.intro}</p>
-              <ul className="mt-2 ml-5 space-y-1.5 list-disc marker:text-text-muted">
-                {dict.highlights.items.map((item, i) => (
-                  <li key={i}>{item}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          {dict.degrees && (
-            <p>{dict.degrees}</p>
-          )}
         </div>
       </div>
+
+      <StatsGrid stats={dict.stats} label={dict.statsLabel} />
     </Section>
   );
 }
