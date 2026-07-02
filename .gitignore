@@ -37,3 +37,4 @@ next-env.d.ts
 # Interview transcripts — sensitive, not for public repo
 /transcripts/app/(campaign)/on-the-record/ 
 app/(campaign)/on-the-record/ 
+transcripts/ 
