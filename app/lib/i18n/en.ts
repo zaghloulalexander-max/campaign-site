@@ -127,7 +127,7 @@ const en = {
     {
       id: 'jim-akers',
       name: 'Jim Akers',
-      title: 'Mayor of Maywood Park',
+      title: 'Mayor, City of Maywood Park',
       quote: '',
       imageSrc: '/endorsements/jim-akers.png',
     },
