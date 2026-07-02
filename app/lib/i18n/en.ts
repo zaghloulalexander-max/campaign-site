@@ -125,6 +125,13 @@ const en = {
       imageSrc: '/endorsements/tom-potter.png',
     },
     {
+      id: 'jim-akers',
+      name: 'Jim Akers',
+      title: 'Mayor of Maywood Park',
+      quote: '',
+      imageSrc: '/endorsements/jim-akers.png',
+    },
+    {
       id: 'nafisa-fai',
       name: 'Nafisa Fai',
       title: 'Washington County Commissioner',

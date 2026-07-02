@@ -36,6 +36,7 @@ export default function EndorsementCard({ endorser }: EndorsementCardProps) {
       </div>
 
       <div>
+        {endorser.quote ? (
         <blockquote className="relative max-w-lg">
           <span
             className="absolute -left-4 lg:-left-5 top-0 font-[family-name:var(--font-serif)] text-xl md:text-2xl lg:text-3xl text-text select-none leading-snug"
@@ -53,6 +54,12 @@ export default function EndorsementCard({ endorser }: EndorsementCardProps) {
             <p className="text-base text-text mt-1">{endorser.title}</p>
           </footer>
         </blockquote>
+        ) : (
+        <div className="max-w-lg">
+          <p className="text-lg font-semibold text-text">{endorser.name}</p>
+          <p className="text-base text-text mt-1">{endorser.title}</p>
+        </div>
+        )}
       </div>
     </div>
   );
