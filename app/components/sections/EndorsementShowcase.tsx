@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import EndorsementCard, { type Endorser } from '@/app/components/sections/EndorsementCard';
 import { useAutoAdvance } from '@/app/hooks/useAutoAdvance';
 
-const ADVANCE_DURATION = 8;
+const ADVANCE_DURATION = 5;
 const EASE_STANDARD: [number, number, number, number] = [0.4, 0, 0.2, 1];
 const TRANSITION_DURATION = 0.45;
 
@@ -48,25 +48,27 @@ function ProgressBars({
           <button
             key={index}
             onClick={() => onBarClick(index)}
-            className="relative flex-1 h-[2px] cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 rounded-full overflow-hidden"
+            className="relative flex-1 h-6 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 rounded-full flex items-center"
             aria-label={`Go to endorsement ${index + 1}`}
           >
-            <div className="absolute inset-0 bg-primary-200 rounded-full" />
-            {isPast && <div className="absolute inset-0 bg-primary-900 rounded-full" />}
-            {isActive && (
-              prefersReducedMotion ? (
-                <div className="absolute inset-0 bg-primary-900 rounded-full" />
-              ) : (
-                <motion.div
-                  key={animationKey}
-                  className="absolute inset-y-0 left-0 bg-primary-900 rounded-full"
-                  initial={{ width: '0%' }}
-                  animate={{ width: isPaused ? undefined : '100%' }}
-                  transition={{ duration, ease: 'linear' }}
-                  onAnimationComplete={onComplete}
-                />
-              )
-            )}
+            <div className="relative h-[2px] w-full rounded-full overflow-hidden">
+              <div className="absolute inset-0 bg-primary-200 rounded-full" />
+              {isPast && <div className="absolute inset-0 bg-primary-900 rounded-full" />}
+              {isActive && (
+                prefersReducedMotion ? (
+                  <div className="absolute inset-0 bg-primary-900 rounded-full" />
+                ) : (
+                  <motion.div
+                    key={animationKey}
+                    className="absolute inset-y-0 left-0 bg-primary-900 rounded-full"
+                    initial={{ width: '0%' }}
+                    animate={{ width: isPaused ? undefined : '100%' }}
+                    transition={{ duration, ease: 'linear' }}
+                    onAnimationComplete={onComplete}
+                  />
+                )
+              )}
+            </div>
           </button>
         );
       })}

@@ -125,13 +125,6 @@ const en = {
       imageSrc: '/endorsements/tom-potter.png',
     },
     {
-      id: 'jim-akers',
-      name: 'Jim Akers',
-      title: 'Mayor, City of Maywood Park',
-      quote: '',
-      imageSrc: '/endorsements/jim-akers.png',
-    },
-    {
       id: 'nafisa-fai',
       name: 'Nafisa Fai',
       title: 'Washington County Commissioner',
@@ -145,7 +138,60 @@ const en = {
       quote: 'Nabil has supported Black, Asian, White, Latino, and Native American working class communities for more than 32 years through housing assistance and social services. He will serve all Multnomah residents well, especially those with the greatest needs.',
       imageSrc: '/endorsements/ernesto-fonseca.jpeg',
     },
+    {
+      id: 'virginia-salinas',
+      name: 'Virginia Salinas',
+      title: 'Community Leader & Former Local 88 Leader',
+      quote: 'His unwavering commitment to our community, paired with his professionalism, showcases true leadership. With Nabil, voices will be heard, and our Multnomah County will be better.',
+      imageSrc: '/endorsements/virginia-salinas.png',
+    },
+    {
+      id: 'carla-radcliffe',
+      name: 'Carla Radcliffe, MD',
+      title: 'Former Family Practice Physician, Multnomah County Health Department',
+      quote: 'I have known Nabil for over 20 years as a physician with the Multnomah County Health Department. I have worked with him and seen firsthand his depth of caring and his ability to listen and understand differing points of view.',
+      imageSrc: '/endorsements/carla-radcliffe.png',
+    },
+    {
+      id: 'mohamed-alyajouri',
+      name: 'Mohamed Alyajouri',
+      title: 'Mt. Hood Community College Board of Education',
+      quote: 'Nabil has been working tirelessly for years to ensure that families in our community have what they need during challenging times. He is a passionate civic leader whose values, work and advocacy are centered around helping others.',
+      imageSrc: '/endorsements/mohamed-alyajouri.png',
+    },
   ],
+
+  // Endorsement wall — complete list
+  endorsementWall: {
+    heading: 'Endorsements',
+    people: [
+      { name: 'Tom Potter', title: 'Former Chief of Police and Mayor of Portland' },
+      { name: 'Nafisa Fai', title: 'Washington County Commissioner' },
+      { name: 'Dr. Ernesto Fonseca', title: 'CEO, Hacienda CDC' },
+      { name: 'Jim Akers', title: 'Mayor, City of Maywood Park' },
+      { name: 'Mohamed Alyajouri', title: 'Mt. Hood Community College Board of Education' },
+      { name: 'Virginia Salinas', title: 'Community Leader & Former Local 88 Leader' },
+      { name: 'Sho Dozono', title: 'Retired Businessman & Civic Leader' },
+      { name: 'Musse Olol', title: 'President, Somali American Council of Oregon' },
+      { name: 'Carla Radcliffe, MD', title: 'Former Family Practice Physician, Multnomah County Health Department' },
+      { name: 'Sun Park, MD', title: 'Internal Medicine Physician' },
+      { name: 'Ronault (Polo) Catalani', title: 'Attorney & Civic Leader' },
+      { name: 'Julie A. Preciado', title: 'Attorney & Civic Leader' },
+      { name: 'Sam Friedenberg', title: 'Retired Attorney' },
+      { name: 'Wajdi Said', title: 'Co-Founder, Beloved Community Coalitions' },
+      { name: 'Moe Farhoud', title: 'Owner, Stark Investments' },
+      { name: 'Prashant Dubey', title: 'Chief Strategy Officer, Agiloft' },
+      { name: 'Aisha Harley', title: 'Portland Business Owner' },
+      { name: 'Baltazar F. Ortiz', title: 'Civic Leader' },
+      { name: 'Raquel Aguillon', title: 'Civic Leader & Community Advocate' },
+      { name: 'Mirna Ghamrawi', title: 'Educator & Community Advocate' },
+      { name: 'Judi Kloper', title: 'Retired Educator & Community Advocate' },
+      { name: 'Carlos J. Castro', title: 'Sociology Professor, Clark College' },
+      { name: 'Jeff Hammarlund', title: 'Retired University Teacher & Clean Energy Advocate' },
+      { name: 'Raúl Gómez-Rojas', title: 'Conductor & Music Director, Metropolitan Youth Symphony' },
+      { name: 'Hampton Rodriguez', title: 'Artist & Founder, Bohío Studio' },
+    ],
+  },
 
   // Donate
   donate: {
@@ -263,6 +309,10 @@ export interface Dictionary {
     keepReading: string;
   };
   endorsements: readonly { id: string; name: string; title: string; quote: string; imageSrc?: string }[];
+  endorsementWall: {
+    heading: string;
+    people: readonly { name: string; title: string }[];
+  };
   donate: { heading: string; subheading: string; button: string; disclaimer: string };
   signup: {
     heading: string;

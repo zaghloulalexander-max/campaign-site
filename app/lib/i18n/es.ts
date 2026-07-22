@@ -79,6 +79,13 @@ const es: Dictionary = {
     },
   ],
 
+  endorsementWall: {
+    heading: 'Respaldos',
+    people: [
+      { name: 'Name', title: '[Traducción pendiente]' },
+    ],
+  },
+
   donate: {
     heading: '[Traducción pendiente]',
     subheading: '[Traducción pendiente]',
