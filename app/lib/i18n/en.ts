@@ -184,7 +184,7 @@ const en = {
       { name: 'Sam Friedenberg', title: 'Retired Attorney', imageSrc: '/endorsements/sam-friedenberg.png' },
       { name: 'Wajdi Said', title: 'Co-Founder, Beloved Community Coalitions', imageSrc: '/endorsements/wajdi-said.png' },
       { name: 'Moe Farhoud', title: 'Owner, Stark Investments', imageSrc: '/endorsements/moe-farhoud.png' },
-      { name: 'Prashant Dubey', title: 'Chief Strategy Officer, Agiloft', imageSrc: '/endorsements/prashant-dubey.png' },
+      { name: 'Prashant Dubey', title: 'Chief Strategy Officer, Agiloft', imageSrc: '/endorsements/prashant-dubey.png', quote: 'Nabil recognizes that District 2 is one of the most racially and socio-economically diverse districts in Portland. Public safety means something different in Cully than in Parkrose than in St. Johns than in Alameda. Policies and programs cannot be one-size-fits-all.' },
       { name: 'Aisha Harley', title: 'Portland Business Owner', imageSrc: '/endorsements/aisha-harley.png' },
       { name: 'Baltazar F. Ortiz', title: 'Civic Leader', imageSrc: '/endorsements/baltazar-ortiz.png', quote: 'Nabil exemplifies strong leadership within our community, consistently delivers results, and demonstrates a steadfast commitment to humanitarian values.' },
       { name: 'Raquel Aguillon', title: 'Civic Leader & Community Advocate', imageSrc: '/endorsements/raquel-aguillon.png', quote: 'I met Nabil about 25 years ago and I can confidently say he is a thought leader, skilled at bringing people together, looking for solutions and building alliances. Nabil deeply cares about humanity and has walked the talk of service to others.' },
