@@ -79,10 +79,13 @@ const es: Dictionary = {
     },
   ],
 
-  endorsementWall: {
+  endorsementsPage: {
     heading: 'Respaldos',
+    intro: '[Traducción pendiente]',
+    homeLink: 'Ver todos los respaldos',
+    homeHeading: '[Traducción pendiente]',
     people: [
-      { name: 'Name', title: '[Traducción pendiente]' },
+      { name: 'Name', title: '[Traducción pendiente]', imageSrc: '/endorsements/placeholder.png' },
     ],
   },
 
@@ -156,6 +159,7 @@ const es: Dictionary = {
 
   footer: {
     issuesLabel: 'Temas',
+    endorsementsLink: 'Respaldos',
     involvedLabel: 'Participe',
     volunteerLink: 'Voluntario',
     internshipsLink: 'Pasantías',

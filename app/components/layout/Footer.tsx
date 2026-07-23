@@ -76,6 +76,9 @@ export default function Footer({ dict, issues }: FooterProps) {
                 {dict.involvedLabel}
               </p>
               <div className="mt-4 flex flex-col gap-2.5 text-sm text-text-subtle">
+                <Link href="/endorsements" className={linkClasses}>
+                  {dict.endorsementsLink}
+                </Link>
                 <a href={siteConfig.donateUrl} className={linkClasses} target="_blank" rel="noopener noreferrer">
                   {dict.donateLink}
                 </a>

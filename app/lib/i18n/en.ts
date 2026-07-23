@@ -161,35 +161,39 @@ const en = {
     },
   ],
 
-  // Endorsement wall — complete list
-  endorsementWall: {
+  // Endorsements page — all endorsers, photo required for each
+  endorsementsPage: {
     heading: 'Endorsements',
+    intro: 'Community leaders, elected officials, and neighbors across District 2.',
+    homeLink: 'See all endorsements',
+    homeHeading: 'Endorsed by 25+ community leaders',
     people: [
-      { name: 'Tom Potter', title: 'Former Chief of Police and Mayor of Portland' },
-      { name: 'Nafisa Fai', title: 'Washington County Commissioner' },
-      { name: 'Dr. Ernesto Fonseca', title: 'CEO, Hacienda CDC' },
-      { name: 'Jim Akers', title: 'Mayor, City of Maywood Park' },
-      { name: 'Mohamed Alyajouri', title: 'Mt. Hood Community College Board of Education' },
-      { name: 'Virginia Salinas', title: 'Community Leader & Former Local 88 Leader' },
-      { name: 'Sho Dozono', title: 'Retired Businessman & Civic Leader' },
-      { name: 'Musse Olol', title: 'President, Somali American Council of Oregon' },
-      { name: 'Carla Radcliffe, MD', title: 'Former Family Practice Physician, Multnomah County Health Department' },
-      { name: 'Sun Park, MD', title: 'Internal Medicine Physician' },
-      { name: 'Ronault (Polo) Catalani', title: 'Attorney & Civic Leader' },
-      { name: 'Julie A. Preciado', title: 'Attorney & Civic Leader' },
-      { name: 'Sam Friedenberg', title: 'Retired Attorney' },
-      { name: 'Wajdi Said', title: 'Co-Founder, Beloved Community Coalitions' },
-      { name: 'Moe Farhoud', title: 'Owner, Stark Investments' },
-      { name: 'Prashant Dubey', title: 'Chief Strategy Officer, Agiloft' },
-      { name: 'Aisha Harley', title: 'Portland Business Owner' },
-      { name: 'Baltazar F. Ortiz', title: 'Civic Leader' },
-      { name: 'Raquel Aguillon', title: 'Civic Leader & Community Advocate' },
-      { name: 'Mirna Ghamrawi', title: 'Educator & Community Advocate' },
-      { name: 'Judi Kloper', title: 'Retired Educator & Community Advocate' },
-      { name: 'Carlos J. Castro', title: 'Sociology Professor, Clark College' },
-      { name: 'Jeff Hammarlund', title: 'Retired University Teacher & Clean Energy Advocate' },
-      { name: 'Raúl Gómez-Rojas', title: 'Conductor & Music Director, Metropolitan Youth Symphony' },
-      { name: 'Hampton Rodriguez', title: 'Artist & Founder, Bohío Studio' },
+      { name: 'Tom Potter', title: 'Former Chief of Police and Mayor of Portland', imageSrc: '/endorsements/tom-potter.png', quote: 'I am honored to endorse Nabil. He will be a strong voice on the Multnomah County Commission.' },
+      { name: 'Nafisa Fai', title: 'Washington County Commissioner', imageSrc: '/endorsements/nafisa-fai.jpeg', quote: 'Multnomah County needs a commissioner who has done the work, not just studied it. Nabil has done the work.' },
+      { name: 'Dr. Ernesto Fonseca', title: 'CEO, Hacienda CDC', imageSrc: '/endorsements/ernesto-fonseca.jpeg', quote: 'Nabil has supported Black, Asian, White, Latino, and Native American working class communities for more than 32 years through housing assistance and social services. He will serve all Multnomah residents well, especially those with the greatest needs.' },
+      { name: 'Jim Akers', title: 'Mayor, City of Maywood Park', imageSrc: '/endorsements/jim-akers.png' },
+      { name: 'Mohammad Bader', title: 'Former Director, Multnomah County Department of County Human Services', imageSrc: '/endorsements/mohammad-bader.png', quote: 'Nabil is honest, hard-working, and represents the underserved with a heart of gold and a determination to get things done. He is not afraid to roll up his sleeves and work alongside underserved and marginalized communities.' },
+      { name: 'Mohamed Alyajouri', title: 'Mt. Hood Community College Board of Education', imageSrc: '/endorsements/mohamed-alyajouri.png', quote: 'Nabil has been working tirelessly for years to ensure that families in our community have what they need during challenging times. He is a passionate civic leader whose values, work and advocacy are centered around helping others.' },
+      { name: 'Virginia Salinas', title: 'Community Leader & Former Local 88 Leader', imageSrc: '/endorsements/virginia-salinas.png', quote: 'His unwavering commitment to our community, paired with his professionalism, showcases true leadership. With Nabil, voices will be heard, and our Multnomah County will be better.' },
+      { name: 'Sho Dozono', title: 'Retired Businessman & Civic Leader', imageSrc: '/endorsements/sho-dozono.png' },
+      { name: 'Musse Olol', title: 'President, Somali American Council of Oregon', imageSrc: '/endorsements/musse-olol.png' },
+      { name: 'Carla Radcliffe, MD', title: 'Former Family Practice Physician, Multnomah County Health Department', imageSrc: '/endorsements/carla-radcliffe.png', quote: 'I have known Nabil for over 20 years as a physician with the Multnomah County Health Department. I have worked with him and seen firsthand his depth of caring and his ability to listen and understand differing points of view.' },
+      { name: 'Sun Park, MD', title: 'Internal Medicine Physician', imageSrc: '/endorsements/sun-park.png', quote: 'Through his several decades of work with Multnomah County, he has shown his dedication and leadership in serving the community. I have full confidence that Nabil would be a great advocate to build a safer, cleaner and cohesive Multnomah County.' },
+      { name: 'Ronault (Polo) Catalani', title: 'Attorney & Civic Leader', imageSrc: '/endorsements/ronault-catalani.png' },
+      { name: 'Julie A. Preciado', title: 'Attorney & Civic Leader', imageSrc: '/endorsements/julie-preciado.png' },
+      { name: 'Sam Friedenberg', title: 'Retired Attorney', imageSrc: '/endorsements/sam-friedenberg.png' },
+      { name: 'Wajdi Said', title: 'Co-Founder, Beloved Community Coalitions', imageSrc: '/endorsements/wajdi-said.png' },
+      { name: 'Moe Farhoud', title: 'Owner, Stark Investments', imageSrc: '/endorsements/moe-farhoud.png' },
+      { name: 'Prashant Dubey', title: 'Chief Strategy Officer, Agiloft', imageSrc: '/endorsements/prashant-dubey.png' },
+      { name: 'Aisha Harley', title: 'Portland Business Owner', imageSrc: '/endorsements/aisha-harley.png' },
+      { name: 'Baltazar F. Ortiz', title: 'Civic Leader', imageSrc: '/endorsements/baltazar-ortiz.png', quote: 'Nabil exemplifies strong leadership within our community, consistently delivers results, and demonstrates a steadfast commitment to humanitarian values.' },
+      { name: 'Raquel Aguillon', title: 'Civic Leader & Community Advocate', imageSrc: '/endorsements/raquel-aguillon.png', quote: 'I met Nabil about 25 years ago and I can confidently say he is a thought leader, skilled at bringing people together, looking for solutions and building alliances. Nabil deeply cares about humanity and has walked the talk of service to others.' },
+      { name: 'Mirna Ghamrawi', title: 'Educator & Community Advocate', imageSrc: '/endorsements/mirna-ghamrawi.png', quote: 'I have seen his passion to serve our marginalized and underserved communities in action and truly enjoy partnering with him in this work. As an educator, I am filled with hope when I see someone like him in a position to effect positive change in our County.' },
+      { name: 'Judi Kloper', title: 'Retired Educator & Community Advocate', imageSrc: '/endorsements/judi-kloper.png' },
+      { name: 'Carlos J. Castro', title: 'Sociology Professor, Clark College', imageSrc: '/endorsements/carlos-castro.png', quote: 'He is a dynamic and experienced leader, who listens and works for the community, and is always ready to help those in need.' },
+      { name: 'Jeff Hammarlund', title: 'Retired University Teacher & Clean Energy Advocate', imageSrc: '/endorsements/jeff-hammarlund.png', quote: 'I have gotten to know him while volunteering for the social service agency he directs. He is a humble, thoughtful, and compassionate man who is committed to helping Portland become the great city we know it can be.' },
+      { name: 'Raúl Gómez-Rojas', title: 'Conductor & Music Director, Metropolitan Youth Symphony', imageSrc: '/endorsements/raul-gomez-rojas.png', quote: 'His passionate support of arts education as a way of bringing our community together has been an inspiration in my own work. I know Nabil to be a generous public servant, a kind and effective leader and a fearless visionary for what our city can and should be.' },
+      { name: 'Hampton Rodriguez', title: 'Artist & Founder, Bohío Studio', imageSrc: '/endorsements/hampton-rodriguez.png' },
     ],
   },
 
@@ -260,6 +264,7 @@ const en = {
   footer: {
     issuesLabel: 'Issues',
     involvedLabel: 'Get Involved',
+    endorsementsLink: 'Endorsements',
     volunteerLink: 'Volunteer',
     internshipsLink: 'Internships',
     donateLink: 'Donate',
@@ -309,9 +314,12 @@ export interface Dictionary {
     keepReading: string;
   };
   endorsements: readonly { id: string; name: string; title: string; quote: string; imageSrc?: string }[];
-  endorsementWall: {
+  endorsementsPage: {
     heading: string;
-    people: readonly { name: string; title: string }[];
+    intro: string;
+    homeLink: string;
+    homeHeading: string;
+    people: readonly { name: string; title: string; imageSrc: string; quote?: string }[];
   };
   donate: { heading: string; subheading: string; button: string; disclaimer: string };
   signup: {
@@ -347,6 +355,7 @@ export interface Dictionary {
   footer: {
     issuesLabel: string;
     involvedLabel: string;
+    endorsementsLink: string;
     volunteerLink: string;
     internshipsLink: string;
     donateLink: string;
