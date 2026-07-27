@@ -169,6 +169,7 @@ const en = {
     homeHeading: 'Endorsed by 25+ community leaders',
     people: [
       { name: 'Tom Potter', title: 'Former Chief of Police and Mayor of Portland', imageSrc: '/endorsements/tom-potter.png', quote: 'I am honored to endorse Nabil. He will be a strong voice on the Multnomah County Commission.' },
+      { name: 'Sharon Meieran', title: 'Former Multnomah County Commissioner, Doctor & Lawyer', imageSrc: '/endorsements/sharon-meieran.png' },
       { name: 'Nafisa Fai', title: 'Washington County Commissioner', imageSrc: '/endorsements/nafisa-fai.jpeg', quote: 'Multnomah County needs a commissioner who has done the work, not just studied it. Nabil has done the work.' },
       { name: 'Dr. Ernesto Fonseca', title: 'CEO, Hacienda CDC', imageSrc: '/endorsements/ernesto-fonseca.jpeg', quote: 'Nabil has supported Black, Asian, White, Latino, and Native American working class communities for more than 32 years through housing assistance and social services. He will serve all Multnomah residents well, especially those with the greatest needs.' },
       { name: 'Jim Akers', title: 'Mayor, City of Maywood Park', imageSrc: '/endorsements/jim-akers.png' },
