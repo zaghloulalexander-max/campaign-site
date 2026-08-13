@@ -54,9 +54,9 @@ const en = {
         description: 'Over the last ten years through Bienestar, we\'ve assisted 3,200 immigrants and refugees with housing support, food resources, legal clinics, ESL classes, and connection to long-term stability programs.',
       },
       {
-        number: '$200M',
+        number: '$450M+',
         label: 'in direct client services managed',
-        description: 'Over 32 years, I\'ve managed more than $200 million in county, city, state, and federal funding across three departments for direct client services.',
+        description: 'Over 32 years, I\'ve managed more than $450 million in county, city, state, and federal funding across three departments for direct client services.',
       },
       {
         number: '20,000+',
