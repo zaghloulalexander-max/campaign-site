@@ -166,7 +166,7 @@ const en = {
     heading: 'Endorsements',
     intro: 'Community leaders, elected officials, and neighbors across District 2.',
     homeLink: 'See all endorsements',
-    homeHeading: 'Endorsed by 25+ community leaders',
+    homeHeading: 'Endorsed by 30+ community leaders',
     people: [
       { name: 'Dan Ryan', title: 'Portland City Councilor, District 2', imageSrc: '/endorsements/dan-ryan.jpg', quote: 'I first got to know Nabil in 2024, when we were both candidates for Portland City Council. Nabil understands how government works, and how to bring community, public and private partners together to get things done! He is authentic, experienced, and a true public servant. Recently, Nabil and I walked through the King neighborhood in District 2 and talked with each other about the challenges and opportunities facing our community from homelessness, behavioral health and public safety to economic opportunity and coalition building. Nabil is NOT part of the status quo that has plagued the county for a decade plus, he is ready to shake things up! I\u2019m proud to endorse Nabil Zaghloul for Multnomah County Commissioner, District 2.' },
       { name: 'Tom Potter', title: 'Former Chief of Police and Mayor of Portland', imageSrc: '/endorsements/tom-potter.png', quote: 'I am honored to endorse Nabil. He will be a strong voice on the Multnomah County Commission.' },

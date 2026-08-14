@@ -18,22 +18,8 @@ interface IssuesProps {
 export default function Issues({ dict }: IssuesProps) {
   return (
     <Section id="issues" background="default" labelledBy="issues-heading">
-      {/* Educational intro — full width */}
-      <div className="max-w-3xl">
-        <p className="text-2xl md:text-3xl lg:text-[1.75rem] font-normal text-text leading-snug">
-          <Link
-            href={dict.questionHref}
-            className="underline decoration-border hover:decoration-text underline-offset-4 transition-colors duration-150 motion-reduce:transition-none focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 rounded"
-          >
-            {dict.question}
-          </Link>
-          {' '}
-          <span className="text-text-muted">{dict.answer}</span>
-        </p>
-      </div>
-
       {/* Divider */}
-      <div className="border-b border-border my-16 md:my-20" />
+      <div className="border-b border-border mb-16 md:mb-20" />
 
       {/* Two-column layout — heading + pillars left, teasers right */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-16 lg:gap-20">
@@ -74,6 +60,22 @@ export default function Issues({ dict }: IssuesProps) {
             </Link>
           ))}
         </div>
+      </div>
+{/* Divider */}
+      <div className="border-b border-border my-16 md:my-20" />
+
+      {/* Educational note — full width */}
+      <div className="max-w-3xl">
+        <p className="text-2xl md:text-3xl lg:text-[1.75rem] font-normal text-text leading-snug">
+          <Link
+            href={dict.questionHref}
+            className="underline decoration-border hover:decoration-text underline-offset-4 transition-colors duration-150 motion-reduce:transition-none focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 rounded"
+          >
+            {dict.question}
+          </Link>
+          {' '}
+          <span className="text-text-muted">{dict.answer}</span>
+        </p>
       </div>
     </Section>
   );

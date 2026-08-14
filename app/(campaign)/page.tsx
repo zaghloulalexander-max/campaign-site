@@ -19,9 +19,9 @@ export default function Home() {
         // imageSrc="/hero.jpg"
       />
       <About dict={dict.about} />
+      <EndorsementsLink dict={dict.endorsementsPage} />
       <Issues dict={dict.issues} />
       <Labor dict={dict.labor} />
-      <EndorsementsLink dict={dict.endorsementsPage} />
       <Donate
         dict={dict.donate}
         imageSrc="/images/donate-bg.jpg"
