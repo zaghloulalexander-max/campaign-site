@@ -25,7 +25,7 @@ const es: Dictionary = {
       { number: '600+', label: '[Traducción pendiente]', description: '[Traducción pendiente]', href: '/issues/public-safety' },
       { number: '1,800', label: '[Traducción pendiente]', description: '[Traducción pendiente]' },
       { number: '3,200+', label: '[Traducción pendiente]', description: '[Traducción pendiente]' },
-      { number: '$200M', label: '[Traducción pendiente]', description: '[Traducción pendiente]' },
+      { number: '$450M+', label: '[Traducción pendiente]', description: '[Traducción pendiente]' },
       { number: '20,000+', label: '[Traducción pendiente]', description: '[Traducción pendiente]' },
     ],
   },
