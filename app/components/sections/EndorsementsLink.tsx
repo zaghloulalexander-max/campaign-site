@@ -11,7 +11,7 @@ interface EndorsementsLinkProps {
   };
 }
 
-const SHOWN = 9;
+const SHOWN = 10;
 
 export default function EndorsementsLink({ dict }: EndorsementsLinkProps) {
   const featured = dict.people.slice(0, SHOWN);
